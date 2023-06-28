@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/renew/sub_layout_user}"
+      xmlns:th="http://www.thymeleaf.org">
+
+<style layout:fragment="css">
+    input::-webkit-inner-spin-button { appearance: none; -moz-appearance: none; -webkit-appearance: none; }
+</style>
+
+<!-- index_layout_user.html 에 정의한 main page 부분 -->
+<div layout:fragment="content">
+    <div class="subCont inquiry1-wrap inquiry2-wrap">
+        <div class="auto mt120">
+            <div class="titleWrap">
+                <p class="title">차량문의</p>
+                <p class="text">문의 내용을 작성해 주시면 빠르게 답변해드리겠습니다.</p>
+            </div>
+
+        </div>
+        <div class="inquiryCont">
+            <div class="auto pb120">
+                <div class="bannerWrap">
+                    <div class="textWrap">
+                        <p class="title">차량만 필요하세요?</p>
+                        <p class="text">
+                            낮은 견적으로 받아보세요.<br>
+                            간편하고 합리적인 가격으로 도와드립니다.
+                        </p>
+                        <p class="text m-text">
+                            낮은 견적으로 받아보세요.
+                        </p>
+                    </div>
+                    <img src="/renew/images/inquiryBanner02.jpg" alt="항공만 필요하세요?">
+                </div>
+
+
+                <ul class="tabWrap">
+                    <li><a href="#tab1" class="actived">왕복</a></li>
+                    <li><a href="#tab2">편도</a></li>
+                </ul>
+
+
+                <p class="essentialText">*는 필수 입력사항입니다.</p>
+
+                <div class="inquriyTable tabCont actived" id="tab1">
+
+                    <div class="form-50 tableList nUser">
+                        <p class="title">단체명 <span class="star green strong">*</span></p>
+                        <div class="inputWrap">
+                            <input type="text" placeholder="단체명을 입력해주세요.">
+                        </div>
+                    </div>
+                    <div class="form-50 tableList nUser mr00">
+                        <p class="title">담당자 <span class="star green strong">*</span></p>
+                        <div class="inputWrap">
+                            <input type="text" placeholder="담당자명을 입력해주세요.">
+                        </div>
+                    </div>
+                    <div class="form-50 tableList nUser">
+                        <p class="title">연락처 <span class="star green strong">*</span></p>
+                        <div class="inputWrap">
+                            <input type="number" placeholder="연락처를 입력해주세요.">
+                        </div>
+                    </div>
+                    <div class="form-50 tableList nUser mr00">
+                        <p class="title">이메일 <span class="star green strong">*</span></p>
+                        <div class="inputWrap">
+                            <input type="text" placeholder="이메일을 입력해주세요.">
+                        </div>
+                    </div>
+
+                    <div class="tableList">
+                        <div class="titWrap">
+                            <p class="title">경로 <span class="star green strong">*</span></p>
+                            <a href="#" class="addBtn"><span></span> <p>경유지 추가</p></a>
+                        </div>
+
+                        <div class="inputWrap ">
+                            <div class="placeWrap">
+                                <input type="text" placeholder="출발은 어디서 하나요?">
+                                <textarea placeholder="모든 경유지를 구체적으로 적어주세요."></textarea>
+                                <input type="text" placeholder="목적지는 어디신가요?">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-50 tableList ">
+                        <p class="title">출발날짜 <span class="star green strong">*</span></p>
+                        <div class="inputWrap inputWrap2">
+                            <div class="datepickerWrap mr10">
+                                <input type="text" id="datepicker1"  placeholder="yyyy-mm-dd">
+                            </div>
+                            <div class="selectBox time">
+                                <button class="label">09:00</button>
+                                <ul class="optionList">
+                                    <li class="optionItem">01:00</li>
+                                    <li class="optionItem">01:30</li>
+                                    <li class="optionItem">02:00</li>
+                                    <li class="optionItem">02:30</li>
+                                    <li class="optionItem">03:00</li>
+                                    <li class="optionItem">03:30</li>
+                                    <li class="optionItem">04:00</li>
+                                    <li class="optionItem">04:30</li>
+                                    <li class="optionItem">05:00</li>
+                                    <li class="optionItem">05:30</li>
+                                    <li class="optionItem">06:00</li>
+                                    <li class="optionItem">06:30</li>
+                                    <li class="optionItem">07:00</li>
+                                    <li class="optionItem">07:30</li>
+                                    <li class="optionItem">08:00</li>
+                                    <li class="optionItem">08:30</li>
+                                    <li class="optionItem">09:00</li>
+                                    <li class="optionItem">09:30</li>
+                                    <li class="optionItem">10:00</li>
+                                    <li class="optionItem">10:30</li>
+                                    <li class="optionItem">11:00</li>
+                                    <li class="optionItem">11:30</li>
+                                    <li class="optionItem">12:00</li>
+                                    <li class="optionItem">12:30</li>
+                                    <li class="optionItem">13:00</li>
+                                    <li class="optionItem">13:30</li>
+                                    <li class="optionItem">14:00</li>
+                                    <li class="optionItem">14:30</li>
+                                    <li class="optionItem">15:00</li>
+                                    <li class="optionItem">15:30</li>
+                                    <li class="optionItem">16:00</li>
+                                    <li class="optionItem">16:30</li>
+                                    <li class="optionItem">17:00</li>
+                                    <li class="optionItem">17:30</li>
+                                    <li class="optionItem">18:00</li>
+                                    <li class="optionItem">18:30</li>
+                                    <li class="optionItem">19:00</li>
+                                    <li class="optionItem">19:30</li>
+                                    <li class="optionItem">20:00</li>
+                                    <li class="optionItem">20:30</li>
+                                    <li class="optionItem">21:00</li>
+                                    <li class="optionItem">21:30</li>
+                                    <li class="optionItem">22:00</li>
+                                    <li class="optionItem">22:30</li>
+                                    <li class="optionItem">23:00</li>
+                                    <li class="optionItem">23:30</li>
+                                    <li class="optionItem">00:00</li>
+                                    <li class="optionItem">00:30</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-50 tableList mr00">
+                        <p class="title">도착날짜 <span class="star green strong">*</span></p>
+                        <div class="inputWrap inputWrap2">
+                            <div class="datepickerWrap mr10">
+                                <input type="text" id="datepicker2" placeholder="yyyy-mm-dd">
+                            </div>
+                            <div class="selectBox time">
+                                <button class="label">09:00</button>
+                                <ul class="optionList">
+                                    <li class="optionItem">01:00</li>
+                                    <li class="optionItem">01:30</li>
+                                    <li class="optionItem">02:00</li>
+                                    <li class="optionItem">02:30</li>
+                                    <li class="optionItem">03:00</li>
+                                    <li class="optionItem">03:30</li>
+                                    <li class="optionItem">04:00</li>
+                                    <li class="optionItem">04:30</li>
+                                    <li class="optionItem">05:00</li>
+                                    <li class="optionItem">05:30</li>
+                                    <li class="optionItem">06:00</li>
+                                    <li class="optionItem">06:30</li>
+                                    <li class="optionItem">07:00</li>
+                                    <li class="optionItem">07:30</li>
+                                    <li class="optionItem">08:00</li>
+                                    <li class="optionItem">08:30</li>
+                                    <li class="optionItem">09:00</li>
+                                    <li class="optionItem">09:30</li>
+                                    <li class="optionItem">10:00</li>
+                                    <li class="optionItem">10:30</li>
+                                    <li class="optionItem">11:00</li>
+                                    <li class="optionItem">11:30</li>
+                                    <li class="optionItem">12:00</li>
+                                    <li class="optionItem">12:30</li>
+                                    <li class="optionItem">13:00</li>
+                                    <li class="optionItem">13:30</li>
+                                    <li class="optionItem">14:00</li>
+                                    <li class="optionItem">14:30</li>
+                                    <li class="optionItem">15:00</li>
+                                    <li class="optionItem">15:30</li>
+                                    <li class="optionItem">16:00</li>
+                                    <li class="optionItem">16:30</li>
+                                    <li class="optionItem">17:00</li>
+                                    <li class="optionItem">17:30</li>
+                                    <li class="optionItem">18:00</li>
+                                    <li class="optionItem">18:30</li>
+                                    <li class="optionItem">19:00</li>
+                                    <li class="optionItem">19:30</li>
+                                    <li class="optionItem">20:00</li>
+                                    <li class="optionItem">20:30</li>
+                                    <li class="optionItem">21:00</li>
+                                    <li class="optionItem">21:30</li>
+                                    <li class="optionItem">22:00</li>
+                                    <li class="optionItem">22:30</li>
+                                    <li class="optionItem">23:00</li>
+                                    <li class="optionItem">23:30</li>
+                                    <li class="optionItem">00:00</li>
+                                    <li class="optionItem">00:30</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-50 tableList">
+                        <p class="title">기사님 동행여부 <span class="star green strong">*</span></p>
+                        <ul class="selectTab">
+                            <li><a href="#" class="driver1 actived">출발, 귀환만 동행</a></li>
+                            <li><a href="#" class="driver2">전체일정 동행</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="form-50 tableList mr00">
+                        <p class="title">인원 <span class="star green strong">*</span></p>
+                        <div class="inputWrap">
+                            <div class="inputBox">
+                                <input type="number" placeholder="몇명이 떠나시나요?">
+                                <span>명</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tableList">
+                        <p class="title">이용목적 <span class="star green strong">*</span></p>
+                        <div class="inputWrap">
+                            <input type="text" placeholder="어떤 목적으로 버스를 구하세요?">
+                        </div>
+                    </div>
+
+                    <div class="tableList driver2-text">
+                        <p class="title">전체 일정 작성 <span class="star green strong">*</span></p>
+                        <div class="inputWrap">
+                            <textarea placeholder="정확한 전체일정을 구체적으로 적어주세요."></textarea>
+                        </div>
+                    </div>
+
+
+                    <div class="tableList">
+                        <p class="title">카드결제 및 영수증</p>
+                        <ul class="checkWrap checkWrap2">
+                            <li><a href="#">세금계산서 및 현금영수증 발행</a></li>
+                            <li><a href="#">카드결제</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="tableList">
+                        <p class="title">선호하는 버스 <span class="detail">(여러개 선택 가능)</span></p>
+                        <div class="checkWrap checkWrap5">
+                            <div><a href="#" class="actived noneCheck">상관없음</a></div>
+                            <div>
+                                <a href="#" class="check">미니버스(최대25인승)</a>
+                                <a href="#" class="check">대형버스(최대45인승)</a>
+                                <a href="#" class="check">대형우등(28인승)</a>
+                                <a href="#" class="check">밴(최대14인승)</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tableList">
+                        <p class="title">추가 메세지</p>
+                        <div class="inputWrap">
+                            <textarea placeholder="추가 요청사항을 적어주세요."></textarea>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="inquriyTable tabCont" id="tab2">
+
+                    <div class="form-50 tableList nUser">
+                        <p class="title">단체명 <span class="star green strong">*</span></p>
+                        <div class="inputWrap">
+                            <input type="text" placeholder="단체명을 입력해주세요.">
+                        </div>
+                    </div>
+                    <div class="form-50 tableList nUser mr00">
+                        <p class="title">담당자 <span class="star green strong">*</span></p>
+                        <div class="inputWrap">
+                            <input type="text" placeholder="담당자명을 입력해주세요.">
+                        </div>
+                    </div>
+                    <div class="form-50 tableList nUser">
+                        <p class="title">연락처 <span class="star green strong">*</span></p>
+                        <div class="inputWrap">
+                            <input type="number" placeholder="연락처를 입력해주세요.">
+                        </div>
+                    </div>
+                    <div class="form-50 tableList nUser mr00">
+                        <p class="title">이메일 <span class="star green strong">*</span></p>
+                        <div class="inputWrap">
+                            <input type="text" placeholder="이메일을 입력해주세요.">
+                        </div>
+                    </div>
+
+                    <div class="tableList">
+                        <div class="titWrap">
+                            <p class="title">경로 <span class="star green strong">*</span></p>
+                            <a href="#" class="addBtn"><span></span> <p>경유지 추가</p></a>
+                        </div>
+
+                        <div class="inputWrap ">
+                            <div class="placeWrap">
+                                <input type="text" placeholder="출발은 어디서 하나요?">
+                                <textarea placeholder="모든 경유지를 구체적으로 적어주세요."></textarea>
+                                <input type="text" placeholder="출발은 어디서 하나요?">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-50 tableList ">
+                        <p class="title">출발날짜 <span class="star green strong">*</span></p>
+                        <div class="inputWrap inputWrap2">
+                            <div class="datepickerWrap mr10">
+                                <input type="text" id="datepicker1"  placeholder="yyyy-mm-dd">
+                            </div>
+                            <div class="selectBox time">
+                                <button class="label">09:00</button>
+                                <ul class="optionList">
+                                    <li class="optionItem">01:00</li>
+                                    <li class="optionItem">01:30</li>
+                                    <li class="optionItem">02:00</li>
+                                    <li class="optionItem">02:30</li>
+                                    <li class="optionItem">03:00</li>
+                                    <li class="optionItem">03:30</li>
+                                    <li class="optionItem">04:00</li>
+                                    <li class="optionItem">04:30</li>
+                                    <li class="optionItem">05:00</li>
+                                    <li class="optionItem">05:30</li>
+                                    <li class="optionItem">06:00</li>
+                                    <li class="optionItem">06:30</li>
+                                    <li class="optionItem">07:00</li>
+                                    <li class="optionItem">07:30</li>
+                                    <li class="optionItem">08:00</li>
+                                    <li class="optionItem">08:30</li>
+                                    <li class="optionItem">09:00</li>
+                                    <li class="optionItem">09:30</li>
+                                    <li class="optionItem">10:00</li>
+                                    <li class="optionItem">10:30</li>
+                                    <li class="optionItem">11:00</li>
+                                    <li class="optionItem">11:30</li>
+                                    <li class="optionItem">12:00</li>
+                                    <li class="optionItem">12:30</li>
+                                    <li class="optionItem">13:00</li>
+                                    <li class="optionItem">13:30</li>
+                                    <li class="optionItem">14:00</li>
+                                    <li class="optionItem">14:30</li>
+                                    <li class="optionItem">15:00</li>
+                                    <li class="optionItem">15:30</li>
+                                    <li class="optionItem">16:00</li>
+                                    <li class="optionItem">16:30</li>
+                                    <li class="optionItem">17:00</li>
+                                    <li class="optionItem">17:30</li>
+                                    <li class="optionItem">18:00</li>
+                                    <li class="optionItem">18:30</li>
+                                    <li class="optionItem">19:00</li>
+                                    <li class="optionItem">19:30</li>
+                                    <li class="optionItem">20:00</li>
+                                    <li class="optionItem">20:30</li>
+                                    <li class="optionItem">21:00</li>
+                                    <li class="optionItem">21:30</li>
+                                    <li class="optionItem">22:00</li>
+                                    <li class="optionItem">22:30</li>
+                                    <li class="optionItem">23:00</li>
+                                    <li class="optionItem">23:30</li>
+                                    <li class="optionItem">00:00</li>
+                                    <li class="optionItem">00:30</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-50 tableList mr00">
+                        <p class="title">도착날짜 <span class="star green strong">*</span></p>
+                        <div class="inputWrap inputWrap2">
+                            <div class="datepickerWrap mr10">
+                                <input type="text" id="datepicker2" placeholder="yyyy-mm-dd">
+                            </div>
+                            <div class="selectBox time">
+                                <button class="label">09:00</button>
+                                <ul class="optionList">
+                                    <li class="optionItem">01:00</li>
+                                    <li class="optionItem">01:30</li>
+                                    <li class="optionItem">02:00</li>
+                                    <li class="optionItem">02:30</li>
+                                    <li class="optionItem">03:00</li>
+                                    <li class="optionItem">03:30</li>
+                                    <li class="optionItem">04:00</li>
+                                    <li class="optionItem">04:30</li>
+                                    <li class="optionItem">05:00</li>
+                                    <li class="optionItem">05:30</li>
+                                    <li class="optionItem">06:00</li>
+                                    <li class="optionItem">06:30</li>
+                                    <li class="optionItem">07:00</li>
+                                    <li class="optionItem">07:30</li>
+                                    <li class="optionItem">08:00</li>
+                                    <li class="optionItem">08:30</li>
+                                    <li class="optionItem">09:00</li>
+                                    <li class="optionItem">09:30</li>
+                                    <li class="optionItem">10:00</li>
+                                    <li class="optionItem">10:30</li>
+                                    <li class="optionItem">11:00</li>
+                                    <li class="optionItem">11:30</li>
+                                    <li class="optionItem">12:00</li>
+                                    <li class="optionItem">12:30</li>
+                                    <li class="optionItem">13:00</li>
+                                    <li class="optionItem">13:30</li>
+                                    <li class="optionItem">14:00</li>
+                                    <li class="optionItem">14:30</li>
+                                    <li class="optionItem">15:00</li>
+                                    <li class="optionItem">15:30</li>
+                                    <li class="optionItem">16:00</li>
+                                    <li class="optionItem">16:30</li>
+                                    <li class="optionItem">17:00</li>
+                                    <li class="optionItem">17:30</li>
+                                    <li class="optionItem">18:00</li>
+                                    <li class="optionItem">18:30</li>
+                                    <li class="optionItem">19:00</li>
+                                    <li class="optionItem">19:30</li>
+                                    <li class="optionItem">20:00</li>
+                                    <li class="optionItem">20:30</li>
+                                    <li class="optionItem">21:00</li>
+                                    <li class="optionItem">21:30</li>
+                                    <li class="optionItem">22:00</li>
+                                    <li class="optionItem">22:30</li>
+                                    <li class="optionItem">23:00</li>
+                                    <li class="optionItem">23:30</li>
+                                    <li class="optionItem">00:00</li>
+                                    <li class="optionItem">00:30</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tableList">
+                        <p class="title">인원</p>
+                        <div class="inputWrap">
+                            <div class="inputBox">
+                                <input type="number" placeholder="몇명이 떠나시나요?">
+                                <span>명</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tableList">
+                        <p class="title">이용목적 <span class="star green strong">*</span></p>
+                        <div class="inputWrap">
+                            <input type="text" placeholder="어떤 목적으로 버스를 구하세요?">
+                        </div>
+                    </div>
+
+                    <div class="tableList">
+                        <p class="title">카드결제 및 영수증</p>
+                        <ul class="checkWrap checkWrap2">
+                            <li><a href="#">세금계산서 및 현금영수증 발행</a></li>
+                            <li><a href="#">카드결제</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="tableList">
+                        <p class="title">선호하는 버스 <span class="detail">(여러개 선택 가능)</span></p>
+                        <div class="checkWrap checkWrap5">
+                            <div><a href="#" class="actived noneCheck">상관없음</a></div>
+                            <div>
+                                <a href="#" class="check">미니버스(최대25인승)</a>
+                                <a href="#" class="check">대형버스(최대45인승)</a>
+                                <a href="#" class="check">대형우등(28인승)</a>
+                                <a href="#" class="check">밴(최대14인승)</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tableList">
+                        <p class="title">추가 메세지</p>
+                        <div class="inputWrap">
+                            <textarea placeholder="추가 요청사항을 적어주세요."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-btn">
+                    <a href="#" class="comm-btn green-btn">문의하기</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--가입요청 모달-->
+    <div class="modal joinModal">
+        <div class="modal-inner">
+            <div class="modal-text">
+                <p class="title">
+                    로그인이 필요한 페이지입니다.
+                </p>
+                <p class="text">비회원으로 작성 시 입력한 정보를 보실 수 없습니다.</p>
+            </div>
+            <div class="modal-btn">
+                <a href="#" class="comm-btn white-btn close-btn nUser-btn mr10">비회원으로 작성하기</a>
+                <a href="/login" class="comm-btn green-btn ">로그인 하기</a>
+            </div>
+        </div>
+        <div class="join-modal-bg"></div>
+    </div>
+
+    <!--script START-->
+    <script>
+    </script>
+    <!--script END-->
+</div>
+</html>

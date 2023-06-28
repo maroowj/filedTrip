@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/renew/sub_layout_user}"
+      xmlns:th="http://www.thymeleaf.org">
+
+<style layout:fragment="css">
+    input::-webkit-inner-spin-button { appearance: none; -moz-appearance: none; -webkit-appearance: none; }
+</style>
+
+<!-- index_layout_user.html 에 정의한 main page 부분 -->
+<div layout:fragment="content">
+    <div class="subCont loginWrap">
+        <div class="auto pt120 pb120">
+            <div class="login-wrap">
+                <h4>로그인</h4>
+                <div class="sns-wrap">
+                    <p class="snsTitle">SNS 계정 로그인</p>
+
+                    <a class="kakao-btn cupoint" onclick="kakaoLogin();"><i class="fa-solid fa-comment"></i> 카카오톡으로 로그인</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--script START-->
+    <script>
+        Kakao.init('5fb80087ca3d56e255f5cffbf267eed4');
+
+
+        function kakaoLogin() {
+            Kakao.Auth.login({
+                scope: 'profile_nickname,profile_image,account_email,gender,birthday,age_range',
+                success: function () {
+                    Kakao.API.request({
+                        url: '/v2/user/me',
+                        success: function (response) {
+                            let kakaoData = {
+                                age: response.kakao_account.age_range,
+                                birth: response.kakao_account.birthday,
+                                email: response.kakao_account.email,
+                                gender: response.kakao_account.gender,
+                            };
+                            location.href = '/login/kakao?provider=kakao' +
+                                '&sid=' + response.id +
+                                '&nickname=' + response.properties.nickname +
+                                '&thumbnailImageUrl=' + response.properties.thumbnail_image +
+                                '&gender=' + kakaoData.gender +
+                                '&age=' + kakaoData.age +
+                                '&email=' + kakaoData.email +
+                                '&birth=' + kakaoData.birth;
+                        },
+                        fail: function (error) {
+                            console.log(error);
+                        }
+                    })
+                },
+                fail: function (error) {
+                    console.log(error);
+                }
+            })
+        }
+
+    </script>
+    <!--script END-->
+</div>
+</html>

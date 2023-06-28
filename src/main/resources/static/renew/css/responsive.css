@@ -1,0 +1,1072 @@
+@media screen and (max-width: 1480px) {
+    /* ruleset for 1201px - 1480px */
+   
+    /*메인 index*/
+    .headerWrap{height: 70px;}
+    .headerWrap .headerInner{width:94%;}
+    .headerWrap .headerInner .logoWrap a{width: 120px; }
+    .headerWrap .headerInner .menuWrap .menu li a{font-size: 17px; width: 140px;}
+    .headerWrap .headerInner .menuWrap .login-btn{margin-left: 20px; font-size: 15px; width: 100px; height: 35px; line-height: 34px;}
+    .headerWrap .headerInner .menuWrap .mypage-btn img{width: 45px;height: 45px; margin-left: 20px;}
+    .mainFooter p{height: 70px;}
+    
+    .bannerSwiper > ul > li{height: calc(100vh - 140px);}
+    .bannerSwiper > ul > li .textWrap{width: 94%; padding: 0;}
+    .bannerSwiper > ul > li .textWrap .title{font-size: 50px;}
+    .bannerSwiper > ul > li .textWrap .slide-btn{width: 150px; }
+    .bannerSwiper .schBox{width: 94%;}
+    .bannerSwiper .schBox{bottom: 60px;}
+    .bannerSwiper .schBox .diySel .selectBox .optionList{max-height: 80px}
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{bottom: 326px;}
+    .mainFooter p{width: 94%;}
+    
+    
+    /*체험장등록 diy.html*/
+    
+    .auto{width: 94%;}
+    .subCont .titleWrap .title{font-size: 38px;}
+    .timetableWrap div .btnWrap{right:0; top:inherit; bottom:-40px; right:-2vw; transform:inherit; z-index: 99; border:1px solid #d7d7d7; border-radius: 5px; background: #fff; padding: 5px 10px; height:auto;}
+    .timetableWrap div .btnWrap:before{content: ''; width: 0; height: 0; position: absolute; top: -6px; left: 10px; border-left: 6px solid transparent; border-right: 6px solid transparent; border-bottom: 6px solid #d7d7d7;}
+    .timetableWrap div .btnWrap:after{content: ''; width: 0; height: 0; position: absolute; border-left: 6px solid transparent; border-right: 6px solid transparent; border-bottom: 6px solid #fff; top: -5px; left: 10px;}
+    
+    .timetableWrap div .btnWrap li a{width: 28px;height: 28px;}
+    .timetableWrap div .btnWrap li a i{font-size:12px;}
+    
+    
+    /*항공권 inquiry1.html*/
+    
+    .inquiry1-wrap .inquiryCont:after{height: calc(100% - 80px); top:80px;}
+    
+    
+    /*견적요청 trip.html*/
+    .tripWrap .tripList > li a .textBox .title{font-size: 20px;}
+    
+    
+    /*견적요청 상세 tripDetail2.html*/
+    .tripDetail-wrap .tripDetail-box .auto{align-items: flex-start; }
+    .tripDetail-wrap .tripDetail-box .imgWrap{width: 35%;}
+    .tripDetail-wrap .tripDetail-box .textBox{width: calc(65% - 40px);}
+    .tripDetail-wrap .tripDetail-box .textBox .title{font-size: 30px;}
+    
+    .comm-btn{font-size: 15px;}
+    
+    
+    .tripDetail-wrap .trip1-prev .prev-title{font-size: 30px; }
+    .tripDetail-wrap .trip1-prev .prev-title span{font-size: 30px; }
+    .tripDetail-wrap .trip1-prev .prevBox{padding: 20px;}
+    
+    
+    
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    /* ruleset for 1025px - 1200px */
+   
+    /*메인 index*/
+    .bannerSwiper .schBox p.titleWrap{height: 40px; line-height: 39px;}
+    
+    .bannerSwiper .schBox .textWrap .searchBox input{height: 45px;}
+    .bannerSwiper .schBox .diySel .selectBox{height: 45px;}
+    .bannerSwiper .schBox .diySel .search-btn{height: 45px;}
+    .bannerSwiper .schBox .diySel .selectBox .optionList{top:46px;}
+    
+    
+    
+    /*체험장등록 diy.html*/
+    .subCont .titleWrap .title{font-size: 32px;}
+    .subCont .titleWrap .text{margin-top: 8px; font-size: 15px;}
+    .subCont .titleWrap .text span{font-size: 15px;}
+    .diyWrap .selWrap{padding: 20px;}
+    .diyWrap .selWrap .searchBox input{font-size: 15px; height: 45px;}
+    .diyWrap .selWrap .diySel .selectWrap .selectBox{height: 45px;}
+    .diyWrap .selWrap .diySel .selectWrap .selectBox .label{font-size: 15px;}
+    .diyWrap .selWrap .diySel .search-btn{height: 45px; font-size: 15px;}
+    
+    
+    .subCont .pt120{padding-top: 100px !important;}
+    .subCont .pb120{padding-bottom: 100px !important;}
+    .subCont .mt120{margin-top: 100px !important;}
+    .subCont .mb120{margin-bottom: 100px !important;}
+    
+    .diyWrap .stepList li{height: 50px; font-size: 16px;}
+    .diyWrap .stepList li:before{border-bottom-width:24.5px; border-top-width:24.5px; border-left-width: 15px; border-right-width: 15px; right:-30px}
+    .diyWrap .stepList li:after{border-bottom-width:24.5px; border-top-width:24.5px; border-left-width: 15px; border-right-width: 15px; right:-31px;}
+    .diyWrap .stepList li.actived:before{border-left-width: 15px;}
+    .diyWrap .stepList li.actived:after{border-left-width: 15px; right:-30px;}
+    
+    .timetableWrap div .btnWrap{bottom:-38px;}
+    .timetableWrap div .btnWrap li a{width: 26px;height: 26px;}
+    .timetableWrap div .btnWrap li a i{font-size: 10px;}
+    
+    .page-btn a{font-size: 15px;}
+    
+    
+    
+    /*예상견적서 diy2.html*/
+    .diyWrap .numberSel-wrap{padding:30px 20px;}
+    .diyWrap .numberSel-wrap .selectWrap > li.actived .conutText span, .diyWrap .numberSel-wrap .selectWrap > li.count .conutText span{font-size: 15px;}
+    .diyWrap .numberSel-wrap .selectWrap > li .text{font-size: 14px;}
+    
+    .diyWrap .numberSel-wrap .selectWrap > li{height: 45px;}
+    .diyWrap .numberSel-wrap a.comm-btn{height: 45px;}
+    
+    .diyWrap .numberSel-wrap .selectWrap > li .numList{top:50px;}
+    
+    .diy2-tableWrap .page-table1 tr td{height: 45px;}
+    .diy2-tableWrap table td .inputBox input{height: 35px;}
+    .diyWrap .numberSel-wrap .selectWrap > li .numList li{height: 45px;}
+    
+    
+    /*체험장등록 완료 diy3.html*/
+    .diy3-cont {padding: 100px 30px;}
+    .diy3-cont .title{font-size: 32px;}
+    
+    
+    /*항공권 inquiry1.html*/
+    .inquiry1-wrap .inquiryCont .bannerWrap .textWrap .title{font-size: 28px;}
+    .inquiry1-wrap .inquiryCont .bannerWrap .textWrap .text{font-size: 15px;}
+    .inquiry1-wrap .inquriyTable{padding: 20px 40px 60px;}
+    
+    .inquiry1-wrap .inquriyTable div.tableList .title{font-size: 15px;}
+    .inquiry1-wrap .inquriyTable div.tableList .inputWrap .inputBox span{font-size: 15px;}
+    
+    
+    
+    /*견적요청 trip.html*/
+    .tripWrap .tripList > li a .textBox .text li{margin-bottom: 5px;}
+    .tripWrap .tripList > li a .textBox .text li .tit span{font-size: 15px;}
+    .tripWrap .tripList > li a .textBox .text li .info{font-size: 15px;}
+    .tripWrap .tabWrap li a{font-size: 15px;}
+    
+    
+    /*견적요청 상세 tripDetail2.html*/
+    
+    .tripDetail-wrap .tripDetail-box .textBox{width: calc(65% - 30px);}
+    .tripDetail-wrap .tripDetail-box .textBox .title{font-size: 28px;}
+    .tripDetail-wrap .tripDetail-box{background-position: top 50px right -300px;}
+    .tripDetail-wrap .trip1-prev .prev-title{font-size: 28px;}
+    .tripDetail-wrap .trip1-prev .prev-title span{font-size: 28px;}
+    
+    
+    
+    
+}
+
+@media screen and (max-width: 1024px) {
+    /* ruleset for 768px - 1024px */
+   
+    /*메인 index*/
+    .headerWrap .headerInner .menuWrap .menu{display:none;}
+    .headerWrap .headerInner .menuWrap .menuBtn{display:flex; justify-content: space-between; align-items: center; flex-direction: column; width: 35px; height: 25px; margin-left: 20px;}
+    .headerWrap .headerInner .menuWrap .menuBtn span{display:block; width:100%; height: 3px; background: #333; border-radius: 3px;}
+
+    
+    .m-menuWrap{position:absolute; top:0;bottom:0; right:0;z-index: 99999999; width: 0vw; transition: width .3s; display:revert;}
+    .m-menuWrap.actived{width: 100vw;}
+    .m-menuWrap .menuWrap-inner{position:fixed; top:0;bottom:0; right:0; background: #fff; z-index: 999999;transition: width 0.5s; display:inherit; width: 0vw;}
+    .m-menuWrap .menuWrap-inner .titleWrap{display:flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #d7d7d7; height: 70px; padding: 0 20px; opacity: 0; transition: opacity .3s;}
+    .m-menuWrap.actived .menuWrap-inner .titleWrap {opacity: 1}
+    .m-menuWrap.actived .menuWrap-inner{width: 60vw;}
+    .m-menuWrap .menuWrap-inner .titleWrap .profWrap{display:flex; justify-content: flex-start; align-items: center;}
+    
+    .m-menuWrap .menuWrap-inner .titleWrap .profWrap a.profImg{width: 45px;height: 45px;}
+    .m-menuWrap .menuWrap-inner .titleWrap .profWrap a.profImg img{width: 100%; height: 100%; border-radius: 50%; border:1px solid #d7d7d7;}
+    
+    .m-menuWrap .menuWrap-inner .titleWrap .profWrap .infoWrap{display:flex; justify-content: flex-start; align-items: center;margin-left: 10px;}
+    .m-menuWrap .menuWrap-inner .titleWrap .profWrap .infoWrap li a{color: #888;font-size: 14px; letter-spacing: -1px; }
+    .m-menuWrap .menuWrap-inner .titleWrap .profWrap .infoWrap li:first-child a:after{content:''; display:inline-block; margin: 0 10px; width: 1px; height: 10px; background: #d7d7d7;}
+
+    .m-menuWrap .menuWrap-inner .titleWrap .close-btn i{color: #333; font-weight: 900; font-size: 30px;}
+    
+    
+    .m-menuWrap .menuWrap-inner .menuList{ opacity: 0; transition: opacity .3s;}
+    .m-menuWrap.actived .menuWrap-inner .menuList{opacity: 1;}
+    .m-menuWrap .menuWrap-inner .menuList li a{display:flex; justify-content: flex-start; align-items: center; height: 60px; padding: 0 20px; border-bottom: 1px solid #d7d7d7; font-size: 18px; color: #333; font-weight: 700;}
+    
+    
+    .m-menuWrap .menuBg{background:rgba(0,0,0,0.4); position:fixed; top:0; bottom:0; left:0; right:0; z-index: 99999; display:none;}
+    .m-menuWrap.actived .menuBg{display: block;}
+    
+    
+    .bannerSwiper > ul > li .textWrap .title{font-size: 45px;}
+    .bannerSwiper > ul > li .textWrap .text{font-size: 20px;}
+    .bannerSwiper > ul > li .textWrap .slide-btn{font-size: 15px;}
+    .bannerSwiper .schBox p.titleWrap{font-size: 15px; height: 40px;}
+    .bannerSwiper .schBox .textWrap .searchBox input{font-size: 15px;}
+    .bannerSwiper .schBox .diySel .selectBox .label{font-size: 15px;}
+    .bannerSwiper .schBox .diySel .search-btn{font-size: 15px;}
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{bottom: 306px;}
+    
+    .headerWrap .headerInner .menuWrap .mypageMenu-box{top:60px;}
+    .headerWrap .headerInner .menuWrap .mypageMenu-box li a{font-size: 15px; height: 35px; width: 110px;}
+    
+    
+    /*체험장등록 diy.html*/
+    .tableTitle{height: 30px;}
+    .tableTitle .time{width: 32%;}
+    .tableTitle .detail{width: 28%;}
+    .tableTitle .text{width: 40%;}
+    .tableTitle li p{font-size: 14px;}
+    .timetableWrap div .tableText .time {width: 32%;}
+    .timetableWrap div .tableText .detail{width: 28%;}
+    .timetableWrap div .tableText .text{width: 40%;}
+    .timetableWrap div.update .btnWrap li.save{display:none !important;}
+    .timetableWrap div .btnWrap li.reWirte{display:none !important;}
+    
+    .timetableWrap div.update .tableText{padding-right: 75px;}
+    .timetableWrap div .btnWrap{top:50%; bottom:inherit; transform: translateY(-50%); right:0; border:none; }
+    .timetableWrap div .btnWrap:before{display:none;}
+    .timetableWrap div .btnWrap:after{display:none;}
+    .timetableWrap div .btnWrap li a{width: 30px;height: 30px;}
+    .timetableWrap div .btnWrap li a i{font-size: 12px;}
+    
+    
+    .timetableWrap div:hover .btnWrap {display:none;}
+    .timetableWrap div.update .btnWrap {display:flex;}
+    
+    .timetableWrap div .btnWrap li a:hover{background: #fff; border-color:#d7d7d7;}
+    .timetableWrap div .btnWrap li a:hover i{color: #aaa;}
+    
+    .diyWrap .timetableWrap .titleWrap .titleBtn a:hover{background: #33bc65; color: #fff;}
+    
+    .subFooter .footerInner .footerMenu .menuList li a{font-size: 14px;}
+    .subFooter .footerInner .footerMenu .snsList li a{width: 30px;height: 30px;}
+    .subFooter .footerInner .footerMenu .snsList li a i{font-size: 12px;}
+    .subFooter .footerInner .footerMenu .snsList li:nth-child(1) a i{font-size: 14px;}
+    .subFooter .footerInner .footerMenu .snsList li:nth-child(3) a i{font-size: 13px;}
+    
+    .subFooter .footerInner .infoWrap li{font-size: 13px;}
+    .subFooter .footerInner .copyright{font-size: 13px;}
+    
+    /*모달 modal*/
+    .modal .modal-inner{width: 94%;}
+    
+    .modal .modal-inner .modal-title{padding: 0 20px;}
+    .modal .modal-inner .modal-text{padding: 20px;}
+    .modal .modal-inner .modal-btn{padding: 10px 20px;}
+    
+    
+    /*체험장등록 diy.html*/
+    .diyWrap .diy-titleWrap input{font-size: 18px; height: 55px;}
+    
+    /*예상견적서 diy2.html*/
+    .diyWrap .numberSel-wrap{flex-wrap:wrap; padding: 20px;}
+    .diyWrap .numberSel-wrap .selectWrap{flex-wrap:wrap; width: 100%;}
+    .diyWrap .numberSel-wrap .selectWrap > li{height:auto; min-height: 50px; padding: 10px 20px; width: 100%; margin-bottom: 10px; margin-right: 0;}
+    
+    .diyWrap .numberSel-wrap .selectWrap > li.actived{margin-bottom: 110px;}
+    .diyWrap .numberSel-wrap .selectWrap > li.actived .numList{z-index: 99; width: calc(100% + 2px); left:-1px; top:55px; border:1px solid #00ab3e;}
+    
+    .diyWrap .numberSel-wrap a.comm-btn{width: 100%;}
+    
+    .diy2-tableWrap table td.total{font-size: 15px;}
+    
+    
+    
+    /*체험장등록 완료 diy3.html*/
+    .diyWrap3 .print-btn{display:none;}
+    .diyWrap3 .white-btn{border-color:#00ab3e; background: #00ab3e; color: #fff;}
+    
+    
+    
+    /*항공권 inquiry1.html*/
+    .inquiry1-wrap .inquiryCont:after{height: calc(100% - 60px); top:60px;}
+    .inquiry1-wrap .inquiryCont .bannerWrap .textWrap{left:30px;}
+    .inquiry1-wrap .inquiryCont .bannerWrap .textWrap .title{font-size: 24px; margin-bottom: 15px;}
+    .inquiry1-wrap .inquiryCont .bannerWrap .textWrap .text{font-size: 14px;}
+    
+    .inquiry1-wrap .inquriyTable{padding: 10px 20px 40px;}
+    .inquiry1-wrap .inquriyTable div.tableList{margin-top: 30px;}
+    
+    
+    /*차량문의 inquiry2.html*/
+    .inquiry2-wrap .tabWrap li a{font-size: 15px; height: 45px;}
+    .inquiry1-wrap .essentialText{font-size: 13px;}
+    .inquiry2-wrap .titWrap .addBtn p{font-size: 14px;}
+    .inquiry1-wrap .checkWrap5 div:nth-child(1){width: 33.333%;}
+    .inquiry1-wrap .checkWrap5 div:nth-child(2){width: 66.67%;}
+    .inquiry1-wrap .checkWrap5 div:nth-child(1) a{height: 90px;}
+    .inquiry1-wrap .checkWrap5 div:nth-child(2){flex-wrap:wrap;}
+    .inquiry1-wrap .checkWrap5 div:nth-child(2) a{width: 50%;}
+    .inquiry1-wrap .checkWrap5 div:nth-child(2) a:nth-child(2n){border-right: 1px solid #d7d7d7;}
+    .inquiry1-wrap .checkWrap5 div:nth-child(2) a:nth-child(2){border-radius: 0 5px 0 0}
+    .inquiry1-wrap .checkWrap5 div:nth-child(2) a:nth-child(4){border-radius: 0 0 5px 0}
+    .inquiry1-wrap .checkWrap5 div:nth-child(2) a:nth-last-child(-n + 2){border-top: 0;}
+    
+    
+    /*견적요청 trip.html*/
+    .tripWrap .tripList > li{width: 100%; margin-right: 0; margin-bottom: 0;}
+    .tripWrap .tripList > li:nth-last-child(-n + 3){margin-bottom: 0px;}
+    
+    .tripWrap .tripList > li a{display:flex; justify-content: space-between; align-items: center; border:0; border-top:1px solid #d7d7d7; padding: 20px 0; border-radius: 0; box-shadow: none;}
+    .tripWrap .tripList > li:last-child a{border-bottom: 1px solid #d7d7d7; }
+    
+    .tripWrap .tripList > li a .imgWrap{width: 30%;}
+    .tripWrap .tripList > li a .imgWrap img{border-radius: 10px}
+    .tripWrap .tripList > li a:hover{border-color:#d7d7d7;}
+    .tripWrap .tripList > li a:hover .textBox .title{color:#333;}
+    
+    
+    .tripWrap .tripList > li a .textBox{width: calc(70% - 20px); padding: 0 ; background: transparent;}
+    .tripWrap .tripList > li a .textBox .text li .tit span{font-weight: 600;}
+  
+    .tripWrap .tabWrap li a{height: 35px;} 
+    
+    
+    /*예약신청 모달 reservModal*/
+    .page-table2 tr td{height: 40px;}
+    .reservModal .subTitle .course2{display:flex; justify-content: center; align-items: center;}
+    .reservModal .subTitle .course2 p{color: #333; font-weight: 600; font-size: 15px;}
+    .reservModal .subTitle .addBtn-wrap{margin-top: 0; margin-left: 10px;}
+    .reservModal .subTitle .addBtn-wrap a{width: 28px;height: 28px;}
+    .reservModal .subTitle .addBtn-wrap a i{margin-bottom: 0;}
+    
+    
+    
+    /*견적요청 상세 tripDetail2.html*/
+    
+/*
+    .tripDetail-wrap .tripDetail-box .auto{flex-wrap:wrap;}
+    .tripDetail-wrap .tripDetail-box .auto.pt120{padding-top: 30px !important;}
+    .tripDetail-wrap .tripDetail-box .imgWrap{width: 100%;}
+    .tripDetail-wrap .tripDetail-box .imgWrap .img img{border-radius: 10px}
+*/
+    
+    .tripDetail-wrap .tripDetail-box .textBox .text{padding-bottom: 0; margin-bottom: 0; border-bottom: 0;}
+    .tripDetail-wrap .tripDetail-box .auto{position:relative; padding-top: 40px !important; padding-bottom: 233px !important;}
+    .tripDetail1-wrap .tripDetail-box .auto{ padding-bottom: 126px !important;}
+    .tripDetail-wrap .tripDetail-box .auto .m-colWrap{position:absolute; bottom:40px; left:0; width: 100%; margin-top: 20px; padding-top: 20px; border-top: 1px solid #d7d7d7;}
+    
+    .tripDetail-wrap .tripDetail-box .textBox .title{font-size: 26px;}
+    
+    .tripDetail-wrap .trip1-prev .prev-title{font-size: 26px;}
+    .tripDetail-wrap .trip1-prev .prev-title span{font-size: 26px;}
+    
+    .tripDetail-wrap .trip1-prev {border-bottom: 0; padding-bottom: 0; margin-bottom: 60px;}
+    .tripDetail-wrap .trip1-prev .prevBox{padding: 20px 0; border-left:0; border-right: 0; border-radius: 0;}
+    .tripDetail-wrap .trip1-prev .prevBox .imgWrap{width: 200px;}
+    
+    .tripDetail-wrap .trip1-prev .prevBox .textBox{width: calc(100% - 220px);}
+    .tripDetail-wrap .trip1-prev .prevBox .textBox .title{font-size: 20px; margin-bottom: 15px;}
+    .tripDetail-wrap .trip1-prev .prevBox .textBox .text li .tit{width: 65px;}
+    .tripDetail-wrap .trip1-prev .prevBox .textBox .text li .tit span{font-size: 15px;}
+    .tripDetail-wrap .trip1-prev .prevBox .textBox .text li .info{font-size: 15px; width: calc(100% - 75px);}
+    
+    
+    /*로그인 login.html*/
+    .login-wrap h4{font-size: 28px;}
+    .login-wrap .sns-wrap .kakao-btn{font-size: 15px;}
+    
+    
+    /*마이페이지 mypage.html*/
+    .mypageWrap .mypageCont{height: 711px;}
+    .mypageWrap .mypageCont .inqWrap .titleWrap h4{font-size: 26px;}
+    .mypageWrap .mypageCont .profWrap{width: 180px;}
+    
+    .mypageWrap .mypageCont .profWrap .profInfo{padding: 40px 0;}
+    .mypageWrap .mypageCont .profWrap .profInfo img{width: 80px;height: 80px;}
+    
+    .mypageWrap .mypageCont .profWrap .profInfo .name{font-size: 17px; margin-top: 10px;}
+    .mypageWrap .mypageCont .profWrap .profInfo .name span{font-size: 17px;}
+    .mypageWrap .mypageCont .profWrap .profInfo .logoutBtn{height: 30px; font-size: 14px;}
+    .mypageWrap .mypageCont .profWrap .profInfo .logoutBtn:hover{background: #fff;}
+    .mypageWrap .mypageCont .profWrap .menuWrap li a{height: 50px; font-size: 15px;font-weight: 700;}
+    
+    .mypageWrap .mypageCont .inqWrap{width: calc(100% - 180px);}
+    .mypageWrap .mypageCont .inqWrap .titleWrap{padding: 40px 20px 15px;}
+    .mypageWrap .mypageCont .inqWrap .totalWrap{padding: 10px 20px;}
+    .mypageWrap .mypageCont .inqWrap .list li a{padding: 12px 20px; height: 50px;}
+    .mypageWrap .mypageCont .profWrap .menuWrap li a:hover{background: #fff; color: #333; border-color:#d7d7d7;}
+    .mypageWrap .mypageCont .profWrap .menuWrap li a:hover i{color: #aaa; opacity: 1;}
+    .mypageWrap .mypageCont .profWrap .menuWrap li a.actived{background: #00ab3e; border-color:#00ab3e; color: #fff;}
+    .mypageWrap .mypageCont .profWrap .menuWrap li a.actived i{color: #fff; opacity: 0.9;}
+    
+    .mypageWrap .mypageCont .inqWrap .list li a .date{width: 85px;}
+    .mypageWrap .mypageCont .inqWrap .list li a .title{width: calc(100% - 165px); font-size: 15px; margin-right: 20px;}
+    .mypageWrap .mypageCont .inqWrap1 .list li a .title{width: calc(100% - 75px); margin-right: 0;}
+    .mypageWrap .mypageCont .inqWrap .list li a:hover{background: #fff;}
+    
+    .mypageWrap .mypageCont .inqWrap .list li a span.anw{font-size: 13px; height: 24px; font-weight: 500; width: 60px;}
+    
+    
+    .mypageWrap .mypageCont .inqWrap .paging{margin-top: 30px;}
+    .mypageWrap .mypageCont .inqWrap .paging .page-num a:nth-last-child(-n + 5){display:none;}
+    
+    
+    
+    
+    .paging .page-arrow:hover{background: #fff; border-color:#d7d7d7}
+    .paging .page-arrow:hover:before{color: #aaa;}
+    .paging .page-num a:hover{background: #fff; border: none; color: #888;}
+    .paging .page-num a.actived{ background: #00ab3e; border:1px solid #00ab3e; color: #fff;}
+    
+    
+    /*견적요청내역 reserve_update.html*/
+    .reserveDetail-wrap .pc-tableWrap{display:none;}
+    .reserveDetail-wrap .m-tableWrap{display:block;}
+    .reserveDetail-wrap .subTitle .course2{display:flex; justify-content: center; align-items: center;}
+    .reserveDetail-wrap .subTitle .course2 p{color: #333; font-weight: 600; font-size: 15px;}
+    .reserveDetail-wrap .subTitle .addBtn-wrap{margin-top: 0; margin-left: 10px;}
+    .reserveDetail-wrap .subTitle .addBtn-wrap a{width: 28px;height: 28px;}
+    .reserveDetail-wrap .subTitle .addBtn-wrap a i{margin-bottom: 1px;}
+    
+    
+}
+    
+
+
+
+@media screen and (max-width: 767px) {
+    /* ruleset for 481px - 767px */
+   
+    /*메인 index*/
+    .headerWrap{height: 65px;}
+    .headerWrap .headerInner .logoWrap a{width: 110px;}
+    .headerWrap .headerInner .menuWrap .menuBtn{margin-left: 10px; width: 32px;}
+    
+    .headerWrap .headerInner .menuWrap .login-btn{ font-size: 14px; height: 32px; line-height: 32px; width: 80px;}
+    
+    .m-menuWrap.actived .menuWrap-inner{width: 80vw;}
+    .m-menuWrap .menuWrap-inner .titleWrap{height: 65px;}
+    .m-menuWrap .menuWrap-inner .titleWrap .profWrap .infoWrap li a{font-size: 13px;}
+    .m-menuWrap .menuWrap-inner .menuList li a{font-size: 17px;}
+    
+    .bannerSwiper > ul > li{height: calc(100vh  - 130px);}
+    .bannerSwiper > ul > li .textWrap{top:calc(50% - 173px);}
+    .bannerSwiper > ul > li .textWrap .title{font-size: 40px;}
+    .bannerSwiper > ul > li .textWrap .text{font-size: 18px;}
+    .bannerSwiper > ul > li .textWrap .slide-btn{height: 35px;line-height: 35px; width: 130px; font-size: 14px;}
+    
+    
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{bottom:calc(366px + 3vw);}
+    
+    
+    .bannerSwiper .schBox{border-radius: 10px; bottom: 3vw;}
+    .bannerSwiper .schBox p.titleWrap{padding: 0 20px; border-radius: 10px 10px 0 0; font-size: 15px;}
+    .bannerSwiper .schBox .textWrap{padding: 20px;}
+    .bannerSwiper .schBox .diySel{flex-wrap:wrap;}
+    .bannerSwiper .schBox .textWrap .searchBox input{padding-left: 10px; height: 40px; font-size: 15px;}
+    .bannerSwiper .schBox .diySel .selectWrap{flex-wrap:wrap; width: 100%;}
+    .bannerSwiper .schBox .diySel .selectBox{margin-right: 0; width: 100%; margin-bottom: 10px; height: 40px;}
+    .bannerSwiper .schBox .diySel .selectBox .label{padding-left: 10px; font-size: 15px;}
+    .bannerSwiper .schBox .diySel .selectBox .optionList{max-height: 75px;}
+    .bannerSwiper .schBox .diySel .selectBox .optionItem{font-size: 15px; height: 40px;line-height: 40px;}
+    .bannerSwiper .schBox .diySel .search-btn{width: 100%; height: 40px; font-size: 15px;}
+    
+    .mainFooter p{height: 65px; font-size: 12px;}
+    
+    
+    
+    
+    /*체험장등록 diy.html*/
+    .subCont .pt120{padding-top: 80px !important;}
+    .subCont .pb120{padding-bottom: 80px !important;}
+    .subCont .mt120{margin-top: 80px !important;}
+    .subCont .mb120{margin-bottom: 80px !important;}
+    
+    .subCont .titleWrap .title{font-size: 30px;}
+    .subCont .titleWrap .text{font-size: 15px;}
+    
+    
+    .diyWrap .diy-titleWrap input{font-size: 17px; height: 50px; padding:0 15px;}
+    
+    .diyWrap .selWrap{border-radius: 10px; }
+    .diyWrap .selWrap .searchBox input{font-size: 15px; height: 40px; padding-left: 10px;}
+    .diyWrap .selWrap .diySel{flex-wrap:wrap;}
+    .diyWrap .selWrap .diySel .selectWrap{flex-wrap:wrap; width: 100%;}
+    .diyWrap .selWrap .diySel .selectWrap .selectBox{margin-right: 0; width: 100%; height: 40px; margin-bottom: 10px;}
+    .diyWrap .selWrap .diySel .selectWrap .selectBox .label{font-size: 15px; padding-left: 10px; }
+    .diyWrap .selWrap .diySel .selectWrap .selectBox .optionList{top:41px;}
+    .diyWrap .selWrap .diySel .selectWrap .selectBox .optionItem{font-size: 15px;height: 40px !important; line-height: 40px;}
+    .diyWrap .selWrap .diySel .search-btn{height: 40px; font-size: 15px; width: 100%; font-weight: 600;}
+    
+
+    .diyWrap .stepList li{font-size: 15px;}
+
+    .diyWrap .timetableWrap .titleWrap{height: 40px; padding: 0 10px; padding-left: 15px;}
+    .diyWrap .timetableWrap .titleWrap .title p{font-size: 14px;}
+    .diyWrap .timetableWrap .titleWrap .titleBtn a{font-size: 14px;}
+    
+    .tableTitle{display:none;}
+    .timetableWrap div .tableText{ height:100px; align-items: flex-start; padding: 0 5px;}
+    
+    .timetableWrap div .tableText .text{width: calc(100% - 10px); position:absolute; bottom:0; left:50%; transform: translateX(-50%);}
+    .timetableWrap div .tableText .text:before{top:0; width: calc(100% - 20px); height:1px; transform: translateX(-50%); left:50%;}
+    .timetableWrap div .tableText .text:after{display:none;}
+    
+    .timetableWrap div .tableText .time{width: auto; justify-content: flex-start; position:relative;}
+    .timetableWrap div .tableText .time:after{content:''; width: 1px; height:25px; display:inline-block; background: #e7e7e7; position:absolute; top:50%; right:0; transform: translateY(-50%);}
+    
+    .timetableWrap div .tableText .time .selectBox{width: 40px;}
+    .timetableWrap div .tableText .time .selectBox .label{font-size: 15px; padding: 0;}
+    .timetableWrap div .tableText .time .selectBox:first-child .label{justify-content: flex-start;}
+    .timetableWrap div .tableText .time > p{margin: 0 10px; font-size: 14px;}
+    
+    .timetableWrap div .tableText .detail{width:100%;}
+  
+    
+    .timetableWrap div.update .tableText{flex-wrap:wrap; padding-right: 0; height: auto; padding: 10px 0;}
+    .timetableWrap div.update .tableText .time{width:calc(100% - 85px);}
+    .timetableWrap div.update .tableText .time .selectBox{width: 48%;}
+    .timetableWrap div.update .tableText .time .selectBox .label{padding-left: 10px;}
+    .timetableWrap div.update .tableText .time .selectBox:last-child .label{padding-right: 30px;}
+    .timetableWrap div.update .tableText .time > p{margin: 0 5px;}
+    .timetableWrap div.update .tableText .detail{width: 100%;}
+    
+    .timetableWrap div.update .tableText .text{position:inherit; left:0; transform: inherit; width: 100%; position:relative;}
+    .timetableWrap div.update .tableText .text:before{content:'';display:block; width: calc(100% - 20px);height: 1px; background: #e7e7e7; left:50%; transform: translate(-50% , 0);}
+    .timetableWrap div.update .tableText .text:after{content:'';display:block; width: calc(100% - 20px);height: 1px; background: #e7e7e7; top:inherit; bottom:0; left:50%; transform: translate(-50% , 0);}
+    
+    
+    .timetableWrap div .btnWrap{top:10px; transform: inherit; height:50px;}
+    
+    input{font-size: 15px;}
+    .page-btn a{font-size: 15px; font-weight: 700;}
+    
+    .subFooter .footerInner{padding: 20px 0;}
+    .subFooter .footerInner .infoWrap{margin: 15px 0;}
+    .subFooter .footerInner .footerMenu .menuList li a{font-size: 13px;}
+    .subFooter .footerInner .infoWrap li{font-size: 12px; line-height: 1.3;}
+    .subFooter .footerInner .copyright{font-size: 12px;}
+    
+    
+    /*모달 modal*/
+    .modal .modal-inner{border-radius: 10px;}
+    .modal .modal-inner .modal-btn a{ font-size: 14px;}
+    .modal .modal-inner .modal-title{height: 45px;}
+    .modal .modal-inner .modal-title p{font-size: 16px;}
+    
+    /*푸터 modal*/
+    .footerModal .textWrap{padding: 10px; }
+    .footerModal .textWrap p{font-size: 14px; line-height: 1.5;}
+    .footerModal1 .textWrap p.title{font-size: 15px;}
+    .footerModal2 .textWrap p span{font-size: 14px;}
+     
+    .footerModal .textWrap{max-height:calc(100vh - 356px); overflow-y: auto;}
+    
+    
+    /*예상견적서 diy2.html*/
+    .diyWrap .numberSel-wrap{border-radius: 10px;}
+    .diyWrap .numberSel-wrap .selectWrap > li{padding: 5px 10px; min-height: 45px;}
+    .diyWrap .numberSel-wrap .selectWrap > li.actived{margin-bottom: 105px;}
+    .diyWrap .numberSel-wrap .selectWrap > li.actived .numList{top:50px;}
+    
+    .diyWrap .numberSel-wrap .selectWrap > li .title{font-size: 15px;}
+    .diyWrap .numberSel-wrap .selectWrap > li.actived .conutText span, .diyWrap .numberSel-wrap .selectWrap > li.count .conutText span{font-size: 15px;}
+    
+    .diyWrap .numberSel-wrap .selectWrap > li .numList li{padding: 0 10px;}
+    .diyWrap .numberSel-wrap .selectWrap > li .numList li .tit{font-size: 14px;}
+    .diyWrap .numberSel-wrap .selectWrap > li .numList li .countWrap{width: 120px;}
+    .diyWrap .numberSel-wrap .selectWrap > li .numList li .countWrap .inp{font-size: 14px;}
+    .diyWrap .numberSel-wrap .selectWrap > li .numList li.notice{padding: 5px 10px;}
+    .diyWrap .numberSel-wrap .selectWrap > li .numList li .txt{font-size: 14px;}
+    
+    .diyWrap .numberSel-wrap a.comm-btn{font-size: 15px; height: 40px ;font-weight: 600;}
+    
+    
+    .pc-diy2-tableWrap{display:none;}
+    .m-diy2-tableWrap{display:block; margin-top: 30px;}
+    
+    .m-diy2-tableWrap .diy2List{border-radius: 10px; background: #fff; padding: 20px; margin-bottom: 10px;}
+    .m-diy2-tableWrap .diy2List:last-child{margin-bottom: 0;}
+    .m-diy2-tableWrap .diy2List p.title{display:flex; justify-content:space-between; align-items: center; border-bottom: 1px solid #e7e7e7; padding-bottom: 10px;}
+    .m-diy2-tableWrap .diy2List p.title span{color: #00ab3e; font-size: 15px; font-weight: 700; margin-right: 5px;}
+
+    .m-diy2-tableWrap .diy2List .textWrap{display:flex; justify-content: space-between; align-items: center; padding-top: 15px; position:relative;}
+    
+
+    .m-diy2-tableWrap .diy2List .textWrap p.tit{color: #888; font-size: 15px;}
+    .m-diy2-tableWrap .diy2List .textWrap p.txt{color: #888; font-size: 15px;}
+    .m-diy2-tableWrap .diy2List .textWrap.priceWrap{margin-top: 15px; border-top: 1px solid #e7e7e7;}
+    .m-diy2-tableWrap .diy2List .textWrap.priceWrap p.tit{color: #333; font-weight: 800;}
+    .m-diy2-tableWrap .diy2List .textWrap.priceWrap p.txt{color: #333; font-weight: 800;}
+    
+    .m-diy2-tableWrap .diy2List .textWrap .inputWrap{width: 50%; display:flex; justify-content: flex-end; align-items: center;}
+    .m-diy2-tableWrap .diy2List .textWrap .inputWrap input{height: 40px; width: 100%; text-align: right; font-size: 15px; color: #888;}
+    .m-diy2-tableWrap .diy2List .textWrap .inputWrap span{font-size: 15px; color: #888; margin-left: 10px;}
+    
+    .m-diy2-tableWrap .totalWrap{background: #00ab3e; border-radius: 5px;display:flex; justify-content: space-between; align-items: center; padding: 0 20px; height:45px;}
+    .m-diy2-tableWrap .totalWrap .tit{color: #fff; font-weight: 700; font-size: 16px;}
+    .m-diy2-tableWrap .totalWrap .txt{color: #fff; font-weight: 700; font-size: 16px;}
+    
+    .comm-btn{height: 45px;}
+    
+    
+    
+    
+    /*체험장등록 완료 diy3.html*/
+    .diy3-cont{padding: 60px 20px;}
+    .diy3-cont span.icon{width: 65px;height: 65px; border-width: 4px;}
+    .diy3-cont span.icon i{font-size: 32px;}
+    .diy3-cont .title{font-size: 28px;}
+    .diy3-cont .text{font-size: 15px; }
+    .diy3-cont .text a{font-size: 15px; }
+    
+    
+    /*항공권 inquiry1.html*/
+    .inquiry1-wrap .inquiryCont:after{height: calc(100% - 30px); top:30px;}
+    .inquiry1-wrap .inquiryCont .bannerWrap img{border-radius: 10px;}
+    .inquiry1-wrap .inquiryCont .bannerWrap .textWrap{left:20px;}
+    .inquiry1-wrap .inquiryCont .bannerWrap .textWrap .title{font-size: 21px; margin-bottom: 0; font-weight: 700; margin-bottom: 5px; transform: skew(-0.05deg);} 
+    .inquiry1-wrap .inquiryCont .bannerWrap .textWrap .text{display:none;}
+    .inquiry1-wrap .inquiryCont .bannerWrap .textWrap .m-text{display:block; line-height: 1; font-size: 13px;}
+    
+    .inquiry1-wrap .inquriyTable{padding: 30px 20px;}
+    .inquiry1-wrap .inquriyTable div.tableList.form-50{width: 100%; margin-right: 0;}
+    .inquiry1-wrap .inquriyTable div.tableList:first-child{margin-top: 0;}
+    
+    
+    /*차량문의 inquiry2.html*/
+    .inquiry1-wrap .checkWrap5 div:nth-child(1){width: 26%;}
+    .inquiry1-wrap .checkWrap5 div:nth-child(2){width: 74%;}
+    
+    
+    /*견적요청 trip.html*/
+    .tripWrap .tripList > li a{align-items: flex-start;}
+    .tripWrap .tripList > li a .textBox .title{font-size: 18px;}
+    .tripWrap .tabWrap li a{margin: 0 5px; margin-bottom: 10px;}
+    
+    
+    /*예약신청 모달 reservModal*/
+    .reservModal .modal-text{max-height: calc(80vh - 156px)}
+    .reservModal .modal-text .tableWrap table th{line-height: 1.1;}
+    .reservModal .receiptWrap ul li p.tit{width: 70%; word-break: keep-all;}
+    .reservModal .receiptWrap ul li p.price{width: 30%; display:flex; justify-content: flex-end; }
+    
+    
+    /*견적요청 상세 tripDetail2.html*/
+    
+    .tripDetail-wrap .tripDetail-box{background-position: bottom -230px right -260px; background-size: 130%;}
+    .tripDetail-wrap .tripDetail-box .auto{flex-wrap: wrap; padding-top: 30px !important; padding-bottom: 30px !important;}
+    .tripDetail-wrap .tripDetail-box .imgWrap{width: 100%;}
+    .tripDetail-wrap .tripDetail-box .imgWrap .img img{border-radius: 10px;}
+    .tripDetail-wrap .tripDetail-box .textBox{width: 100%; margin-top: 30px;}
+    .tripDetail-wrap .tripDetail-box .textBox .title{font-size: 24px;}
+    .tripDetail-wrap .tripDetail-box .auto .m-colWrap{position:inherit; bottom:inherit; left:inherit; }
+    .tripDetail-wrap .tripDetail-box .textBox .text{margin-top: 15px;}
+    .tripDetail-wrap .tripDetail-box .textBox .text li .tit{width: 65px;}
+    .tripDetail-wrap .tripDetail-box .textBox .text li .tit span{font-size: 15px;}
+    .tripDetail-wrap .tripDetail-box .textBox .text li .info{font-size: 15px; width: calc(100% - 75px);}
+    .tripDetail-wrap .trip1-selBox .selBox-title{font-size: 15px;}
+    
+    .tripDetail-wrap .trip1-prev .prev-title{font-size: 24px;}
+    .tripDetail-wrap .trip1-prev .prev-title span{font-size: 24px;}
+    .tripDetail-wrap .trip1-prev .prevBox{align-items: flex-start; margin-top: 20px;}
+    .tripDetail-wrap .trip1-prev .prevBox .imgWrap{width: 30%}
+    .tripDetail-wrap .trip1-prev .prevBox .textBox{width: calc(70% - 15px);}
+    .tripDetail-wrap .trip1-prev .prevBox .textBox .title{font-size: 18px;}
+    .tripDetail-wrap .trip1-prev .prevBox .textBox .text li{margin-bottom: 8px;}
+    .tripDetail-wrap .trip1-prev .prevBox .textBox .text li .tit{width: 60px;}
+    .tripDetail-wrap .trip1-prev .prevBox .textBox .text li .tit span{font-size: 14px;}
+    
+    .tripDetail-wrap .trip1-prev .prevBox .textBox .text li .info{font-size: 14px; width: calc(100% - 70px);}
+    
+    
+    /*로그인 login.html*/
+    .loginWrap{ min-height: calc(100vh - 392px);}
+    .login-wrap {width: 100%; margin: 0 auto; padding: 60px 40px;}
+    .login-wrap .sns-wrap p.snsTitle{font-size: 14px;}
+    
+    /*마이페이지 mypage.html*/ 
+    .mypageWrap .pt120{padding-top: 60px !important;}
+    .mypageWrap .pb120{padding-bottom: 60px !important;}
+    .mypageWrap .mypageCont{flex-wrap:wrap; height:auto;}
+    .mypageWrap .mypageCont .inqWrap .titleWrap h4{font-size: 24px;}
+    .mypageWrap .mypageCont .profWrap{width: 100%; border-right: 0;}
+    .mypageWrap .mypageCont .profWrap .profInfo{padding: 30px;}
+    .mypageWrap .mypageCont .profWrap .profInfo img{width: 120px;height: 120px;}
+    .mypageWrap .mypageCont .profWrap .menuWrap{display:flex; justify-content: space-between; align-items: center; width: 100%;}
+    .mypageWrap .mypageCont .profWrap .menuWrap li{width: 50%;}
+    .mypageWrap .mypageCont .profWrap .menuWrap li a{border:1px solid #d7d7d7; border-left: 0;  height: 50px; justify-content: center; font-size: 16px;}
+    .mypageWrap .mypageCont .profWrap .menuWrap li:last-child a{border-right: 0;}
+    .mypageWrap .mypageCont .profWrap .menuWrap li a i{display:none;}
+    .mypageWrap .mypageCont .inqWrap{width: 100%; padding-bottom: 20px;}
+    .mypageWrap .mypageCont .inqWrap .titleWrap{padding: 30px 20px 15px;}
+    .mypageWrap .mypageCont .inqWrap .paging{margin: 20px 0 0;}
+    
+    .mypageWrap .mypageCont .inqWrap .list li a .date{font-size: 13px; margin-top: 0; width: 70px;}
+    .mypageWrap .mypageCont .inqWrap .list li a .title{width: calc(100% - 150px);}
+    .mypageWrap .mypageCont .inqWrap1 .list li a .title{width: calc(100% - 70px);}
+    
+    
+    
+    /*견적요청내역 reserve_update.html*/
+    .reserveDetail-wrap .tableWrap table th{line-height: 1.1;}
+    .reserveDetail-wrap .receiptWrap ul li p.tit{width: 70%; word-break: keep-all;}
+    .reserveDetail-wrap .receiptWrap ul li p.price{width: 30%; display:flex; justify-content: flex-end; }
+    
+    .reserveDetail-wrap .answerWrap{padding: 15px;}
+    
+    
+    
+    /*항공권 문의 상세 inquiry1_update.html*/
+    .inquiryUpdate-wrap .tableWrap colgroup col:nth-child(1){width: 30% !important;}
+    .inquiryUpdate-wrap .tableWrap colgroup col:nth-child(2){width: 70% !important;}
+    .inquiryUpdate-wrap .answerWrap{padding: 15px;}
+    
+    
+    
+}
+
+
+
+
+
+
+@media screen and (max-width: 480px) {
+    /* ruleset for 375px - 480px */
+    
+   /*메인 index*/
+    .headerWrap .headerInner .logoWrap a{width: 100px;}
+    .headerWrap .headerInner .menuWrap .menuBtn{height: 23px;}
+    .bannerSwiper > ul > li{height: calc(100vh  - 65px);}
+    .bannerSwiper .schBox p.titleWrap{padding: 0 15px;}
+    .bannerSwiper .schBox .textWrap{padding: 15px;}
+    .bannerSwiper > ul > li .textWrap .title{font-size: 30px;}
+    .bannerSwiper > ul > li .textWrap .text{font-size: 15px;}
+    .bannerSwiper > ul > li .textWrap .slide-btn{margin-top: 20px;}
+    
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{bottom:calc(354px + 3vw);}
+    
+    
+    .m-menuWrap.actived .menuWrap-inner{width: 90vw;}
+    .m-menuWrap .menuWrap-inner .menuList li a{font-size: 16px; height: 55px;}
+    
+    .headerWrap .headerInner .menuWrap .login-btn{height: 30px;line-height: 30px;}
+    
+    
+    
+    
+    /*체험장등록 diy.html*/
+    
+    .subCont .pt120{padding-top: 65px !important;}
+    .subCont .pb120{padding-bottom: 65px !important;}
+    .subCont .mt120{margin-top: 65px !important;}
+    .subCont .mb120{margin-bottom: 65px !important;}
+    
+    .subCont .titleWrap .title{font-size: 26px;}
+    .subCont .titleWrap .text{margin-top: 5px; font-size: 14px;}
+    
+    .diyWrap .diy-titleWrap{margin-top: 20px;}
+    .diyWrap .diy-titleWrap input{font-size: 16px; font-weight: 800; height: 45px;}
+    .diyWrap .selWrap{padding: 15px; margin-top: 20px;}
+    
+    .diyWrap .selWrap .searchBox input{font-size: 14px;}
+    .diyWrap .selWrap .diySel .selectWrap .selectBox .label{font-size: 14px;}
+    .diyWrap .selWrap .diySel .selectWrap .selectBox .optionItem{font-size: 14px;}
+    .diyWrap .selWrap .diySel .search-btn{font-size: 14px;}
+    
+    .diyWrap .stepList{margin-top: 20px;}
+    .diyWrap .stepList li{font-size: 14px; height: 45px;}
+    .diyWrap .stepList li:before{border-bottom-width:22px; border-top-width:22px;}
+    .diyWrap .stepList li:after{border-bottom-width:22px; border-top-width:22px;}
+    
+    .timetableWrap div .tableText .time .selectBox{width: 37px;}
+    .timetableWrap div .tableText .time .selectBox .label{font-size: 14px;}
+    .timetableWrap div .tableText li input{font-size: 14px;}
+    input{font-size: 14px;}
+    
+    .diyWrap .timetableWrap{margin-top: 20px;}
+    
+    .subCont .page-btn{margin-top: 40px;}
+    .page-btn a{width: 100%; font-size: 14px; height: 45px;}
+
+    
+    /*모달 modal*/
+    .modal .modal-inner{border-radius: 10px;}
+    .modal .modal-inner .modal-btn a{ font-size: 14px;}
+    .modal .modal-inner .modal-title{height: 45px; padding: 0 15px;}
+    .modal .modal-inner .modal-title p{font-size: 16px; font-weight: 600;}
+    
+    .modal .modal-inner .modal-text{padding: 15px;}
+    .modal .modal-inner .modal-btn{padding: 10px 15px;}
+    
+    .modal .modal-inner .modal-btn a{height: 40px;}
+    
+    
+    
+    /*예상견적서 diy2.html*/
+    .diyWrap .numberSel-wrap{margin-top: 20px; padding: 15px;}
+    .diyWrap .numberSel-wrap .selectWrap > li .title{font-size: 14px;}
+    .diyWrap .numberSel-wrap .selectWrap > li.actived .conutText span, .diyWrap .numberSel-wrap .selectWrap > li.count .conutText span{font-size: 14px;}
+    .diyWrap .numberSel-wrap a.comm-btn{font-size: 14px;}
+    
+    .m-diy2-tableWrap .diy2List p.title span{font-size: 14px;}
+    .m-diy2-tableWrap .diy2List .textWrap{padding-top: 12px;}
+    .m-diy2-tableWrap .diy2List .textWrap p.tit{font-size: 14px;}
+    .m-diy2-tableWrap .diy2List .textWrap p.txt{font-size: 14px;}
+    .m-diy2-tableWrap .diy2List .textWrap .inputWrap input{height: 35px; font-size: 14px;}
+    .m-diy2-tableWrap .diy2List .textWrap .inputWrap span{font-size: 14px; margin-left: 5px;}
+    .m-diy2-tableWrap .totalWrap{height: 40px;}
+    .m-diy2-tableWrap .totalWrap .tit{font-size: 15px;}
+    .m-diy2-tableWrap .totalWrap .txt{font-size: 15px;}
+    
+    
+    /*체험장등록 완료 diy3.html*/
+    .diy3-cont{padding: 50px 20px 60px; margin-top: 20px;}
+    .diy3-cont span.icon{width: 60px;height: 60px;}
+    .diy3-cont span.icon i{font-size: 30px;}
+    .diy3-cont .title{font-size: 24px;}
+    .diy3-cont .text{font-size: 14px; word-break: keep-all;}
+    .diy3-cont .text a{font-size: 14px;}
+    
+    
+    
+    /*항공권 inquiry1.html*/
+    .inquiry1-wrap .inquiryCont{margin-top: 20px;}
+    
+    .inquiry1-wrap .inquiryCont .bannerWrap .textWrap .title{font-size: 17px; font-weight: 700; margin-bottom: 0; margin-top: 4px; line-height: 1;}
+    .inquiry1-wrap .inquiryCont .bannerWrap .textWrap .m-text{display:none;}
+    
+    .inquiry1-wrap .essentialText{margin-top: 20px; }
+    .inquiry1-wrap .inquriyTable div.tableList .title{ margin-bottom: 5px;}
+    .inquiry1-wrap .inquriyTable div.tableList .inputWrap input{height: 40px; font-size: 14px;}
+    
+    .inquiry1-wrap .inquriyTable div.tableList .inputWrap .selectBox{height: 40px;}
+    .inquiry1-wrap .inquriyTable div.tableList .inputWrap .selectBox .label{font-size: 14px;}
+    .inquiry1-wrap .inquriyTable div.tableList .inputWrap .selectBox .optionList{top:40px;}
+    .inquiry1-wrap .inquriyTable div.tableList .inputWrap .selectBox .optionItem{height: 40px; line-height: 40px; font-size: 14px;}
+    .inquiry1-wrap .inquriyTable div.tableList .inputWrap .inputBox span{font-size: 14px;}
+    
+    
+    
+    /*차량문의 inquiry2.html*/
+    .inquiry2-wrap .tabWrap li a{height: 40px;}
+    .inquiry2-wrap .titWrap .addBtn span{width: 18px;height: 18px;}
+    .inquiry2-wrap .titWrap .addBtn span{font-size: 13px;}
+    .inquiry2-wrap .inquriyTable .tableList .selectTab li a{height: 40px; font-size: 14px;}
+    .inquiry1-wrap .checkWrap2{flex-wrap: wrap;}
+    .inquiry1-wrap .checkWrap2 li{width: 100%;}
+    .inquiry1-wrap .checkWrap2 li a{height: 40px; font-size: 14px; border-right: 1px solid #d7d7d7; margin-top: 5px;}
+    .inquiry1-wrap .checkWrap2 li:first-child a{border-radius: 5px; margin-top: 0;}
+    .inquiry1-wrap .checkWrap2 li:last-child a{border-radius: 5px; }
+    
+    .inquiry1-wrap .checkWrap5 {flex-wrap:wrap;}
+    .inquiry1-wrap .checkWrap5 div:nth-child(1){width: 100%;}
+    .inquiry1-wrap .checkWrap5 div:nth-child(2){width: 100%;}
+    .inquiry1-wrap .checkWrap5 div a{width: 100% !important; height: 40px !important; border-radius: 5px !important; border-right: 1px solid #d7d7d7; border-top:1px solid #d7d7d7 !important; font-size: 14px; margin-top: 5px;}
+    
+    .inquiry1-wrap .inquriyTable div.tableList .inputWrap textarea{font-size: 14px;}
+    
+    
+    /*여행자보험 inquiry3.html*/
+    .inquiry3-wrap .tableList .tripSel li{font-size: 14px;height: 40px;}
+    .inquiry3-wrap .tableList .tripChk li{font-size: 14px;height: 40px;}
+    
+    
+    
+    /*견적요청 trip.html*/
+    
+    .subCont .titleWrap .text span{font-size: 14px;}
+    .tripWrap .tripList > li a .textBox{width: calc(70% - 15px);}
+    .tripWrap .tripList > li a .textBox .text{margin-top: 10px;}
+    .tripWrap .tripList > li a .textBox .text li .tit{font-size: 14px; width: 60px;}
+    .tripWrap .tripList > li a .textBox .text li .info{font-size: 14px; width: calc(100% - 70px);}
+    .tripWrap .tripList > li a .imgWrap img{border-radius: 5px;}
+    
+    
+    /*예약신청 모달 reservModal*/
+    
+    .reservModal .modal-text .tableWrap table th{font-size: 14px;}
+    .reservModal .modal-text .tableWrap table td input{font-size: 14px;}
+    .reservModal .modal-text .tableWrap table td select{font-size: 14px;}
+    .page-table2 tr td p{font-size: 14px;}
+    
+    .reservModal .modal-text .tableWrap table td .dateWrap .datepickerWrap{width: 65%;}
+    .reservModal .modal-text .tableWrap table td .dateWrap select{width: 35%;}
+    
+    .reservModal .tableWrap2 table td .radioWrap label{font-size: 14px;}
+    .reservModal .tableWrap2 table td .program-detail li .title{width: 60px; padding: 0 5px; height: 24px;}
+
+    .reservModal .tableWrap2 table td .program-detail li .text{width: calc(100% - 70px);}
+    
+
+    .reservModal .subTitle{font-size: 14px;}
+    .reservModal .subTitle .course2 p{font-size: 14px;}
+    .reservModal .tableWrap2 table td .totalWrap .totalTitle{padding: 0 5px; width: 90px; font-size: 13px; height: 24px;}
+    .reservModal .tableWrap2 table td .totalWrap p.text{font-size: 14px; width: calc(100% - 100px);}
+    .reservModal .tableWrap2 table td .phoneWrap span{font-size: 14px; margin: 0 5px;}
+    .reservModal .tableWrap2 table td p.noti{font-size: 13px;}
+    
+    .reservModal .tableWrap2 table td .carWrap select{width: 60%;}
+    .reservModal .tableWrap2 table td .carWrap .inputWrap{width: 40%;}
+    .reservModal .tableWrap2 table td textarea{font-size: 14px;}
+    .reservModal .tableWrap2 table td .checkWrap label{font-size: 14px;}
+    .reservModal .tableWrap2 table td .numWrap p{margin-left: 5px;}
+    .reservModal .tableWrap2 table td .carWrap .inputWrap p{margin-left: 5px;}
+    .reservModal .subTitle .addBtn-wrap a i{margin-bottom: 1px;}
+    
+    .reservModal .receiptWrap p.title{font-size: 14px; padding: 0 15px;}
+    .reservModal .receiptWrap ul{padding: 15px;}
+    .reservModal .receiptWrap ul li p{font-size: 14px;}
+    
+    
+    
+    
+    /*견적요청 상세 tripDetail2.html*/
+    .tripDetail-wrap .tripDetail-box .auto{padding-top: 20px !important; padding-bottom: 20px !important;}
+    .tripDetail-wrap .tripDetail-box .textBox{margin-top: 20px;}
+    .tripDetail-wrap .tripDetail-box .textBox .title{font-size: 22px;}
+    .tripDetail-wrap .trip1-prev .prev-title{font-size: 22px;}
+    .tripDetail-wrap .trip1-prev .prev-title span{font-size: 22px;}
+    .tripDetail-wrap .tripDetail-box .textBox .text li{margin-bottom: 8px;}
+    .tripDetail-wrap .trip1-prev{margin-bottom: 30px;}
+    .tripDetail-wrap .trip1-prev .prevBox{margin-top: 10px;}
+    .tripDetail-wrap .trip1-prev .prevBox .textBox .title{margin-bottom: 10px;}
+    .tripDetail-wrap .trip1-prev .prevBox .textBox .text li{margin-bottom: 5px;}
+    
+    .tripDetail-wrap .trip1-selBox .selectBox{height: 40px; font-size: 14px;}
+    .tripDetail-wrap .trip1-selBox .selectBox .label{font-size: 14px;}
+    .tripDetail-wrap .trip1-selBox .selectBox.active .optionList{top:40px;}
+    
+    .tripDetail-wrap .trip1-selBox .selectBox .optionItem{font-size: 14px; height: 40px; line-height: 40px;}
+    .comm-btn{ font-size: 14px;}
+    
+    
+    
+    
+    /*로그인 login.html*/
+    .loginWrap{ min-height: calc(100vh - 400px);}
+    .login-wrap{border-radius: 10px; padding:60px 20px;}
+    .login-wrap h4{font-size: 24px; }
+    .login-wrap .sns-wrap{margin-top: 40px;}
+    .login-wrap .sns-wrap .kakao-btn{height: 45px; font-size: 14px; border-radius: 5px; margin-top: 15px;}
+    
+    
+    
+    /*마이페이지 mypage.html*/
+    .mypageWrap .pt120{padding-top: 40px !important;}
+    .mypageWrap .pb120{padding-bottom: 40px !important;}
+    .mypageWrap .mypageCont .profWrap .profInfo img{width: 80px;height: 80px;}
+    .mypageWrap .mypageCont .profWrap .profInfo .name{font-size: 16px;}
+    .mypageWrap .mypageCont .profWrap .profInfo .name span{font-size: 16px; font-weight: 900;}
+    .mypageWrap .mypageCont .profWrap .profInfo .logoutBtn{width: 120px; font-size: 13px;}
+    .mypageWrap .mypageCont .profWrap .menuWrap li a{height: 45px; font-size: 14px; padding: 0 5px; font-weight: 800;}
+    .mypageWrap .mypageCont .inqWrap .totalWrap{padding: 10px;}
+    .mypageWrap .mypageCont .inqWrap .titleWrap{padding: 30px 10px 10px;}
+    .mypageWrap .mypageCont .inqWrap .titleWrap h4{font-size: 20px; font-weight: 800;}
+    .mypageWrap .mypageCont .inqWrap .totalWrap .total{font-size: 13px;}
+    
+    .mypageWrap .mypageCont .inqWrap .list li a{padding: 10px;}
+    .mypageWrap .mypageCont .inqWrap .list li a .date{font-size: 12px; width: 70px; font-weight: 600;}
+    .mypageWrap .mypageCont .inqWrap .list li a .title{width: calc(100% - 140px); font-size: 14px; font-weight: 800; margin-right: 10px;}
+    .mypageWrap .mypageCont .inqWrap1 .list li a .title{width: calc(100% - 70px); margin-right: 0;}
+    
+    .mypageWrap .mypageCont .inqWrap .list li a span.anw{font-size: 12px; height: 24px; width: 60px;}
+    
+    .paging .page-arrow{width: 32px;height: 32px;}
+    .paging .page-num a{width: 32px;height: 32px; font-size: 13px;}
+    
+    
+    /*견적요청내역 reserve_update.html*/
+    .reserveDetail-wrap .tableWrap{margin-top: 20px;}
+    .reserveDetail-wrap .tableWrap table tr td .dateWrap .datepickerWrap{width: 65%;}
+    .reserveDetail-wrap .tableWrap table tr td .dateWrap select{width: 35%;}
+    .reserveDetail-wrap .tableWrap table th{font-size: 14px;}
+    .reserveDetail-wrap .tableWrap table td input{font-size: 14px;}
+    .reserveDetail-wrap .tableWrap table td select{font-size: 14px;}
+
+    .reserveDetail-wrap .tableWrap2 table td .radioWrap label{font-size: 14px;}
+    .reserveDetail-wrap .tableWrap2 table td .program-detail li .title{width: 60px; padding: 0 5px; height: 24px;}
+
+    .reserveDetail-wrap .tableWrap2 table td .program-detail li .text{width: calc(100% - 70px);}
+    
+    
+    .reserveDetail-wrap .subTitle{font-size: 14px;}
+    .reserveDetail-wrap .subTitle .course2 p{font-size: 14px;}
+    .reserveDetail-wrap .tableWrap2 table td .totalWrap .totalTitle{padding: 0 5px; width: 90px; font-size: 13px; height: 24px;}
+    .reserveDetail-wrap .tableWrap2 table td .totalWrap p.text{font-size: 14px; width: calc(100% - 100px);}
+    .reserveDetail-wrap .tableWrap2 table td .phoneWrap span{font-size: 14px; margin: 0 5px;}
+    .reserveDetail-wrap .tableWrap2 table td p.noti{font-size: 13px;}
+    
+    .reserveDetail-wrap .tableWrap2 table td .carWrap .selectBox{width: 60%;}
+    .reserveDetail-wrap .tableWrap2 table td .carWrap .inputWrap{width: 40%;}
+    .reserveDetail-wrap .tableWrap2 table td textarea{font-size: 14px;}
+    .reserveDetail-wrap .tableWrap2 table td .checkWrap label{font-size: 14px;}
+    .reserveDetail-wrap .tableWrap2 table td .numWrap p{margin-left: 5px;}
+    .reserveDetail-wrap .tableWrap2 table td .carWrap .inputWrap p{margin-left: 5px;}
+    .reserveDetail-wrap .subTitle .addBtn-wrap a i{margin-bottom: 1px;}
+    
+    .reserveDetail-wrap .receiptWrap p.title{font-size: 14px; padding: 0 15px;}
+    .reserveDetail-wrap .receiptWrap ul{padding: 15px;}
+    .reserveDetail-wrap .receiptWrap ul li p{font-size: 14px;}
+    
+    
+    .reserveDetail-wrap .selectBox{width: 100%; height: 40px;}
+    .reserveDetail-wrap .selectBox .label{font-size: 14px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
+    .reserveDetail-wrap .selectBox .optionList{top:40px;}
+    .reserveDetail-wrap .selectBox .optionItem{height: 40px;line-height: 40px; font-size: 14px;}
+    
+    
+    .reserveDetail1-wrap .page-table2 tr td{font-size: 14px;}
+    
+    .reserveDetail-wrap .answerWrap{margin-top: 20px;}
+    .reserveDetail-wrap .answerWrap p{font-size: 14px;}
+    
+    
+    /*항공권 문의 상세 inquiry1_update.html*/
+    .inquiryUpdate-wrap .tabWrap{margin-top: 20px;}
+    .inquiryUpdate-wrap .tableWrap{margin-top: 20px;}
+    .inquiryUpdate-wrap .tableWrap table th{font-size: 14px; font-weight: 700;}
+    .inquiryUpdate-wrap .dateWrap .datepickerWrap{width: 65%;}
+    .inquiryUpdate-wrap .dateWrap .selectBox{width: 45%;}
+    
+    .inquiryUpdate-wrap .tableWrap table td{font-size: 14px;}
+    .inquiryUpdate-wrap .tableWrap table td input{font-size: 14px;}
+    .inquiryUpdate-wrap .tableWrap table td .selectBox .label{font-size: 14px;}
+    .inquiryUpdate-wrap .tableWrap table td .selectBox .optionItem{font-size: 14px;}
+    .inquiryUpdate-wrap .inputBox span{font-size: 14px;}
+    
+    .inquiryUpdate-wrap .answerWrap{margin-top: 20px;}
+    .inquiryUpdate-wrap .answerWrap p{font-size: 14px;}
+    
+    
+    .inquiryUpdate-wrap.inquiry2-wrap .titWrap .addBtn p{font-size: 13px;}
+    .inquiryUpdate-wrap .flexWrap-start label{font-size: 14px;}
+    .inquiryUpdate-wrap table th .sTxt{font-size: 13px;}
+    .inquiryUpdate-wrap table td textarea{font-size: 14px;}
+    .inquiry2-wrap .placeWrap textarea{font-size: 14px;}
+    
+    .inquiryUpdate-wrap .listWrap p{font-size: 14px;}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

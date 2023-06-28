@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/default_layout}"
+      xmlns:th="http://www.thymeleaf.org">
+
+<style layout:fragment="css">
+    #memberList td.add-d-flex{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #memberList span.user{
+        max-width: calc(100% - 70px);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+    }
+    #memberList span.kakao{
+        background-color: var(--kakao);
+        border-radius: 4px;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        margin-left: 8px;
+    }
+    #memberList span.kakao i{
+        display: inline-block;
+        width: 10.71px;
+        height: 10px;
+        background: url('/images/logo/logo_kakao.svg') no-repeat;
+        background-size: 10.71px 10px;
+    }
+    #memberList span.facebook{
+        background-color: var(--facebook);
+        border-radius: 4px;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        margin-left: 8px;
+    }
+    #memberList span.facebook i{
+        display: inline-block;
+        width: 5.56px;
+        height: 10px;
+        background: url('/images/logo/logo_facebook.svg') no-repeat;
+        background-size: 5.56px 10px;
+    }
+    .search-wrap {
+        position: relative;
+        /*padding: 15px 47px 15px 30px;*/
+        padding: unset;
+        margin-bottom: 15px;
+        /*border-bottom: 1px solid var(--light-grey2);*/
+    }
+    .search-wrap > input{
+        width: 100%;
+        height: 50px;
+        border: 1px solid var(--light-grey2);
+        background: var(--light-grey1);
+        border-radius: 5px;
+        padding: 0 50px 0 20px;
+        font-size: 15px;
+    }
+    .search-wrap .search-icon {
+        position: absolute;
+        right: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 50px;
+        text-align: center;
+        font-size: 20px;
+    }
+    .company-table .select-box {
+        position: relative;
+        margin-left: 20px;
+        width: 150px;
+    }
+    .company-table .select-box select {
+        border: 1px solid #e5e5e5;
+        border-radius: 5px;
+        height: 35px;
+        line-height: 34px;
+        padding: 0 10px;
+        cursor: pointer;
+        appearance: none;
+    }
+    .company-table .select-box:after {
+        content: '\f0d7';
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 900;
+        font-family: "Font Awesome 6 Pro";
+        color: #666;
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translate(-50%,-50%);
+        cursor: pointer;
+    }
+    .modal textarea {
+        border: 1px solid #e5e5e5;
+        border-radius: 5px;
+        height: 200px;
+        padding: 10px;
+        width: 100%;
+        resize: none;
+        font-size: 15px;
+        margin-top: 30px;
+    }
+    .course-detail select{
+        background: transparent;
+        border: unset;
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 30px;
+        color: #333;
+    }
+</style>
+
+<div layout:fragment="content">
+
+    <main role="main" class="main-content">
+        <script>
+            const main_menu = 7;
+        </script>
+
+        <!--컨텐츠 영역-->
+        <div class="contents">
+            <div class="admin-contents-title">
+                <h3 class="admin-title">문의 관리</h3>
+            </div><!--admin-contents-title-->
+
+            <div class="course2-list-wrap">
+                <!--검색-->
+                <div class="search-wrap">
+                    <input type="text" placeholder="문의 검색" class="keyword" onkeyup="getCompanyList($(this).val())">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                </div>
+
+                <div class="company-table course2-table">
+                    <div class="admin-table-title-wrap">
+                        <div class="admin-table-title">
+                            <p class="title">전체</p>
+                            <p class="detail-text">문의 리스트</p>
+                            <div class="select-box ">
+                                <select id="courseType w100pro" style="width: 100%">
+                                    <option value="전체" selected>전체</option>
+                                    <option value="차량">차량</option>
+                                    <option value="항공권">항공권</option>
+                                    <option value="여행자보험">여행자보험</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="reserve-check-btn">
+                            <!--<a class="blue-btn cupoint">선택한 문의 답변</a>-->
+                            <!--<a class="s-blue-btn cupoint">선택한 문의 답변 수정</a>-->
+                            <a class="gray-btn cupoint">선택한 문의 삭제</a>
+                        </div>
+                    </div>
+
+                    <!--table START-->
+                    <table class="admin-table">
+                        <colgroup>
+                            <col style="width:4%">
+                            <col style="width:6%">
+                            <col style="">
+                            <col style="">
+                            <col style="width:12%">
+                            <col style="width:12%">
+                            <col style="width:12%">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th class="after-none"><input type="checkbox" class="all-check"></th>
+                            <th>번호</th>
+                            <th>카테고리</th>
+                            <th>제목</th>
+                            <th>작성자</th>
+                            <th>날짜</th>
+                            <th>답변여부</th>
+                        </tr>
+                        </thead>
+                        <!--<tbody id="companyCourseList"></tbody>-->
+                        <tbody id="qnaList">
+                        <tr>
+                            <td><input type='checkbox' class='checked'></td>
+                            <td class="info">1</td>
+                            <td class="info">항공권</td>
+                            <td class="info">문의제목</td>
+                            <td class="info">작성자명</td>
+                            <td class="info">22-00-00</td>
+                            <td class="info"><span class='reserve-state r-state4'>답변대기</span></td>
+                        </tr>
+                        <tr>
+                            <td><input type='checkbox' class='checked'></td>
+                            <td class="info">1</td>
+                            <td class="info">항공권</td>
+                            <td class="info">문의제목</td>
+                            <td class="info">작성자명</td>
+                            <td class="info">22-00-00</td>
+                            <td class="info"><span class='reserve-state r-state3'>답변완료</span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <div id="pagination"></div>
+                </div><!--company-table-->
+            </div>
+
+        </div><!--contents-->
+
+        <!--코스 상세보기 MODAL START-->
+        <div id="course-modal" class="modal admin-modal course-modal" style="display: block">
+            <div class="modal-wrap">
+                <div class="modal-title-wrap">
+                    <p class="title">문의정보</p>
+                    <i class="fa-solid fa-xmark close"></i>
+                </div>
+
+                <div class="modal-text-wrap">
+                    <div class="course-detail-wrap">
+                        <div class="course-detail w100pro">
+                            <!--카테고리 정보: option정보에 따라 카테고리별 테이블 내용 다르게 나타나기-->
+                            <select class="category" disabled>
+                                <option value="여행자 보험" selected>여행자 보험</option>
+                                <option value="차량">차량</option>
+                                <option value="항공권">항공권</option>
+                            </select>
+
+                            <!--작성자 정보-->
+                            <table class="date-table modal-table">
+                                <colgroup>
+                                    <col style="width:140px">
+                                    <col style="width:calc(50% - 70px)">
+                                    <col style="width:140px">
+                                    <col style="width:calc(50% - 140px)">
+                                </colgroup>
+                                <tbody>
+                                <tr>
+                                    <th>작성자명</th>
+                                    <td>
+                                        <div class="d-flex-wrap reservation-date">
+                                            김미
+                                        </div>
+                                    </td>
+                                    <th class="b-left">아이디</th>
+                                    <td>
+                                        <div class="d-flex-wrap booking-status">
+                                            kimee@kakao.com
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>연락처</th>
+                                    <td colspan="3">
+                                        <div class="d-flex-wrap reservation-date">
+                                            010-0000-0000
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>이메일</th>
+                                    <td colspan="3">
+                                        <div class="d-flex-wrap reservation-date">
+                                            email@email.com
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!--여행자보험의 경우 type1-->
+                                <table class="type1 reserve-table modal-table d-none">
+                                    <colgroup>
+                                        <col style="width:140px">
+                                        <col style="width:calc(50% - 70px)">
+                                        <col style="width:140px">
+                                        <col style="width:calc(50% - 140px)">
+                                    </colgroup>
+                                    <tbody>
+                                    <tr>
+                                        <th>가입단체명 또는<br>여행사명</th>
+                                        <td colspan="3">
+                                            <div class="d-flex-wrap reservation-date">
+                                                가입단체명 이름
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>여행선택</th>
+                                        <td colspan="3">
+                                            <div class="d-flex-wrap reservation-date">
+                                                국내여행
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>국내여행인경우<br>(사망 1억원 보상)</th>
+                                        <td colspan="3">
+                                            <div class="d-flex-wrap reservation-date">
+                                                A1
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>인원</th>
+                                        <td colspan="3">
+                                            <div class="d-flex-wrap reservation-date">
+                                                10명
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>출발날짜</th>
+                                        <td colspan="3">
+                                            <div class="d-flex-wrap reservation-date">
+                                                2022-10-07 10:00
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>도착날짜</th>
+                                        <td colspan="3">
+                                            <div class="d-flex-wrap reservation-date">
+                                                2022-10-09 17:00
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                                <!--차량의 경우 type2-->
+                                <table class="type2 reserve-table modal-table d-none">
+                                    <colgroup>
+                                        <col style="width:140px">
+                                        <col style="width:calc(50% - 70px)">
+                                        <col style="width:140px">
+                                        <col style="width:calc(50% - 140px)">
+                                    </colgroup>
+                                    <tbody>
+                                    <tr>
+                                        <th>구분</th>
+                                        <td colspan="3">
+                                            <div class="d-flex-wrap reservation-date">
+                                                왕복
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>출발지</th>
+                                        <td colspan="3">
+                                            <div class="d-flex-wrap reservation-date">
+                                                출발 경로
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>목적지</th>
+                                        <td colspan="3">
+                                            <div class="d-flex-wrap reservation-date">
+                                                목적지 경로
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>경유지</th>
+                                        <td colspan="3">
+                                            <div class="d-flex-wrap reservation-date">
+                                                모든 경유 내용
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>출발날짜</th>
+                                        <td colspan="3">
+                                            <div class="d-flex-wrap reservation-date">
+                                                2022-10-07 10:00
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>도착날짜</th>
+                                        <td colspan="3">
+                                            <div class="d-flex-wrap reservation-date">
+                                                2022-10-07 10:00
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>기사님 동행여부</th>
+                                        <td colspan="3">
+                                            <div class="d-flex-wrap reservation-date">
+                                                전체일정 동행
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>전체 일정 작성</th>
+                                        <td colspan="3">
+                                            <div class="d-flex-wrap reservation-date">
+                                                전체일정 내용
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>인원</th>
+                                        <td colspan="3">
+                                            <div class="d-flex-wrap reservation-date">
+                                                100명
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>이용목적</th>
+                                        <td colspan="3">
+                                            <div class="d-flex-wrap reservation-date">
+                                                이용목적 내용
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>카드결제 및 영수증</th>
+                                        <td colspan="3">
+                                            <div class="d-flex-wrap reservation-date">
+                                                세금계산서 및 현금영수증 발행
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>선호하는 버스<br>(여러개 선택 가능)</th>
+                                        <td colspan="3">
+                                            <div class="d-flex-wrap reservation-date">
+                                                세금계산서 및 현금영수증 발행
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>추가 메세지</th>
+                                        <td colspan="3">
+                                            <div class="d-flex-wrap reservation-date">
+                                                추가 요청사항 내용
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                                <!--항공권의 경우 type3-->
+                                <table class="type3 reserve-table modal-table">
+                                    <colgroup>
+                                        <col style="width:140px">
+                                        <col style="width:calc(50% - 70px)">
+                                        <col style="width:140px">
+                                        <col style="width:calc(50% - 140px)">
+                                    </colgroup>
+                                    <tbody>
+                                    <tr>
+                                        <th>출발날짜</th>
+                                        <td colspan="3">
+                                            <div class="d-flex-wrap reservation-date">
+                                                2022-10-07 10:00
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>도착날짜</th>
+                                        <td colspan="3">
+                                            <div class="d-flex-wrap reservation-date">
+                                                2022-10-09 17:00
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>구간1</th>
+                                        <td colspan="3">
+                                            <div class="d-flex-wrap reservation-date">
+                                                구간
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>구간2</th>
+                                        <td colspan="3">
+                                            <div class="d-flex-wrap reservation-date">
+                                                구간
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>항공사</th>
+                                        <td colspan="3">
+                                            <div class="d-flex-wrap reservation-date">
+                                                전체
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>요청인원</th>
+                                        <td colspan="3">
+                                            <div class="d-flex-wrap reservation-date">
+                                                10명
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                </tbody>
+                                <textarea placeholder="답변 내용을 입력해주세요."></textarea>
+                            </table>
+                            <!--사용자 정보 table END-->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-bottom">
+                    <a class="modal-btn close-btn cupoint">닫기</a>
+                    <a class="modal-btn reserve-btn cupoint" onclick="">답변하기</a>
+                </div>
+            </div><!--modal-wrap-->
+            <div class="modal-bg-cover"></div>
+        </div>
+
+    </main>
+
+    <script th:inline="javascript">
+        let page=1;
+
+        $(function(){
+            let pp = [[${param.pp}]];
+            if(pp!=null) {
+                let keyword= [[${param.secondCourseTitle}]][0];
+                getSecondList("courseTitle", keyword);
+                $("#topMenuKeyword").val(keyword);
+                $("#topMenuSearchType").val("secondCourseTitle");
+            }else {
+                getSecondList();
+            }
+        })
+
+        // 2차 코스 리스트 불러오기
+        function getSecondList(type, keyword){
+            $.ajax({
+                type: "GET",
+                url: "/api/admin/course/second/list",
+                data: {
+                    "page": page-1,
+                    "size": 10,
+                    "sort": "secondCourseSeq,desc",
+                    "type": type,
+                    "keyword": keyword
+                },
+                success: function(data){
+                    // console.log(data);
+                    let companyTag = "";
+                    let rowNum = data.totalElements;
+
+                    if( data.content.length != 0 ) {
+                        let startNum=(data.pageable.pageNumber+1-1)*data.pageable.pageSize+1;
+
+                        data.content.forEach(function (data, index) {
+                            let num = rowNum-(startNum + index) + 1;
+
+                            if( data.costOption == null ) data.costOption="-";
+                            if( data.category == null ) data.category="-";
+
+                            companyTag +=
+                                "<tr secondCourseSeq='"+data.secondCourseSeq+"'>" +
+                                "<td><input type='checkbox' class='checked'></td>" +
+                                "<td class='info'>"+num+"</td>" +
+                                "<td class='info'>"+data.category+"</td>" +
+                                "<td class='info'>"+data.secondCourseTitle+"</td>";
+
+                            if( data.cost != 0){
+                                if( data.costOption != "" ) companyTag +="<td class='info'>"+fcomma(data.cost)+"원 / "+data.costOption+"</td>";
+                                else companyTag +="<td class='info'>"+fcomma(data.cost)+"원</td>";
+                            }else{
+                                if( data.costOption != "" ) companyTag +="<td class='info'>무료 / "+data.costOption+"</td>";
+                                else companyTag +="<td class='info'>무료</td>";
+                            }
+
+                            if( data.runningTime > 60 ){
+                                if( parseInt(fConvertMin(data.runningTime)) == 0 ) companyTag += "<td class='info'>"+parseInt(fConvertHour(data.runningTime))+"시간</td>";
+                                else companyTag += "<td class='info'>"+parseInt(fConvertHour(data.runningTime))+"시간 "+parseInt(fConvertMin(data.runningTime))+"분</td>";
+                            }else companyTag += "<td class='info'>"+data.runningTime+"분</td>";
+
+                            // if( data.runningTime < 60 ) companyTag += "<td class='info'>"+data.runningTime+"분</td>"
+                            // else companyTag += "<td class='info'>"+(data.runningTime/60)+"시간</td>"
+
+                            companyTag += "<td class='info'>"+data.startDate+" ~ "+data.endDate+"</td>";
+
+                            if( data.withdrawal == 0 ) companyTag += "<td class='info'>노출</td></tr>";
+                            else companyTag += "<td class='info'>미노출</td></tr>";
+                        });
+                        $("#companyCourseList").html(companyTag);
+                    }else{
+                        $("#companyCourseList").html(companyTag);
+                    }
+                    fPagination(data, page);
+                }
+            });
+        }
+
+        $("#pagination").on("click", "ul li a", function() {
+            page = parseInt($(this).attr("gopage"));
+
+            getSecondList();
+        });
+
+        // 전체 업체 코스 리스트 행 클릭 시, 코스상세정보
+        $("#companyCourseList").on("click", ".info", function() {
+            let secondCourseSeq = $(this).parent().attr("secondCourseSeq");
+
+            $.ajax({
+                type: "GET",
+                url: "/api/admin/course/second/detail",
+                data: { "secondCourseSeq": secondCourseSeq },
+                success: function (data) {
+                    // console.log(data);
+                    let detail=data;
+
+                    //이미지 불러오기
+                    if( detail.thumbnailImage != null) {
+                        // let fileName = detail.thumbnailImage.fileName;
+                        // let url = detail.thumbnailImage.dirManager.dirUrl;
+                        // let src = url + fileName;
+                        $(".thumbImage").attr("src", detail.thumbnailImage.url);
+                    }else{
+                        $(".thumbImage").attr("src", "/images/admin/test_3.jpg");
+                    }
+
+                    if( data.length != 0 ) {
+                        $("#course-modal .reserve-btn").attr("seq", secondCourseSeq);
+                        $("#course-modal .secondCourseTitle").text(detail.secondCourseTitle);
+                        $("#course-modal .showDate").text(detail.startDate.substring(0, 10)+" ~ "+detail.endDate.substring(0, 10));
+
+                        if( detail.runningTime > 60 ){
+                            if( parseInt(fConvertMin(detail.runningTime)) == 0 ) $("#course-modal .runningTime").text(parseInt(fConvertHour(detail.runningTime))+"시간");
+                            else $("#course-modal .runningTime").text(parseInt(fConvertHour(detail.runningTime))+"시간 "+parseInt(fConvertMin(detail.runningTime))+"분");
+                        }else $("#course-modal .runningTime").text(detail.runningTime+"분");
+
+                        $("#course-modal .cost").text(fcomma(detail.cost));
+                        $("#course-modal .course").text(detail.course);
+                    }
+                }
+            });
+        });
+
+        // 선택한 코스 수정 클릭
+        $(".company-update-btn").click(function(){
+            if( $("#companyCourseList .checked:checked").length == 0){
+                toastModal("수정할 2차 코스를 선택해주세요.");
+            }else if( $("#companyCourseList .checked:checked").length > 1 ){
+                toastModal("수정할 2차 코스는 1개만 선택가능합니다.");
+                $("#companyCourseList .checked").prop("checked", false);
+                $(".all-check").prop("checked", false);
+            }else{
+                let secondCourseSeq=$("#companyCourseList .checked:checked").parent().parent().attr("secondCourseSeq");
+                location.href="/admin/second-course/update?secondCourseSeq="+secondCourseSeq;
+            }
+        });
+
+        // 선택한 코스 삭제 클릭
+        $(".company-delete-btn").click(function(){
+            if( $("#companyCourseList .checked:checked").length == 0 ){
+                toastModal("삭제할 코스를 선택해주세요.");
+            }else {
+                if( !confirm("선택된 2차 코스를 삭제합니다.") ){
+                    $("#companyCourseList .checked:checked").prop("checked", false);
+                    return;
+                }else {
+                    $("#companyCourseList .checked:checked").each(function () {
+                        let secondCourseSeq = $(this).parent().parent().attr("secondCourseSeq");
+
+                        $.ajax({
+                            type: "POST",
+                            url: "/api/admin/course/second/delete",
+                            data: {"secondCourseSeq": secondCourseSeq},
+                            success: function () {
+                            }
+                        });
+                    });
+                    toastModal("코스 삭제가 완료되었습니다.");
+                    setTimeout(() => location.reload(), 1000);
+                }
+            }
+        });
+
+        // 코스 상세보기 modal 수정하기 클릭 -> 페이지이동
+        function updateCompany(seq){
+            let secondCourseSeq = seq.attr("seq");
+            location.href="/admin/second-course/update?secondCourseSeq="+secondCourseSeq;
+        }
+
+        $("#courseCopy").on("click", function(){
+            if( $("#companyCourseList .checked:checked").length == 0){
+                toastModal("복사할 2차 코스를 선택해주세요.");
+            }else if( $("#companyCourseList .checked:checked").length > 1 ){
+                toastModal("복사할 2차 코스는 1개만 선택가능합니다.");
+                $("#companyCourseList .checked").prop("checked", false);
+                $(".all-check").prop("checked", false);
+            }else {
+                let secondCourseSeq = $("#companyCourseList .checked:checked").parent().parent().attr("secondCourseSeq");
+
+                $.ajax({
+                    type:"post",
+                    url:"/api/admin/course/second/copy",
+                    data:{ "secondCourseSeq":secondCourseSeq},
+                    success:function(data){
+                        toastModal("코스 복사가 완료되었습니다.");
+                        setTimeout(() => location.reload(), 1000);
+                    },
+                    error:function(){
+                        toastModal("코스 복사에 실패했습니다.");
+                        console.log("ajax error (copy course)");
+                    }
+
+                });
+            }
+        });
+    </script>
+
+</div>
+</html>

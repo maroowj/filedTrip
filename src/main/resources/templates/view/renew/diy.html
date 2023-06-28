@@ -1,0 +1,2080 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/renew/sub_layout_user}"
+      xmlns:th="http://www.thymeleaf.org">
+
+<style layout:fragment="css">
+    input::-webkit-inner-spin-button { appearance: none; -moz-appearance: none; -webkit-appearance: none; }
+</style>
+
+<!-- index_layout_user.html 에 정의한 main page 부분 -->
+<div layout:fragment="content">
+    <div class="subCont diyWrap">
+        <div class="auto pt120 pb120">
+            <div class="titleWrap">
+                <p class="title">체험장 등록</p>
+                <p class="text">DIY 여행코스 직접 만들기</p>
+            </div>
+
+            <div class="selWrap">
+                <div class="searchBox">
+                    <input type="text" placeholder="이름으로 검색해보세요.">
+                    <span class="icon"></span>
+                </div>
+                <div class="diySel">
+                    <div class="selectWrap">
+                        <div class="selectBox">
+                            <button class="label">카테고리</button>
+                            <ul class="optionList">
+                                <li class="optionItem">수학여행</li>
+                                <li class="optionItem">박물관투어</li>
+                                <li class="optionItem">환경투어</li>
+                                <li class="optionItem">역사투어</li>
+                                <li class="optionItem">체험학습</li>
+                            </ul>
+                        </div>
+                        <div class="selectBox">
+                            <button class="label">시·도</button>
+                            <ul class="optionList">
+                                <li class="optionItem">인천</li>
+                                <li class="optionItem">서울</li>
+                                <li class="optionItem">경기권</li>
+                                <li class="optionItem">경상권</li>
+                                <li class="optionItem">전라권</li>
+                                <li class="optionItem">강원권</li>
+                                <li class="optionItem">충청권</li>
+                                <li class="optionItem">제주도</li>
+                            </ul>
+                        </div>
+                        <div class="selectBox">
+                            <button class="label">군·구</button>
+                            <ul class="optionList">
+                                <li class="optionItem">강화군</li>
+                                <li class="optionItem">중구</li>
+                                <li class="optionItem">연수구</li>
+                                <li class="optionItem">미추홀구</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="#" class="comm-btn search-btn date-btn">검색</a>
+                </div>
+            </div>
+
+            <ul class="stepList">
+                <li class="actived">체험 일정표 제작</li>
+                <li>예상 견적서</li>
+                <li>등록완료</li>
+            </ul>
+
+            <div class="diy-titleWrap">
+                <input type="text" placeholder="체험 제목을 입력해주세요.">
+            </div>
+            <div class="timetableWrap">
+                <div class="titleWrap">
+                    <div class="title">
+                        <p class="day">DAY01</p>
+                        <p class="date">2022-09-01</p>
+                    </div>
+                    <div class="titleBtn">
+                        <a href="#" class="update-btn mr05">전체수정</a>
+                        <a href="#" class="date-btn">날짜수정</a>
+                    </div>
+
+                </div>
+                <ul class="tableTitle">
+                    <li class="time"><p>시간</p></li>
+                    <li class="text"><p>내용</p></li>
+                    <li class="detail"><p>비고</p></li>
+                </ul>
+
+                <div class="tableList">
+                    <ul class="tableText">
+                        <li class="time">
+                            <div class="selectBox">
+                                <button class="label">09:00</button>
+                                <ul class="optionList">
+                                    <li class="optionItem">01:00</li>
+                                    <li class="optionItem">01:30</li>
+                                    <li class="optionItem">02:00</li>
+                                    <li class="optionItem">02:30</li>
+                                    <li class="optionItem">03:00</li>
+                                    <li class="optionItem">03:30</li>
+                                    <li class="optionItem">04:00</li>
+                                    <li class="optionItem">04:30</li>
+                                    <li class="optionItem">05:00</li>
+                                    <li class="optionItem">05:30</li>
+                                    <li class="optionItem">06:00</li>
+                                    <li class="optionItem">06:30</li>
+                                    <li class="optionItem">07:00</li>
+                                    <li class="optionItem">07:30</li>
+                                    <li class="optionItem">08:00</li>
+                                    <li class="optionItem">08:30</li>
+                                    <li class="optionItem">09:00</li>
+                                    <li class="optionItem">09:30</li>
+                                    <li class="optionItem">10:00</li>
+                                    <li class="optionItem">10:30</li>
+                                    <li class="optionItem">11:00</li>
+                                    <li class="optionItem">11:30</li>
+                                    <li class="optionItem">12:00</li>
+                                    <li class="optionItem">12:30</li>
+                                    <li class="optionItem">13:00</li>
+                                    <li class="optionItem">13:30</li>
+                                    <li class="optionItem">14:00</li>
+                                    <li class="optionItem">14:30</li>
+                                    <li class="optionItem">15:00</li>
+                                    <li class="optionItem">15:30</li>
+                                    <li class="optionItem">16:00</li>
+                                    <li class="optionItem">16:30</li>
+                                    <li class="optionItem">17:00</li>
+                                    <li class="optionItem">17:30</li>
+                                    <li class="optionItem">18:00</li>
+                                    <li class="optionItem">18:30</li>
+                                    <li class="optionItem">19:00</li>
+                                    <li class="optionItem">19:30</li>
+                                    <li class="optionItem">20:00</li>
+                                    <li class="optionItem">20:30</li>
+                                    <li class="optionItem">21:00</li>
+                                    <li class="optionItem">21:30</li>
+                                    <li class="optionItem">22:00</li>
+                                    <li class="optionItem">22:30</li>
+                                    <li class="optionItem">23:00</li>
+                                    <li class="optionItem">23:30</li>
+                                    <li class="optionItem">00:00</li>
+                                    <li class="optionItem">00:30</li>
+                                </ul>
+                            </div>
+                            <p>-</p>
+                            <div class="selectBox">
+                                <button class="label">09:00</button>
+                                <ul class="optionList">
+                                    <li class="optionItem">01:00</li>
+                                    <li class="optionItem">01:30</li>
+                                    <li class="optionItem">02:00</li>
+                                    <li class="optionItem">02:30</li>
+                                    <li class="optionItem">03:00</li>
+                                    <li class="optionItem">03:30</li>
+                                    <li class="optionItem">04:00</li>
+                                    <li class="optionItem">04:30</li>
+                                    <li class="optionItem">05:00</li>
+                                    <li class="optionItem">05:30</li>
+                                    <li class="optionItem">06:00</li>
+                                    <li class="optionItem">06:30</li>
+                                    <li class="optionItem">07:00</li>
+                                    <li class="optionItem">07:30</li>
+                                    <li class="optionItem">08:00</li>
+                                    <li class="optionItem">08:30</li>
+                                    <li class="optionItem">09:00</li>
+                                    <li class="optionItem">09:30</li>
+                                    <li class="optionItem">10:00</li>
+                                    <li class="optionItem">10:30</li>
+                                    <li class="optionItem">11:00</li>
+                                    <li class="optionItem">11:30</li>
+                                    <li class="optionItem">12:00</li>
+                                    <li class="optionItem">12:30</li>
+                                    <li class="optionItem">13:00</li>
+                                    <li class="optionItem">13:30</li>
+                                    <li class="optionItem">14:00</li>
+                                    <li class="optionItem">14:30</li>
+                                    <li class="optionItem">15:00</li>
+                                    <li class="optionItem">15:30</li>
+                                    <li class="optionItem">16:00</li>
+                                    <li class="optionItem">16:30</li>
+                                    <li class="optionItem">17:00</li>
+                                    <li class="optionItem">17:30</li>
+                                    <li class="optionItem">18:00</li>
+                                    <li class="optionItem">18:30</li>
+                                    <li class="optionItem">19:00</li>
+                                    <li class="optionItem">19:30</li>
+                                    <li class="optionItem">20:00</li>
+                                    <li class="optionItem">20:30</li>
+                                    <li class="optionItem">21:00</li>
+                                    <li class="optionItem">21:30</li>
+                                    <li class="optionItem">22:00</li>
+                                    <li class="optionItem">22:30</li>
+                                    <li class="optionItem">23:00</li>
+                                    <li class="optionItem">23:30</li>
+                                    <li class="optionItem">00:00</li>
+                                    <li class="optionItem">00:30</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="text"><input type="text" value="학교출발"></li>
+                        <li class="detail"><input type="text" value=""></li>
+                    </ul>
+                    <ul class="btnWrap">
+                        <li><a href="#"><i class="fa-solid fa-plus"></i></a></li>
+                        <li><a href="#" ><i class="fa-solid fa-minus"></i></a></li>
+                        <li class="save"><a href="#" ><i class="fa-solid fa-check"></i></a></li>
+                        <li class="reWrite"><a href="#"><i class="fa-solid fa-pen"></i></a></li>
+                    </ul>
+
+                </div>
+                <div class="tableList">
+                    <ul class="tableText">
+                        <li class="time">
+                            <div class="selectBox">
+                                <button class="label">09:00</button>
+                                <ul class="optionList">
+                                    <li class="optionItem">01:00</li>
+                                    <li class="optionItem">01:30</li>
+                                    <li class="optionItem">02:00</li>
+                                    <li class="optionItem">02:30</li>
+                                    <li class="optionItem">03:00</li>
+                                    <li class="optionItem">03:30</li>
+                                    <li class="optionItem">04:00</li>
+                                    <li class="optionItem">04:30</li>
+                                    <li class="optionItem">05:00</li>
+                                    <li class="optionItem">05:30</li>
+                                    <li class="optionItem">06:00</li>
+                                    <li class="optionItem">06:30</li>
+                                    <li class="optionItem">07:00</li>
+                                    <li class="optionItem">07:30</li>
+                                    <li class="optionItem">08:00</li>
+                                    <li class="optionItem">08:30</li>
+                                    <li class="optionItem">09:00</li>
+                                    <li class="optionItem">09:30</li>
+                                    <li class="optionItem">10:00</li>
+                                    <li class="optionItem">10:30</li>
+                                    <li class="optionItem">11:00</li>
+                                    <li class="optionItem">11:30</li>
+                                    <li class="optionItem">12:00</li>
+                                    <li class="optionItem">12:30</li>
+                                    <li class="optionItem">13:00</li>
+                                    <li class="optionItem">13:30</li>
+                                    <li class="optionItem">14:00</li>
+                                    <li class="optionItem">14:30</li>
+                                    <li class="optionItem">15:00</li>
+                                    <li class="optionItem">15:30</li>
+                                    <li class="optionItem">16:00</li>
+                                    <li class="optionItem">16:30</li>
+                                    <li class="optionItem">17:00</li>
+                                    <li class="optionItem">17:30</li>
+                                    <li class="optionItem">18:00</li>
+                                    <li class="optionItem">18:30</li>
+                                    <li class="optionItem">19:00</li>
+                                    <li class="optionItem">19:30</li>
+                                    <li class="optionItem">20:00</li>
+                                    <li class="optionItem">20:30</li>
+                                    <li class="optionItem">21:00</li>
+                                    <li class="optionItem">21:30</li>
+                                    <li class="optionItem">22:00</li>
+                                    <li class="optionItem">22:30</li>
+                                    <li class="optionItem">23:00</li>
+                                    <li class="optionItem">23:30</li>
+                                    <li class="optionItem">00:00</li>
+                                    <li class="optionItem">00:30</li>
+                                </ul>
+                            </div>
+                            <p>-</p>
+                            <div class="selectBox">
+                                <button class="label">10:00</button>
+                                <ul class="optionList">
+                                    <li class="optionItem">01:00</li>
+                                    <li class="optionItem">01:30</li>
+                                    <li class="optionItem">02:00</li>
+                                    <li class="optionItem">02:30</li>
+                                    <li class="optionItem">03:00</li>
+                                    <li class="optionItem">03:30</li>
+                                    <li class="optionItem">04:00</li>
+                                    <li class="optionItem">04:30</li>
+                                    <li class="optionItem">05:00</li>
+                                    <li class="optionItem">05:30</li>
+                                    <li class="optionItem">06:00</li>
+                                    <li class="optionItem">06:30</li>
+                                    <li class="optionItem">07:00</li>
+                                    <li class="optionItem">07:30</li>
+                                    <li class="optionItem">08:00</li>
+                                    <li class="optionItem">08:30</li>
+                                    <li class="optionItem">09:00</li>
+                                    <li class="optionItem">09:30</li>
+                                    <li class="optionItem">10:00</li>
+                                    <li class="optionItem">10:30</li>
+                                    <li class="optionItem">11:00</li>
+                                    <li class="optionItem">11:30</li>
+                                    <li class="optionItem">12:00</li>
+                                    <li class="optionItem">12:30</li>
+                                    <li class="optionItem">13:00</li>
+                                    <li class="optionItem">13:30</li>
+                                    <li class="optionItem">14:00</li>
+                                    <li class="optionItem">14:30</li>
+                                    <li class="optionItem">15:00</li>
+                                    <li class="optionItem">15:30</li>
+                                    <li class="optionItem">16:00</li>
+                                    <li class="optionItem">16:30</li>
+                                    <li class="optionItem">17:00</li>
+                                    <li class="optionItem">17:30</li>
+                                    <li class="optionItem">18:00</li>
+                                    <li class="optionItem">18:30</li>
+                                    <li class="optionItem">19:00</li>
+                                    <li class="optionItem">19:30</li>
+                                    <li class="optionItem">20:00</li>
+                                    <li class="optionItem">20:30</li>
+                                    <li class="optionItem">21:00</li>
+                                    <li class="optionItem">21:30</li>
+                                    <li class="optionItem">22:00</li>
+                                    <li class="optionItem">22:30</li>
+                                    <li class="optionItem">23:00</li>
+                                    <li class="optionItem">23:30</li>
+                                    <li class="optionItem">00:00</li>
+                                    <li class="optionItem">00:30</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="text"><input type="text" value="이동" readonly></li>
+                        <li class="detail"><input type="text" value="" readonly></li>
+                    </ul>
+                    <ul class="btnWrap">
+                        <li><a href="#"><i class="fa-solid fa-plus"></i></a></li>
+                        <li><a href="#" ><i class="fa-solid fa-minus"></i></a></li>
+                        <li class="save"><a href="#" ><i class="fa-solid fa-check"></i></a></li>
+                        <li class="reWrite"><a href="#"><i class="fa-solid fa-pen"></i></a></li>
+                    </ul>
+                </div>
+                <div class="tableList">
+                    <ul class="tableText">
+                        <li class="time">
+                            <div class="selectBox">
+                                <button class="label">10:00</button>
+                                <ul class="optionList">
+                                    <li class="optionItem">01:00</li>
+                                    <li class="optionItem">01:30</li>
+                                    <li class="optionItem">02:00</li>
+                                    <li class="optionItem">02:30</li>
+                                    <li class="optionItem">03:00</li>
+                                    <li class="optionItem">03:30</li>
+                                    <li class="optionItem">04:00</li>
+                                    <li class="optionItem">04:30</li>
+                                    <li class="optionItem">05:00</li>
+                                    <li class="optionItem">05:30</li>
+                                    <li class="optionItem">06:00</li>
+                                    <li class="optionItem">06:30</li>
+                                    <li class="optionItem">07:00</li>
+                                    <li class="optionItem">07:30</li>
+                                    <li class="optionItem">08:00</li>
+                                    <li class="optionItem">08:30</li>
+                                    <li class="optionItem">09:00</li>
+                                    <li class="optionItem">09:30</li>
+                                    <li class="optionItem">10:00</li>
+                                    <li class="optionItem">10:30</li>
+                                    <li class="optionItem">11:00</li>
+                                    <li class="optionItem">11:30</li>
+                                    <li class="optionItem">12:00</li>
+                                    <li class="optionItem">12:30</li>
+                                    <li class="optionItem">13:00</li>
+                                    <li class="optionItem">13:30</li>
+                                    <li class="optionItem">14:00</li>
+                                    <li class="optionItem">14:30</li>
+                                    <li class="optionItem">15:00</li>
+                                    <li class="optionItem">15:30</li>
+                                    <li class="optionItem">16:00</li>
+                                    <li class="optionItem">16:30</li>
+                                    <li class="optionItem">17:00</li>
+                                    <li class="optionItem">17:30</li>
+                                    <li class="optionItem">18:00</li>
+                                    <li class="optionItem">18:30</li>
+                                    <li class="optionItem">19:00</li>
+                                    <li class="optionItem">19:30</li>
+                                    <li class="optionItem">20:00</li>
+                                    <li class="optionItem">20:30</li>
+                                    <li class="optionItem">21:00</li>
+                                    <li class="optionItem">21:30</li>
+                                    <li class="optionItem">22:00</li>
+                                    <li class="optionItem">22:30</li>
+                                    <li class="optionItem">23:00</li>
+                                    <li class="optionItem">23:30</li>
+                                    <li class="optionItem">00:00</li>
+                                    <li class="optionItem">00:30</li>
+                                </ul>
+                            </div>
+                            <p>-</p>
+                            <div class="selectBox">
+                                <button class="label">11:30</button>
+                                <ul class="optionList">
+                                    <li class="optionItem">01:00</li>
+                                    <li class="optionItem">01:30</li>
+                                    <li class="optionItem">02:00</li>
+                                    <li class="optionItem">02:30</li>
+                                    <li class="optionItem">03:00</li>
+                                    <li class="optionItem">03:30</li>
+                                    <li class="optionItem">04:00</li>
+                                    <li class="optionItem">04:30</li>
+                                    <li class="optionItem">05:00</li>
+                                    <li class="optionItem">05:30</li>
+                                    <li class="optionItem">06:00</li>
+                                    <li class="optionItem">06:30</li>
+                                    <li class="optionItem">07:00</li>
+                                    <li class="optionItem">07:30</li>
+                                    <li class="optionItem">08:00</li>
+                                    <li class="optionItem">08:30</li>
+                                    <li class="optionItem">09:00</li>
+                                    <li class="optionItem">09:30</li>
+                                    <li class="optionItem">10:00</li>
+                                    <li class="optionItem">10:30</li>
+                                    <li class="optionItem">11:00</li>
+                                    <li class="optionItem">11:30</li>
+                                    <li class="optionItem">12:00</li>
+                                    <li class="optionItem">12:30</li>
+                                    <li class="optionItem">13:00</li>
+                                    <li class="optionItem">13:30</li>
+                                    <li class="optionItem">14:00</li>
+                                    <li class="optionItem">14:30</li>
+                                    <li class="optionItem">15:00</li>
+                                    <li class="optionItem">15:30</li>
+                                    <li class="optionItem">16:00</li>
+                                    <li class="optionItem">16:30</li>
+                                    <li class="optionItem">17:00</li>
+                                    <li class="optionItem">17:30</li>
+                                    <li class="optionItem">18:00</li>
+                                    <li class="optionItem">18:30</li>
+                                    <li class="optionItem">19:00</li>
+                                    <li class="optionItem">19:30</li>
+                                    <li class="optionItem">20:00</li>
+                                    <li class="optionItem">20:30</li>
+                                    <li class="optionItem">21:00</li>
+                                    <li class="optionItem">21:30</li>
+                                    <li class="optionItem">22:00</li>
+                                    <li class="optionItem">22:30</li>
+                                    <li class="optionItem">23:00</li>
+                                    <li class="optionItem">23:30</li>
+                                    <li class="optionItem">00:00</li>
+                                    <li class="optionItem">00:30</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="text"><input type="text" value="수도권 매립지 견학" readonly></li>
+                        <li class="detail"><input type="text" value="" readonly></li>
+                    </ul>
+                    <ul class="btnWrap">
+                        <li><a href="#"><i class="fa-solid fa-plus"></i></a></li>
+                        <li><a href="#" ><i class="fa-solid fa-minus"></i></a></li>
+                        <li class="save"><a href="#" ><i class="fa-solid fa-check"></i></a></li>
+                        <li class="reWrite"><a href="#"><i class="fa-solid fa-pen"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="tableList">
+                    <ul class="tableText">
+                        <li class="time">
+                            <div class="selectBox">
+                                <button class="label">11:30</button>
+                                <ul class="optionList">
+                                    <li class="optionItem">01:00</li>
+                                    <li class="optionItem">01:30</li>
+                                    <li class="optionItem">02:00</li>
+                                    <li class="optionItem">02:30</li>
+                                    <li class="optionItem">03:00</li>
+                                    <li class="optionItem">03:30</li>
+                                    <li class="optionItem">04:00</li>
+                                    <li class="optionItem">04:30</li>
+                                    <li class="optionItem">05:00</li>
+                                    <li class="optionItem">05:30</li>
+                                    <li class="optionItem">06:00</li>
+                                    <li class="optionItem">06:30</li>
+                                    <li class="optionItem">07:00</li>
+                                    <li class="optionItem">07:30</li>
+                                    <li class="optionItem">08:00</li>
+                                    <li class="optionItem">08:30</li>
+                                    <li class="optionItem">09:00</li>
+                                    <li class="optionItem">09:30</li>
+                                    <li class="optionItem">10:00</li>
+                                    <li class="optionItem">10:30</li>
+                                    <li class="optionItem">11:00</li>
+                                    <li class="optionItem">11:30</li>
+                                    <li class="optionItem">12:00</li>
+                                    <li class="optionItem">12:30</li>
+                                    <li class="optionItem">13:00</li>
+                                    <li class="optionItem">13:30</li>
+                                    <li class="optionItem">14:00</li>
+                                    <li class="optionItem">14:30</li>
+                                    <li class="optionItem">15:00</li>
+                                    <li class="optionItem">15:30</li>
+                                    <li class="optionItem">16:00</li>
+                                    <li class="optionItem">16:30</li>
+                                    <li class="optionItem">17:00</li>
+                                    <li class="optionItem">17:30</li>
+                                    <li class="optionItem">18:00</li>
+                                    <li class="optionItem">18:30</li>
+                                    <li class="optionItem">19:00</li>
+                                    <li class="optionItem">19:30</li>
+                                    <li class="optionItem">20:00</li>
+                                    <li class="optionItem">20:30</li>
+                                    <li class="optionItem">21:00</li>
+                                    <li class="optionItem">21:30</li>
+                                    <li class="optionItem">22:00</li>
+                                    <li class="optionItem">22:30</li>
+                                    <li class="optionItem">23:00</li>
+                                    <li class="optionItem">23:30</li>
+                                    <li class="optionItem">00:00</li>
+                                    <li class="optionItem">00:30</li>
+                                </ul>
+                            </div>
+                            <p>-</p>
+                            <div class="selectBox">
+                                <button class="label">12:00</button>
+                                <ul class="optionList">
+                                    <li class="optionItem">01:00</li>
+                                    <li class="optionItem">01:30</li>
+                                    <li class="optionItem">02:00</li>
+                                    <li class="optionItem">02:30</li>
+                                    <li class="optionItem">03:00</li>
+                                    <li class="optionItem">03:30</li>
+                                    <li class="optionItem">04:00</li>
+                                    <li class="optionItem">04:30</li>
+                                    <li class="optionItem">05:00</li>
+                                    <li class="optionItem">05:30</li>
+                                    <li class="optionItem">06:00</li>
+                                    <li class="optionItem">06:30</li>
+                                    <li class="optionItem">07:00</li>
+                                    <li class="optionItem">07:30</li>
+                                    <li class="optionItem">08:00</li>
+                                    <li class="optionItem">08:30</li>
+                                    <li class="optionItem">09:00</li>
+                                    <li class="optionItem">09:30</li>
+                                    <li class="optionItem">10:00</li>
+                                    <li class="optionItem">10:30</li>
+                                    <li class="optionItem">11:00</li>
+                                    <li class="optionItem">11:30</li>
+                                    <li class="optionItem">12:00</li>
+                                    <li class="optionItem">12:30</li>
+                                    <li class="optionItem">13:00</li>
+                                    <li class="optionItem">13:30</li>
+                                    <li class="optionItem">14:00</li>
+                                    <li class="optionItem">14:30</li>
+                                    <li class="optionItem">15:00</li>
+                                    <li class="optionItem">15:30</li>
+                                    <li class="optionItem">16:00</li>
+                                    <li class="optionItem">16:30</li>
+                                    <li class="optionItem">17:00</li>
+                                    <li class="optionItem">17:30</li>
+                                    <li class="optionItem">18:00</li>
+                                    <li class="optionItem">18:30</li>
+                                    <li class="optionItem">19:00</li>
+                                    <li class="optionItem">19:30</li>
+                                    <li class="optionItem">20:00</li>
+                                    <li class="optionItem">20:30</li>
+                                    <li class="optionItem">21:00</li>
+                                    <li class="optionItem">21:30</li>
+                                    <li class="optionItem">22:00</li>
+                                    <li class="optionItem">22:30</li>
+                                    <li class="optionItem">23:00</li>
+                                    <li class="optionItem">23:30</li>
+                                    <li class="optionItem">00:00</li>
+                                    <li class="optionItem">00:30</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="text"><input type="text" value="이동" readonly></li>
+                        <li class="detail"><input type="text" value="" readonly></li>
+                    </ul>
+                    <ul class="btnWrap">
+                        <li><a href="#"><i class="fa-solid fa-plus"></i></a></li>
+                        <li><a href="#" ><i class="fa-solid fa-minus"></i></a></li>
+                        <li class="save"><a href="#" ><i class="fa-solid fa-check"></i></a></li>
+                        <li class="reWrite"><a href="#"><i class="fa-solid fa-pen"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="tableList">
+                    <ul class="tableText">
+                        <li class="time">
+                            <div class="selectBox">
+                                <button class="label">12:00</button>
+                                <ul class="optionList">
+                                    <li class="optionItem">01:00</li>
+                                    <li class="optionItem">01:30</li>
+                                    <li class="optionItem">02:00</li>
+                                    <li class="optionItem">02:30</li>
+                                    <li class="optionItem">03:00</li>
+                                    <li class="optionItem">03:30</li>
+                                    <li class="optionItem">04:00</li>
+                                    <li class="optionItem">04:30</li>
+                                    <li class="optionItem">05:00</li>
+                                    <li class="optionItem">05:30</li>
+                                    <li class="optionItem">06:00</li>
+                                    <li class="optionItem">06:30</li>
+                                    <li class="optionItem">07:00</li>
+                                    <li class="optionItem">07:30</li>
+                                    <li class="optionItem">08:00</li>
+                                    <li class="optionItem">08:30</li>
+                                    <li class="optionItem">09:00</li>
+                                    <li class="optionItem">09:30</li>
+                                    <li class="optionItem">10:00</li>
+                                    <li class="optionItem">10:30</li>
+                                    <li class="optionItem">11:00</li>
+                                    <li class="optionItem">11:30</li>
+                                    <li class="optionItem">12:00</li>
+                                    <li class="optionItem">12:30</li>
+                                    <li class="optionItem">13:00</li>
+                                    <li class="optionItem">13:30</li>
+                                    <li class="optionItem">14:00</li>
+                                    <li class="optionItem">14:30</li>
+                                    <li class="optionItem">15:00</li>
+                                    <li class="optionItem">15:30</li>
+                                    <li class="optionItem">16:00</li>
+                                    <li class="optionItem">16:30</li>
+                                    <li class="optionItem">17:00</li>
+                                    <li class="optionItem">17:30</li>
+                                    <li class="optionItem">18:00</li>
+                                    <li class="optionItem">18:30</li>
+                                    <li class="optionItem">19:00</li>
+                                    <li class="optionItem">19:30</li>
+                                    <li class="optionItem">20:00</li>
+                                    <li class="optionItem">20:30</li>
+                                    <li class="optionItem">21:00</li>
+                                    <li class="optionItem">21:30</li>
+                                    <li class="optionItem">22:00</li>
+                                    <li class="optionItem">22:30</li>
+                                    <li class="optionItem">23:00</li>
+                                    <li class="optionItem">23:30</li>
+                                    <li class="optionItem">00:00</li>
+                                    <li class="optionItem">00:30</li>
+                                </ul>
+                            </div>
+                            <p>-</p>
+                            <div class="selectBox">
+                                <button class="label">13:00</button>
+                                <ul class="optionList">
+                                    <li class="optionItem">01:00</li>
+                                    <li class="optionItem">01:30</li>
+                                    <li class="optionItem">02:00</li>
+                                    <li class="optionItem">02:30</li>
+                                    <li class="optionItem">03:00</li>
+                                    <li class="optionItem">03:30</li>
+                                    <li class="optionItem">04:00</li>
+                                    <li class="optionItem">04:30</li>
+                                    <li class="optionItem">05:00</li>
+                                    <li class="optionItem">05:30</li>
+                                    <li class="optionItem">06:00</li>
+                                    <li class="optionItem">06:30</li>
+                                    <li class="optionItem">07:00</li>
+                                    <li class="optionItem">07:30</li>
+                                    <li class="optionItem">08:00</li>
+                                    <li class="optionItem">08:30</li>
+                                    <li class="optionItem">09:00</li>
+                                    <li class="optionItem">09:30</li>
+                                    <li class="optionItem">10:00</li>
+                                    <li class="optionItem">10:30</li>
+                                    <li class="optionItem">11:00</li>
+                                    <li class="optionItem">11:30</li>
+                                    <li class="optionItem">12:00</li>
+                                    <li class="optionItem">12:30</li>
+                                    <li class="optionItem">13:00</li>
+                                    <li class="optionItem">13:30</li>
+                                    <li class="optionItem">14:00</li>
+                                    <li class="optionItem">14:30</li>
+                                    <li class="optionItem">15:00</li>
+                                    <li class="optionItem">15:30</li>
+                                    <li class="optionItem">16:00</li>
+                                    <li class="optionItem">16:30</li>
+                                    <li class="optionItem">17:00</li>
+                                    <li class="optionItem">17:30</li>
+                                    <li class="optionItem">18:00</li>
+                                    <li class="optionItem">18:30</li>
+                                    <li class="optionItem">19:00</li>
+                                    <li class="optionItem">19:30</li>
+                                    <li class="optionItem">20:00</li>
+                                    <li class="optionItem">20:30</li>
+                                    <li class="optionItem">21:00</li>
+                                    <li class="optionItem">21:30</li>
+                                    <li class="optionItem">22:00</li>
+                                    <li class="optionItem">22:30</li>
+                                    <li class="optionItem">23:00</li>
+                                    <li class="optionItem">23:30</li>
+                                    <li class="optionItem">00:00</li>
+                                    <li class="optionItem">00:30</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="text"><input type="text" value="점심식사" readonly></li>
+                        <li class="detail"><input type="text" value="휴게소" readonly></li>
+                    </ul>
+                    <ul class="btnWrap">
+                        <li><a href="#"><i class="fa-solid fa-plus"></i></a></li>
+                        <li><a href="#" ><i class="fa-solid fa-minus"></i></a></li>
+                        <li class="save"><a href="#" ><i class="fa-solid fa-check"></i></a></li>
+                        <li class="reWrite"><a href="#"><i class="fa-solid fa-pen"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="tableList">
+                    <ul class="tableText">
+                        <li class="time">
+                            <div class="selectBox">
+                                <button class="label">13:00</button>
+                                <ul class="optionList">
+                                    <li class="optionItem">01:00</li>
+                                    <li class="optionItem">01:30</li>
+                                    <li class="optionItem">02:00</li>
+                                    <li class="optionItem">02:30</li>
+                                    <li class="optionItem">03:00</li>
+                                    <li class="optionItem">03:30</li>
+                                    <li class="optionItem">04:00</li>
+                                    <li class="optionItem">04:30</li>
+                                    <li class="optionItem">05:00</li>
+                                    <li class="optionItem">05:30</li>
+                                    <li class="optionItem">06:00</li>
+                                    <li class="optionItem">06:30</li>
+                                    <li class="optionItem">07:00</li>
+                                    <li class="optionItem">07:30</li>
+                                    <li class="optionItem">08:00</li>
+                                    <li class="optionItem">08:30</li>
+                                    <li class="optionItem">09:00</li>
+                                    <li class="optionItem">09:30</li>
+                                    <li class="optionItem">10:00</li>
+                                    <li class="optionItem">10:30</li>
+                                    <li class="optionItem">11:00</li>
+                                    <li class="optionItem">11:30</li>
+                                    <li class="optionItem">12:00</li>
+                                    <li class="optionItem">12:30</li>
+                                    <li class="optionItem">13:00</li>
+                                    <li class="optionItem">13:30</li>
+                                    <li class="optionItem">14:00</li>
+                                    <li class="optionItem">14:30</li>
+                                    <li class="optionItem">15:00</li>
+                                    <li class="optionItem">15:30</li>
+                                    <li class="optionItem">16:00</li>
+                                    <li class="optionItem">16:30</li>
+                                    <li class="optionItem">17:00</li>
+                                    <li class="optionItem">17:30</li>
+                                    <li class="optionItem">18:00</li>
+                                    <li class="optionItem">18:30</li>
+                                    <li class="optionItem">19:00</li>
+                                    <li class="optionItem">19:30</li>
+                                    <li class="optionItem">20:00</li>
+                                    <li class="optionItem">20:30</li>
+                                    <li class="optionItem">21:00</li>
+                                    <li class="optionItem">21:30</li>
+                                    <li class="optionItem">22:00</li>
+                                    <li class="optionItem">22:30</li>
+                                    <li class="optionItem">23:00</li>
+                                    <li class="optionItem">23:30</li>
+                                    <li class="optionItem">00:00</li>
+                                    <li class="optionItem">00:30</li>
+                                </ul>
+                            </div>
+                            <p>-</p>
+                            <div class="selectBox">
+                                <button class="label">14:00</button>
+                                <ul class="optionList">
+                                    <li class="optionItem">01:00</li>
+                                    <li class="optionItem">01:30</li>
+                                    <li class="optionItem">02:00</li>
+                                    <li class="optionItem">02:30</li>
+                                    <li class="optionItem">03:00</li>
+                                    <li class="optionItem">03:30</li>
+                                    <li class="optionItem">04:00</li>
+                                    <li class="optionItem">04:30</li>
+                                    <li class="optionItem">05:00</li>
+                                    <li class="optionItem">05:30</li>
+                                    <li class="optionItem">06:00</li>
+                                    <li class="optionItem">06:30</li>
+                                    <li class="optionItem">07:00</li>
+                                    <li class="optionItem">07:30</li>
+                                    <li class="optionItem">08:00</li>
+                                    <li class="optionItem">08:30</li>
+                                    <li class="optionItem">09:00</li>
+                                    <li class="optionItem">09:30</li>
+                                    <li class="optionItem">10:00</li>
+                                    <li class="optionItem">10:30</li>
+                                    <li class="optionItem">11:00</li>
+                                    <li class="optionItem">11:30</li>
+                                    <li class="optionItem">12:00</li>
+                                    <li class="optionItem">12:30</li>
+                                    <li class="optionItem">13:00</li>
+                                    <li class="optionItem">13:30</li>
+                                    <li class="optionItem">14:00</li>
+                                    <li class="optionItem">14:30</li>
+                                    <li class="optionItem">15:00</li>
+                                    <li class="optionItem">15:30</li>
+                                    <li class="optionItem">16:00</li>
+                                    <li class="optionItem">16:30</li>
+                                    <li class="optionItem">17:00</li>
+                                    <li class="optionItem">17:30</li>
+                                    <li class="optionItem">18:00</li>
+                                    <li class="optionItem">18:30</li>
+                                    <li class="optionItem">19:00</li>
+                                    <li class="optionItem">19:30</li>
+                                    <li class="optionItem">20:00</li>
+                                    <li class="optionItem">20:30</li>
+                                    <li class="optionItem">21:00</li>
+                                    <li class="optionItem">21:30</li>
+                                    <li class="optionItem">22:00</li>
+                                    <li class="optionItem">22:30</li>
+                                    <li class="optionItem">23:00</li>
+                                    <li class="optionItem">23:30</li>
+                                    <li class="optionItem">00:00</li>
+                                    <li class="optionItem">00:30</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="text"><input type="text" value="이동" readonly></li>
+                        <li class="detail"><input type="text" value="" readonly></li>
+                    </ul>
+                    <ul class="btnWrap">
+                        <li><a href="#"><i class="fa-solid fa-plus"></i></a></li>
+                        <li><a href="#" ><i class="fa-solid fa-minus"></i></a></li>
+                        <li class="save"><a href="#" ><i class="fa-solid fa-check"></i></a></li>
+                        <li class="reWrite"><a href="#"><i class="fa-solid fa-pen"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="tableList">
+                    <ul class="tableText">
+                        <li class="time">
+                            <div class="selectBox">
+                                <button class="label">14:00</button>
+                                <ul class="optionList">
+                                    <li class="optionItem">01:00</li>
+                                    <li class="optionItem">01:30</li>
+                                    <li class="optionItem">02:00</li>
+                                    <li class="optionItem">02:30</li>
+                                    <li class="optionItem">03:00</li>
+                                    <li class="optionItem">03:30</li>
+                                    <li class="optionItem">04:00</li>
+                                    <li class="optionItem">04:30</li>
+                                    <li class="optionItem">05:00</li>
+                                    <li class="optionItem">05:30</li>
+                                    <li class="optionItem">06:00</li>
+                                    <li class="optionItem">06:30</li>
+                                    <li class="optionItem">07:00</li>
+                                    <li class="optionItem">07:30</li>
+                                    <li class="optionItem">08:00</li>
+                                    <li class="optionItem">08:30</li>
+                                    <li class="optionItem">09:00</li>
+                                    <li class="optionItem">09:30</li>
+                                    <li class="optionItem">10:00</li>
+                                    <li class="optionItem">10:30</li>
+                                    <li class="optionItem">11:00</li>
+                                    <li class="optionItem">11:30</li>
+                                    <li class="optionItem">12:00</li>
+                                    <li class="optionItem">12:30</li>
+                                    <li class="optionItem">13:00</li>
+                                    <li class="optionItem">13:30</li>
+                                    <li class="optionItem">14:00</li>
+                                    <li class="optionItem">14:30</li>
+                                    <li class="optionItem">15:00</li>
+                                    <li class="optionItem">15:30</li>
+                                    <li class="optionItem">16:00</li>
+                                    <li class="optionItem">16:30</li>
+                                    <li class="optionItem">17:00</li>
+                                    <li class="optionItem">17:30</li>
+                                    <li class="optionItem">18:00</li>
+                                    <li class="optionItem">18:30</li>
+                                    <li class="optionItem">19:00</li>
+                                    <li class="optionItem">19:30</li>
+                                    <li class="optionItem">20:00</li>
+                                    <li class="optionItem">20:30</li>
+                                    <li class="optionItem">21:00</li>
+                                    <li class="optionItem">21:30</li>
+                                    <li class="optionItem">22:00</li>
+                                    <li class="optionItem">22:30</li>
+                                    <li class="optionItem">23:00</li>
+                                    <li class="optionItem">23:30</li>
+                                    <li class="optionItem">00:00</li>
+                                    <li class="optionItem">00:30</li>
+                                </ul>
+                            </div>
+                            <p>-</p>
+                            <div class="selectBox">
+                                <button class="label">15:00</button>
+                                <ul class="optionList">
+                                    <li class="optionItem">01:00</li>
+                                    <li class="optionItem">01:30</li>
+                                    <li class="optionItem">02:00</li>
+                                    <li class="optionItem">02:30</li>
+                                    <li class="optionItem">03:00</li>
+                                    <li class="optionItem">03:30</li>
+                                    <li class="optionItem">04:00</li>
+                                    <li class="optionItem">04:30</li>
+                                    <li class="optionItem">05:00</li>
+                                    <li class="optionItem">05:30</li>
+                                    <li class="optionItem">06:00</li>
+                                    <li class="optionItem">06:30</li>
+                                    <li class="optionItem">07:00</li>
+                                    <li class="optionItem">07:30</li>
+                                    <li class="optionItem">08:00</li>
+                                    <li class="optionItem">08:30</li>
+                                    <li class="optionItem">09:00</li>
+                                    <li class="optionItem">09:30</li>
+                                    <li class="optionItem">10:00</li>
+                                    <li class="optionItem">10:30</li>
+                                    <li class="optionItem">11:00</li>
+                                    <li class="optionItem">11:30</li>
+                                    <li class="optionItem">12:00</li>
+                                    <li class="optionItem">12:30</li>
+                                    <li class="optionItem">13:00</li>
+                                    <li class="optionItem">13:30</li>
+                                    <li class="optionItem">14:00</li>
+                                    <li class="optionItem">14:30</li>
+                                    <li class="optionItem">15:00</li>
+                                    <li class="optionItem">15:30</li>
+                                    <li class="optionItem">16:00</li>
+                                    <li class="optionItem">16:30</li>
+                                    <li class="optionItem">17:00</li>
+                                    <li class="optionItem">17:30</li>
+                                    <li class="optionItem">18:00</li>
+                                    <li class="optionItem">18:30</li>
+                                    <li class="optionItem">19:00</li>
+                                    <li class="optionItem">19:30</li>
+                                    <li class="optionItem">20:00</li>
+                                    <li class="optionItem">20:30</li>
+                                    <li class="optionItem">21:00</li>
+                                    <li class="optionItem">21:30</li>
+                                    <li class="optionItem">22:00</li>
+                                    <li class="optionItem">22:30</li>
+                                    <li class="optionItem">23:00</li>
+                                    <li class="optionItem">23:30</li>
+                                    <li class="optionItem">00:00</li>
+                                    <li class="optionItem">00:30</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="text"><input type="text" value="소각장 시설" readonly></li>
+                        <li class="detail"><input type="text" value="" readonly></li>
+                    </ul>
+                    <ul class="btnWrap">
+                        <li><a href="#"><i class="fa-solid fa-plus"></i></a></li>
+                        <li><a href="#" ><i class="fa-solid fa-minus"></i></a></li>
+                        <li class="save"><a href="#" ><i class="fa-solid fa-check"></i></a></li>
+                        <li class="reWrite"><a href="#"><i class="fa-solid fa-pen"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="tableList">
+                    <ul class="tableText">
+                        <li class="time">
+                            <div class="selectBox">
+                                <button class="label">15:00</button>
+                                <ul class="optionList">
+                                    <li class="optionItem">01:00</li>
+                                    <li class="optionItem">01:30</li>
+                                    <li class="optionItem">02:00</li>
+                                    <li class="optionItem">02:30</li>
+                                    <li class="optionItem">03:00</li>
+                                    <li class="optionItem">03:30</li>
+                                    <li class="optionItem">04:00</li>
+                                    <li class="optionItem">04:30</li>
+                                    <li class="optionItem">05:00</li>
+                                    <li class="optionItem">05:30</li>
+                                    <li class="optionItem">06:00</li>
+                                    <li class="optionItem">06:30</li>
+                                    <li class="optionItem">07:00</li>
+                                    <li class="optionItem">07:30</li>
+                                    <li class="optionItem">08:00</li>
+                                    <li class="optionItem">08:30</li>
+                                    <li class="optionItem">09:00</li>
+                                    <li class="optionItem">09:30</li>
+                                    <li class="optionItem">10:00</li>
+                                    <li class="optionItem">10:30</li>
+                                    <li class="optionItem">11:00</li>
+                                    <li class="optionItem">11:30</li>
+                                    <li class="optionItem">12:00</li>
+                                    <li class="optionItem">12:30</li>
+                                    <li class="optionItem">13:00</li>
+                                    <li class="optionItem">13:30</li>
+                                    <li class="optionItem">14:00</li>
+                                    <li class="optionItem">14:30</li>
+                                    <li class="optionItem">15:00</li>
+                                    <li class="optionItem">15:30</li>
+                                    <li class="optionItem">16:00</li>
+                                    <li class="optionItem">16:30</li>
+                                    <li class="optionItem">17:00</li>
+                                    <li class="optionItem">17:30</li>
+                                    <li class="optionItem">18:00</li>
+                                    <li class="optionItem">18:30</li>
+                                    <li class="optionItem">19:00</li>
+                                    <li class="optionItem">19:30</li>
+                                    <li class="optionItem">20:00</li>
+                                    <li class="optionItem">20:30</li>
+                                    <li class="optionItem">21:00</li>
+                                    <li class="optionItem">21:30</li>
+                                    <li class="optionItem">22:00</li>
+                                    <li class="optionItem">22:30</li>
+                                    <li class="optionItem">23:00</li>
+                                    <li class="optionItem">23:30</li>
+                                    <li class="optionItem">00:00</li>
+                                    <li class="optionItem">00:30</li>
+                                </ul>
+                            </div>
+                            <p>-</p>
+                            <div class="selectBox">
+                                <button class="label">15:30</button>
+                                <ul class="optionList">
+                                    <li class="optionItem">01:00</li>
+                                    <li class="optionItem">01:30</li>
+                                    <li class="optionItem">02:00</li>
+                                    <li class="optionItem">02:30</li>
+                                    <li class="optionItem">03:00</li>
+                                    <li class="optionItem">03:30</li>
+                                    <li class="optionItem">04:00</li>
+                                    <li class="optionItem">04:30</li>
+                                    <li class="optionItem">05:00</li>
+                                    <li class="optionItem">05:30</li>
+                                    <li class="optionItem">06:00</li>
+                                    <li class="optionItem">06:30</li>
+                                    <li class="optionItem">07:00</li>
+                                    <li class="optionItem">07:30</li>
+                                    <li class="optionItem">08:00</li>
+                                    <li class="optionItem">08:30</li>
+                                    <li class="optionItem">09:00</li>
+                                    <li class="optionItem">09:30</li>
+                                    <li class="optionItem">10:00</li>
+                                    <li class="optionItem">10:30</li>
+                                    <li class="optionItem">11:00</li>
+                                    <li class="optionItem">11:30</li>
+                                    <li class="optionItem">12:00</li>
+                                    <li class="optionItem">12:30</li>
+                                    <li class="optionItem">13:00</li>
+                                    <li class="optionItem">13:30</li>
+                                    <li class="optionItem">14:00</li>
+                                    <li class="optionItem">14:30</li>
+                                    <li class="optionItem">15:00</li>
+                                    <li class="optionItem">15:30</li>
+                                    <li class="optionItem">16:00</li>
+                                    <li class="optionItem">16:30</li>
+                                    <li class="optionItem">17:00</li>
+                                    <li class="optionItem">17:30</li>
+                                    <li class="optionItem">18:00</li>
+                                    <li class="optionItem">18:30</li>
+                                    <li class="optionItem">19:00</li>
+                                    <li class="optionItem">19:30</li>
+                                    <li class="optionItem">20:00</li>
+                                    <li class="optionItem">20:30</li>
+                                    <li class="optionItem">21:00</li>
+                                    <li class="optionItem">21:30</li>
+                                    <li class="optionItem">22:00</li>
+                                    <li class="optionItem">22:30</li>
+                                    <li class="optionItem">23:00</li>
+                                    <li class="optionItem">23:30</li>
+                                    <li class="optionItem">00:00</li>
+                                    <li class="optionItem">00:30</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="text"><input type="text" value="환경 시설2" readonly></li>
+                        <li class="detail"><input type="text" value="" readonly></li>
+                    </ul>
+                    <ul class="btnWrap">
+                        <li><a href="#"><i class="fa-solid fa-plus"></i></a></li>
+                        <li><a href="#" ><i class="fa-solid fa-minus"></i></a></li>
+                        <li class="save"><a href="#" ><i class="fa-solid fa-check"></i></a></li>
+                        <li class="reWrite"><a href="#"><i class="fa-solid fa-pen"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="tableList">
+                    <ul class="tableText">
+                        <li class="time">
+                            <div class="selectBox">
+                                <button class="label">15:30</button>
+                                <ul class="optionList">
+                                    <li class="optionItem">01:00</li>
+                                    <li class="optionItem">01:30</li>
+                                    <li class="optionItem">02:00</li>
+                                    <li class="optionItem">02:30</li>
+                                    <li class="optionItem">03:00</li>
+                                    <li class="optionItem">03:30</li>
+                                    <li class="optionItem">04:00</li>
+                                    <li class="optionItem">04:30</li>
+                                    <li class="optionItem">05:00</li>
+                                    <li class="optionItem">05:30</li>
+                                    <li class="optionItem">06:00</li>
+                                    <li class="optionItem">06:30</li>
+                                    <li class="optionItem">07:00</li>
+                                    <li class="optionItem">07:30</li>
+                                    <li class="optionItem">08:00</li>
+                                    <li class="optionItem">08:30</li>
+                                    <li class="optionItem">09:00</li>
+                                    <li class="optionItem">09:30</li>
+                                    <li class="optionItem">10:00</li>
+                                    <li class="optionItem">10:30</li>
+                                    <li class="optionItem">11:00</li>
+                                    <li class="optionItem">11:30</li>
+                                    <li class="optionItem">12:00</li>
+                                    <li class="optionItem">12:30</li>
+                                    <li class="optionItem">13:00</li>
+                                    <li class="optionItem">13:30</li>
+                                    <li class="optionItem">14:00</li>
+                                    <li class="optionItem">14:30</li>
+                                    <li class="optionItem">15:00</li>
+                                    <li class="optionItem">15:30</li>
+                                    <li class="optionItem">16:00</li>
+                                    <li class="optionItem">16:30</li>
+                                    <li class="optionItem">17:00</li>
+                                    <li class="optionItem">17:30</li>
+                                    <li class="optionItem">18:00</li>
+                                    <li class="optionItem">18:30</li>
+                                    <li class="optionItem">19:00</li>
+                                    <li class="optionItem">19:30</li>
+                                    <li class="optionItem">20:00</li>
+                                    <li class="optionItem">20:30</li>
+                                    <li class="optionItem">21:00</li>
+                                    <li class="optionItem">21:30</li>
+                                    <li class="optionItem">22:00</li>
+                                    <li class="optionItem">22:30</li>
+                                    <li class="optionItem">23:00</li>
+                                    <li class="optionItem">23:30</li>
+                                    <li class="optionItem">00:00</li>
+                                    <li class="optionItem">00:30</li>
+                                </ul>
+                            </div>
+                            <p>-</p>
+                            <div class="selectBox">
+                                <button class="label">18:00</button>
+                                <ul class="optionList">
+                                    <li class="optionItem">01:00</li>
+                                    <li class="optionItem">01:30</li>
+                                    <li class="optionItem">02:00</li>
+                                    <li class="optionItem">02:30</li>
+                                    <li class="optionItem">03:00</li>
+                                    <li class="optionItem">03:30</li>
+                                    <li class="optionItem">04:00</li>
+                                    <li class="optionItem">04:30</li>
+                                    <li class="optionItem">05:00</li>
+                                    <li class="optionItem">05:30</li>
+                                    <li class="optionItem">06:00</li>
+                                    <li class="optionItem">06:30</li>
+                                    <li class="optionItem">07:00</li>
+                                    <li class="optionItem">07:30</li>
+                                    <li class="optionItem">08:00</li>
+                                    <li class="optionItem">08:30</li>
+                                    <li class="optionItem">09:00</li>
+                                    <li class="optionItem">09:30</li>
+                                    <li class="optionItem">10:00</li>
+                                    <li class="optionItem">10:30</li>
+                                    <li class="optionItem">11:00</li>
+                                    <li class="optionItem">11:30</li>
+                                    <li class="optionItem">12:00</li>
+                                    <li class="optionItem">12:30</li>
+                                    <li class="optionItem">13:00</li>
+                                    <li class="optionItem">13:30</li>
+                                    <li class="optionItem">14:00</li>
+                                    <li class="optionItem">14:30</li>
+                                    <li class="optionItem">15:00</li>
+                                    <li class="optionItem">15:30</li>
+                                    <li class="optionItem">16:00</li>
+                                    <li class="optionItem">16:30</li>
+                                    <li class="optionItem">17:00</li>
+                                    <li class="optionItem">17:30</li>
+                                    <li class="optionItem">18:00</li>
+                                    <li class="optionItem">18:30</li>
+                                    <li class="optionItem">19:00</li>
+                                    <li class="optionItem">19:30</li>
+                                    <li class="optionItem">20:00</li>
+                                    <li class="optionItem">20:30</li>
+                                    <li class="optionItem">21:00</li>
+                                    <li class="optionItem">21:30</li>
+                                    <li class="optionItem">22:00</li>
+                                    <li class="optionItem">22:30</li>
+                                    <li class="optionItem">23:00</li>
+                                    <li class="optionItem">23:30</li>
+                                    <li class="optionItem">00:00</li>
+                                    <li class="optionItem">00:30</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="text"><input type="text" value="이동" readonly></li>
+                        <li class="detail"><input type="text" value="" readonly></li>
+                    </ul>
+                    <ul class="btnWrap">
+                        <li><a href="#"><i class="fa-solid fa-plus"></i></a></li>
+                        <li><a href="#" ><i class="fa-solid fa-minus"></i></a></li>
+                        <li class="save"><a href="#" ><i class="fa-solid fa-check"></i></a></li>
+                        <li class="reWrite"><a href="#"><i class="fa-solid fa-pen"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="tableList">
+                    <ul class="tableText">
+                        <li class="time">
+                            <div class="selectBox">
+                                <button class="label">18:00</button>
+                                <ul class="optionList">
+                                    <li class="optionItem">01:00</li>
+                                    <li class="optionItem">01:30</li>
+                                    <li class="optionItem">02:00</li>
+                                    <li class="optionItem">02:30</li>
+                                    <li class="optionItem">03:00</li>
+                                    <li class="optionItem">03:30</li>
+                                    <li class="optionItem">04:00</li>
+                                    <li class="optionItem">04:30</li>
+                                    <li class="optionItem">05:00</li>
+                                    <li class="optionItem">05:30</li>
+                                    <li class="optionItem">06:00</li>
+                                    <li class="optionItem">06:30</li>
+                                    <li class="optionItem">07:00</li>
+                                    <li class="optionItem">07:30</li>
+                                    <li class="optionItem">08:00</li>
+                                    <li class="optionItem">08:30</li>
+                                    <li class="optionItem">09:00</li>
+                                    <li class="optionItem">09:30</li>
+                                    <li class="optionItem">10:00</li>
+                                    <li class="optionItem">10:30</li>
+                                    <li class="optionItem">11:00</li>
+                                    <li class="optionItem">11:30</li>
+                                    <li class="optionItem">12:00</li>
+                                    <li class="optionItem">12:30</li>
+                                    <li class="optionItem">13:00</li>
+                                    <li class="optionItem">13:30</li>
+                                    <li class="optionItem">14:00</li>
+                                    <li class="optionItem">14:30</li>
+                                    <li class="optionItem">15:00</li>
+                                    <li class="optionItem">15:30</li>
+                                    <li class="optionItem">16:00</li>
+                                    <li class="optionItem">16:30</li>
+                                    <li class="optionItem">17:00</li>
+                                    <li class="optionItem">17:30</li>
+                                    <li class="optionItem">18:00</li>
+                                    <li class="optionItem">18:30</li>
+                                    <li class="optionItem">19:00</li>
+                                    <li class="optionItem">19:30</li>
+                                    <li class="optionItem">20:00</li>
+                                    <li class="optionItem">20:30</li>
+                                    <li class="optionItem">21:00</li>
+                                    <li class="optionItem">21:30</li>
+                                    <li class="optionItem">22:00</li>
+                                    <li class="optionItem">22:30</li>
+                                    <li class="optionItem">23:00</li>
+                                    <li class="optionItem">23:30</li>
+                                    <li class="optionItem">00:00</li>
+                                    <li class="optionItem">00:30</li>
+                                </ul>
+                            </div>
+                            <p>-</p>
+                            <div class="selectBox">
+                                <button class="label">19:00</button>
+                                <ul class="optionList">
+                                    <li class="optionItem">01:00</li>
+                                    <li class="optionItem">01:30</li>
+                                    <li class="optionItem">02:00</li>
+                                    <li class="optionItem">02:30</li>
+                                    <li class="optionItem">03:00</li>
+                                    <li class="optionItem">03:30</li>
+                                    <li class="optionItem">04:00</li>
+                                    <li class="optionItem">04:30</li>
+                                    <li class="optionItem">05:00</li>
+                                    <li class="optionItem">05:30</li>
+                                    <li class="optionItem">06:00</li>
+                                    <li class="optionItem">06:30</li>
+                                    <li class="optionItem">07:00</li>
+                                    <li class="optionItem">07:30</li>
+                                    <li class="optionItem">08:00</li>
+                                    <li class="optionItem">08:30</li>
+                                    <li class="optionItem">09:00</li>
+                                    <li class="optionItem">09:30</li>
+                                    <li class="optionItem">10:00</li>
+                                    <li class="optionItem">10:30</li>
+                                    <li class="optionItem">11:00</li>
+                                    <li class="optionItem">11:30</li>
+                                    <li class="optionItem">12:00</li>
+                                    <li class="optionItem">12:30</li>
+                                    <li class="optionItem">13:00</li>
+                                    <li class="optionItem">13:30</li>
+                                    <li class="optionItem">14:00</li>
+                                    <li class="optionItem">14:30</li>
+                                    <li class="optionItem">15:00</li>
+                                    <li class="optionItem">15:30</li>
+                                    <li class="optionItem">16:00</li>
+                                    <li class="optionItem">16:30</li>
+                                    <li class="optionItem">17:00</li>
+                                    <li class="optionItem">17:30</li>
+                                    <li class="optionItem">18:00</li>
+                                    <li class="optionItem">18:30</li>
+                                    <li class="optionItem">19:00</li>
+                                    <li class="optionItem">19:30</li>
+                                    <li class="optionItem">20:00</li>
+                                    <li class="optionItem">20:30</li>
+                                    <li class="optionItem">21:00</li>
+                                    <li class="optionItem">21:30</li>
+                                    <li class="optionItem">22:00</li>
+                                    <li class="optionItem">22:30</li>
+                                    <li class="optionItem">23:00</li>
+                                    <li class="optionItem">23:30</li>
+                                    <li class="optionItem">00:00</li>
+                                    <li class="optionItem">00:30</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="text"><input type="text" value="저녁식사" readonly></li>
+                        <li class="detail"><input type="text" value="뷔페" readonly></li>
+                    </ul>
+                    <ul class="btnWrap">
+                        <li><a href="#"><i class="fa-solid fa-plus"></i></a></li>
+                        <li><a href="#" ><i class="fa-solid fa-minus"></i></a></li>
+                        <li class="save"><a href="#" ><i class="fa-solid fa-check"></i></a></li>
+                        <li class="reWrite"><a href="#"><i class="fa-solid fa-pen"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="tableList">
+                    <ul class="tableText">
+                        <li class="time">
+                            <div class="selectBox">
+                                <button class="label">19:00</button>
+                                <ul class="optionList">
+                                    <li class="optionItem">01:00</li>
+                                    <li class="optionItem">01:30</li>
+                                    <li class="optionItem">02:00</li>
+                                    <li class="optionItem">02:30</li>
+                                    <li class="optionItem">03:00</li>
+                                    <li class="optionItem">03:30</li>
+                                    <li class="optionItem">04:00</li>
+                                    <li class="optionItem">04:30</li>
+                                    <li class="optionItem">05:00</li>
+                                    <li class="optionItem">05:30</li>
+                                    <li class="optionItem">06:00</li>
+                                    <li class="optionItem">06:30</li>
+                                    <li class="optionItem">07:00</li>
+                                    <li class="optionItem">07:30</li>
+                                    <li class="optionItem">08:00</li>
+                                    <li class="optionItem">08:30</li>
+                                    <li class="optionItem">09:00</li>
+                                    <li class="optionItem">09:30</li>
+                                    <li class="optionItem">10:00</li>
+                                    <li class="optionItem">10:30</li>
+                                    <li class="optionItem">11:00</li>
+                                    <li class="optionItem">11:30</li>
+                                    <li class="optionItem">12:00</li>
+                                    <li class="optionItem">12:30</li>
+                                    <li class="optionItem">13:00</li>
+                                    <li class="optionItem">13:30</li>
+                                    <li class="optionItem">14:00</li>
+                                    <li class="optionItem">14:30</li>
+                                    <li class="optionItem">15:00</li>
+                                    <li class="optionItem">15:30</li>
+                                    <li class="optionItem">16:00</li>
+                                    <li class="optionItem">16:30</li>
+                                    <li class="optionItem">17:00</li>
+                                    <li class="optionItem">17:30</li>
+                                    <li class="optionItem">18:00</li>
+                                    <li class="optionItem">18:30</li>
+                                    <li class="optionItem">19:00</li>
+                                    <li class="optionItem">19:30</li>
+                                    <li class="optionItem">20:00</li>
+                                    <li class="optionItem">20:30</li>
+                                    <li class="optionItem">21:00</li>
+                                    <li class="optionItem">21:30</li>
+                                    <li class="optionItem">22:00</li>
+                                    <li class="optionItem">22:30</li>
+                                    <li class="optionItem">23:00</li>
+                                    <li class="optionItem">23:30</li>
+                                    <li class="optionItem">00:00</li>
+                                    <li class="optionItem">00:30</li>
+                                </ul>
+                            </div>
+                            <p>-</p>
+                            <div class="selectBox">
+                                <button class="label">19:00</button>
+                                <ul class="optionList">
+                                    <li class="optionItem">01:00</li>
+                                    <li class="optionItem">01:30</li>
+                                    <li class="optionItem">02:00</li>
+                                    <li class="optionItem">02:30</li>
+                                    <li class="optionItem">03:00</li>
+                                    <li class="optionItem">03:30</li>
+                                    <li class="optionItem">04:00</li>
+                                    <li class="optionItem">04:30</li>
+                                    <li class="optionItem">05:00</li>
+                                    <li class="optionItem">05:30</li>
+                                    <li class="optionItem">06:00</li>
+                                    <li class="optionItem">06:30</li>
+                                    <li class="optionItem">07:00</li>
+                                    <li class="optionItem">07:30</li>
+                                    <li class="optionItem">08:00</li>
+                                    <li class="optionItem">08:30</li>
+                                    <li class="optionItem">09:00</li>
+                                    <li class="optionItem">09:30</li>
+                                    <li class="optionItem">10:00</li>
+                                    <li class="optionItem">10:30</li>
+                                    <li class="optionItem">11:00</li>
+                                    <li class="optionItem">11:30</li>
+                                    <li class="optionItem">12:00</li>
+                                    <li class="optionItem">12:30</li>
+                                    <li class="optionItem">13:00</li>
+                                    <li class="optionItem">13:30</li>
+                                    <li class="optionItem">14:00</li>
+                                    <li class="optionItem">14:30</li>
+                                    <li class="optionItem">15:00</li>
+                                    <li class="optionItem">15:30</li>
+                                    <li class="optionItem">16:00</li>
+                                    <li class="optionItem">16:30</li>
+                                    <li class="optionItem">17:00</li>
+                                    <li class="optionItem">17:30</li>
+                                    <li class="optionItem">18:00</li>
+                                    <li class="optionItem">18:30</li>
+                                    <li class="optionItem">19:00</li>
+                                    <li class="optionItem">19:30</li>
+                                    <li class="optionItem">20:00</li>
+                                    <li class="optionItem">20:30</li>
+                                    <li class="optionItem">21:00</li>
+                                    <li class="optionItem">21:30</li>
+                                    <li class="optionItem">22:00</li>
+                                    <li class="optionItem">22:30</li>
+                                    <li class="optionItem">23:00</li>
+                                    <li class="optionItem">23:30</li>
+                                    <li class="optionItem">00:00</li>
+                                    <li class="optionItem">00:30</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="text"><input type="text" value="숙소 체크인 및 자유시간" readonly></li>
+                        <li class="detail"><input type="text" value="" readonly></li>
+                    </ul>
+                    <ul class="btnWrap">
+                        <li><a href="#"><i class="fa-solid fa-plus"></i></a></li>
+                        <li><a href="#" ><i class="fa-solid fa-minus"></i></a></li>
+                        <li class="save"><a href="#" ><i class="fa-solid fa-check"></i></a></li>
+                        <li class="reWrite"><a href="#"><i class="fa-solid fa-pen"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timetableWrap">
+                <div class="titleWrap">
+                    <div class="title">
+                        <p class="day">DAY02</p>
+                        <p class="date">2022-09-02</p>
+                    </div>
+                    <div class="titleBtn">
+                        <a href="#" class="update-btn mr05">전체수정</a>
+                        <a href="#" class="date-btn">날짜수정</a>
+                    </div>
+                </div>
+                <ul class="tableTitle">
+                    <li class="time"><p>시간</p></li>
+                    <li class="text"><p>내용</p></li>
+                    <li class="detail"><p>비고</p></li>
+                </ul>
+
+                <div class="tableList">
+                    <ul class="tableText">
+                        <li class="time">
+                            <div class="selectBox">
+                                <button class="label">08:00</button>
+                                <ul class="optionList">
+                                    <li class="optionItem">01:00</li>
+                                    <li class="optionItem">01:30</li>
+                                    <li class="optionItem">02:00</li>
+                                    <li class="optionItem">02:30</li>
+                                    <li class="optionItem">03:00</li>
+                                    <li class="optionItem">03:30</li>
+                                    <li class="optionItem">04:00</li>
+                                    <li class="optionItem">04:30</li>
+                                    <li class="optionItem">05:00</li>
+                                    <li class="optionItem">05:30</li>
+                                    <li class="optionItem">06:00</li>
+                                    <li class="optionItem">06:30</li>
+                                    <li class="optionItem">07:00</li>
+                                    <li class="optionItem">07:30</li>
+                                    <li class="optionItem">08:00</li>
+                                    <li class="optionItem">08:30</li>
+                                    <li class="optionItem">09:00</li>
+                                    <li class="optionItem">09:30</li>
+                                    <li class="optionItem">10:00</li>
+                                    <li class="optionItem">10:30</li>
+                                    <li class="optionItem">11:00</li>
+                                    <li class="optionItem">11:30</li>
+                                    <li class="optionItem">12:00</li>
+                                    <li class="optionItem">12:30</li>
+                                    <li class="optionItem">13:00</li>
+                                    <li class="optionItem">13:30</li>
+                                    <li class="optionItem">14:00</li>
+                                    <li class="optionItem">14:30</li>
+                                    <li class="optionItem">15:00</li>
+                                    <li class="optionItem">15:30</li>
+                                    <li class="optionItem">16:00</li>
+                                    <li class="optionItem">16:30</li>
+                                    <li class="optionItem">17:00</li>
+                                    <li class="optionItem">17:30</li>
+                                    <li class="optionItem">18:00</li>
+                                    <li class="optionItem">18:30</li>
+                                    <li class="optionItem">19:00</li>
+                                    <li class="optionItem">19:30</li>
+                                    <li class="optionItem">20:00</li>
+                                    <li class="optionItem">20:30</li>
+                                    <li class="optionItem">21:00</li>
+                                    <li class="optionItem">21:30</li>
+                                    <li class="optionItem">22:00</li>
+                                    <li class="optionItem">22:30</li>
+                                    <li class="optionItem">23:00</li>
+                                    <li class="optionItem">23:30</li>
+                                    <li class="optionItem">00:00</li>
+                                    <li class="optionItem">00:30</li>
+                                </ul>
+                            </div>
+                            <p>-</p>
+                            <div class="selectBox">
+                                <button class="label">09:00</button>
+                                <ul class="optionList">
+                                    <li class="optionItem">01:00</li>
+                                    <li class="optionItem">01:30</li>
+                                    <li class="optionItem">02:00</li>
+                                    <li class="optionItem">02:30</li>
+                                    <li class="optionItem">03:00</li>
+                                    <li class="optionItem">03:30</li>
+                                    <li class="optionItem">04:00</li>
+                                    <li class="optionItem">04:30</li>
+                                    <li class="optionItem">05:00</li>
+                                    <li class="optionItem">05:30</li>
+                                    <li class="optionItem">06:00</li>
+                                    <li class="optionItem">06:30</li>
+                                    <li class="optionItem">07:00</li>
+                                    <li class="optionItem">07:30</li>
+                                    <li class="optionItem">08:00</li>
+                                    <li class="optionItem">08:30</li>
+                                    <li class="optionItem">09:00</li>
+                                    <li class="optionItem">09:30</li>
+                                    <li class="optionItem">10:00</li>
+                                    <li class="optionItem">10:30</li>
+                                    <li class="optionItem">11:00</li>
+                                    <li class="optionItem">11:30</li>
+                                    <li class="optionItem">12:00</li>
+                                    <li class="optionItem">12:30</li>
+                                    <li class="optionItem">13:00</li>
+                                    <li class="optionItem">13:30</li>
+                                    <li class="optionItem">14:00</li>
+                                    <li class="optionItem">14:30</li>
+                                    <li class="optionItem">15:00</li>
+                                    <li class="optionItem">15:30</li>
+                                    <li class="optionItem">16:00</li>
+                                    <li class="optionItem">16:30</li>
+                                    <li class="optionItem">17:00</li>
+                                    <li class="optionItem">17:30</li>
+                                    <li class="optionItem">18:00</li>
+                                    <li class="optionItem">18:30</li>
+                                    <li class="optionItem">19:00</li>
+                                    <li class="optionItem">19:30</li>
+                                    <li class="optionItem">20:00</li>
+                                    <li class="optionItem">20:30</li>
+                                    <li class="optionItem">21:00</li>
+                                    <li class="optionItem">21:30</li>
+                                    <li class="optionItem">22:00</li>
+                                    <li class="optionItem">22:30</li>
+                                    <li class="optionItem">23:00</li>
+                                    <li class="optionItem">23:30</li>
+                                    <li class="optionItem">00:00</li>
+                                    <li class="optionItem">00:30</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="text"><input type="text" value="조식" readonly></li>
+                        <li class="detail"><input type="text" value="호텔식" readonly></li>
+                    </ul>
+                    <ul class="btnWrap">
+                        <li><a href="#"><i class="fa-solid fa-plus"></i></a></li>
+                        <li><a href="#" ><i class="fa-solid fa-minus"></i></a></li>
+                        <li class="save"><a href="#" ><i class="fa-solid fa-check"></i></a></li>
+                        <li class="reWrite"><a href="#"><i class="fa-solid fa-pen"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="tableList">
+                    <ul class="tableText">
+                        <li class="time">
+                            <div class="selectBox">
+                                <button class="label">09:00</button>
+                                <ul class="optionList">
+                                    <li class="optionItem">01:00</li>
+                                    <li class="optionItem">01:30</li>
+                                    <li class="optionItem">02:00</li>
+                                    <li class="optionItem">02:30</li>
+                                    <li class="optionItem">03:00</li>
+                                    <li class="optionItem">03:30</li>
+                                    <li class="optionItem">04:00</li>
+                                    <li class="optionItem">04:30</li>
+                                    <li class="optionItem">05:00</li>
+                                    <li class="optionItem">05:30</li>
+                                    <li class="optionItem">06:00</li>
+                                    <li class="optionItem">06:30</li>
+                                    <li class="optionItem">07:00</li>
+                                    <li class="optionItem">07:30</li>
+                                    <li class="optionItem">08:00</li>
+                                    <li class="optionItem">08:30</li>
+                                    <li class="optionItem">09:00</li>
+                                    <li class="optionItem">09:30</li>
+                                    <li class="optionItem">10:00</li>
+                                    <li class="optionItem">10:30</li>
+                                    <li class="optionItem">11:00</li>
+                                    <li class="optionItem">11:30</li>
+                                    <li class="optionItem">12:00</li>
+                                    <li class="optionItem">12:30</li>
+                                    <li class="optionItem">13:00</li>
+                                    <li class="optionItem">13:30</li>
+                                    <li class="optionItem">14:00</li>
+                                    <li class="optionItem">14:30</li>
+                                    <li class="optionItem">15:00</li>
+                                    <li class="optionItem">15:30</li>
+                                    <li class="optionItem">16:00</li>
+                                    <li class="optionItem">16:30</li>
+                                    <li class="optionItem">17:00</li>
+                                    <li class="optionItem">17:30</li>
+                                    <li class="optionItem">18:00</li>
+                                    <li class="optionItem">18:30</li>
+                                    <li class="optionItem">19:00</li>
+                                    <li class="optionItem">19:30</li>
+                                    <li class="optionItem">20:00</li>
+                                    <li class="optionItem">20:30</li>
+                                    <li class="optionItem">21:00</li>
+                                    <li class="optionItem">21:30</li>
+                                    <li class="optionItem">22:00</li>
+                                    <li class="optionItem">22:30</li>
+                                    <li class="optionItem">23:00</li>
+                                    <li class="optionItem">23:30</li>
+                                    <li class="optionItem">00:00</li>
+                                    <li class="optionItem">00:30</li>
+                                </ul>
+                            </div>
+                            <p>-</p>
+                            <div class="selectBox">
+                                <button class="label">10:00</button>
+                                <ul class="optionList">
+                                    <li class="optionItem">01:00</li>
+                                    <li class="optionItem">01:30</li>
+                                    <li class="optionItem">02:00</li>
+                                    <li class="optionItem">02:30</li>
+                                    <li class="optionItem">03:00</li>
+                                    <li class="optionItem">03:30</li>
+                                    <li class="optionItem">04:00</li>
+                                    <li class="optionItem">04:30</li>
+                                    <li class="optionItem">05:00</li>
+                                    <li class="optionItem">05:30</li>
+                                    <li class="optionItem">06:00</li>
+                                    <li class="optionItem">06:30</li>
+                                    <li class="optionItem">07:00</li>
+                                    <li class="optionItem">07:30</li>
+                                    <li class="optionItem">08:00</li>
+                                    <li class="optionItem">08:30</li>
+                                    <li class="optionItem">09:00</li>
+                                    <li class="optionItem">09:30</li>
+                                    <li class="optionItem">10:00</li>
+                                    <li class="optionItem">10:30</li>
+                                    <li class="optionItem">11:00</li>
+                                    <li class="optionItem">11:30</li>
+                                    <li class="optionItem">12:00</li>
+                                    <li class="optionItem">12:30</li>
+                                    <li class="optionItem">13:00</li>
+                                    <li class="optionItem">13:30</li>
+                                    <li class="optionItem">14:00</li>
+                                    <li class="optionItem">14:30</li>
+                                    <li class="optionItem">15:00</li>
+                                    <li class="optionItem">15:30</li>
+                                    <li class="optionItem">16:00</li>
+                                    <li class="optionItem">16:30</li>
+                                    <li class="optionItem">17:00</li>
+                                    <li class="optionItem">17:30</li>
+                                    <li class="optionItem">18:00</li>
+                                    <li class="optionItem">18:30</li>
+                                    <li class="optionItem">19:00</li>
+                                    <li class="optionItem">19:30</li>
+                                    <li class="optionItem">20:00</li>
+                                    <li class="optionItem">20:30</li>
+                                    <li class="optionItem">21:00</li>
+                                    <li class="optionItem">21:30</li>
+                                    <li class="optionItem">22:00</li>
+                                    <li class="optionItem">22:30</li>
+                                    <li class="optionItem">23:00</li>
+                                    <li class="optionItem">23:30</li>
+                                    <li class="optionItem">00:00</li>
+                                    <li class="optionItem">00:30</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="text"><input type="text" value="이동" readonly></li>
+                        <li class="detail"><input type="text" value="" readonly></li>
+                    </ul>
+                    <ul class="btnWrap">
+                        <li><a href="#"><i class="fa-solid fa-plus"></i></a></li>
+                        <li><a href="#" ><i class="fa-solid fa-minus"></i></a></li>
+                        <li class="save"><a href="#" ><i class="fa-solid fa-check"></i></a></li>
+                        <li class="reWrite"><a href="#"><i class="fa-solid fa-pen"></i></a></li>
+                    </ul>
+                </div>
+
+
+
+                <div class="tableList">
+                    <ul class="tableText">
+                        <li class="time">
+                            <div class="selectBox">
+                                <button class="label">10:00</button>
+                                <ul class="optionList">
+                                    <li class="optionItem">01:00</li>
+                                    <li class="optionItem">01:30</li>
+                                    <li class="optionItem">02:00</li>
+                                    <li class="optionItem">02:30</li>
+                                    <li class="optionItem">03:00</li>
+                                    <li class="optionItem">03:30</li>
+                                    <li class="optionItem">04:00</li>
+                                    <li class="optionItem">04:30</li>
+                                    <li class="optionItem">05:00</li>
+                                    <li class="optionItem">05:30</li>
+                                    <li class="optionItem">06:00</li>
+                                    <li class="optionItem">06:30</li>
+                                    <li class="optionItem">07:00</li>
+                                    <li class="optionItem">07:30</li>
+                                    <li class="optionItem">08:00</li>
+                                    <li class="optionItem">08:30</li>
+                                    <li class="optionItem">09:00</li>
+                                    <li class="optionItem">09:30</li>
+                                    <li class="optionItem">10:00</li>
+                                    <li class="optionItem">10:30</li>
+                                    <li class="optionItem">11:00</li>
+                                    <li class="optionItem">11:30</li>
+                                    <li class="optionItem">12:00</li>
+                                    <li class="optionItem">12:30</li>
+                                    <li class="optionItem">13:00</li>
+                                    <li class="optionItem">13:30</li>
+                                    <li class="optionItem">14:00</li>
+                                    <li class="optionItem">14:30</li>
+                                    <li class="optionItem">15:00</li>
+                                    <li class="optionItem">15:30</li>
+                                    <li class="optionItem">16:00</li>
+                                    <li class="optionItem">16:30</li>
+                                    <li class="optionItem">17:00</li>
+                                    <li class="optionItem">17:30</li>
+                                    <li class="optionItem">18:00</li>
+                                    <li class="optionItem">18:30</li>
+                                    <li class="optionItem">19:00</li>
+                                    <li class="optionItem">19:30</li>
+                                    <li class="optionItem">20:00</li>
+                                    <li class="optionItem">20:30</li>
+                                    <li class="optionItem">21:00</li>
+                                    <li class="optionItem">21:30</li>
+                                    <li class="optionItem">22:00</li>
+                                    <li class="optionItem">22:30</li>
+                                    <li class="optionItem">23:00</li>
+                                    <li class="optionItem">23:30</li>
+                                    <li class="optionItem">00:00</li>
+                                    <li class="optionItem">00:30</li>
+                                </ul>
+                            </div>
+                            <p>-</p>
+                            <div class="selectBox">
+                                <button class="label">15:00</button>
+                                <ul class="optionList">
+                                    <li class="optionItem">01:00</li>
+                                    <li class="optionItem">01:30</li>
+                                    <li class="optionItem">02:00</li>
+                                    <li class="optionItem">02:30</li>
+                                    <li class="optionItem">03:00</li>
+                                    <li class="optionItem">03:30</li>
+                                    <li class="optionItem">04:00</li>
+                                    <li class="optionItem">04:30</li>
+                                    <li class="optionItem">05:00</li>
+                                    <li class="optionItem">05:30</li>
+                                    <li class="optionItem">06:00</li>
+                                    <li class="optionItem">06:30</li>
+                                    <li class="optionItem">07:00</li>
+                                    <li class="optionItem">07:30</li>
+                                    <li class="optionItem">08:00</li>
+                                    <li class="optionItem">08:30</li>
+                                    <li class="optionItem">09:00</li>
+                                    <li class="optionItem">09:30</li>
+                                    <li class="optionItem">10:00</li>
+                                    <li class="optionItem">10:30</li>
+                                    <li class="optionItem">11:00</li>
+                                    <li class="optionItem">11:30</li>
+                                    <li class="optionItem">12:00</li>
+                                    <li class="optionItem">12:30</li>
+                                    <li class="optionItem">13:00</li>
+                                    <li class="optionItem">13:30</li>
+                                    <li class="optionItem">14:00</li>
+                                    <li class="optionItem">14:30</li>
+                                    <li class="optionItem">15:00</li>
+                                    <li class="optionItem">15:30</li>
+                                    <li class="optionItem">16:00</li>
+                                    <li class="optionItem">16:30</li>
+                                    <li class="optionItem">17:00</li>
+                                    <li class="optionItem">17:30</li>
+                                    <li class="optionItem">18:00</li>
+                                    <li class="optionItem">18:30</li>
+                                    <li class="optionItem">19:00</li>
+                                    <li class="optionItem">19:30</li>
+                                    <li class="optionItem">20:00</li>
+                                    <li class="optionItem">20:30</li>
+                                    <li class="optionItem">21:00</li>
+                                    <li class="optionItem">21:30</li>
+                                    <li class="optionItem">22:00</li>
+                                    <li class="optionItem">22:30</li>
+                                    <li class="optionItem">23:00</li>
+                                    <li class="optionItem">23:30</li>
+                                    <li class="optionItem">00:00</li>
+                                    <li class="optionItem">00:30</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="text"><input type="text" value="에버랜드" readonly></li>
+                        <li class="detail"><input type="text" value="점심 각자" readonly></li>
+                    </ul>
+                    <ul class="btnWrap">
+                        <li><a href="#"><i class="fa-solid fa-plus"></i></a></li>
+                        <li><a href="#" ><i class="fa-solid fa-minus"></i></a></li>
+                        <li class="save"><a href="#" ><i class="fa-solid fa-check"></i></a></li>
+                        <li class="reWrite"><a href="#"><i class="fa-solid fa-pen"></i></a></li>
+                    </ul>
+                </div>
+
+
+                <div class="tableList">
+                    <ul class="tableText">
+                        <li class="time">
+                            <div class="selectBox">
+                                <button class="label">15:00</button>
+                                <ul class="optionList">
+                                    <li class="optionItem">01:00</li>
+                                    <li class="optionItem">01:30</li>
+                                    <li class="optionItem">02:00</li>
+                                    <li class="optionItem">02:30</li>
+                                    <li class="optionItem">03:00</li>
+                                    <li class="optionItem">03:30</li>
+                                    <li class="optionItem">04:00</li>
+                                    <li class="optionItem">04:30</li>
+                                    <li class="optionItem">05:00</li>
+                                    <li class="optionItem">05:30</li>
+                                    <li class="optionItem">06:00</li>
+                                    <li class="optionItem">06:30</li>
+                                    <li class="optionItem">07:00</li>
+                                    <li class="optionItem">07:30</li>
+                                    <li class="optionItem">08:00</li>
+                                    <li class="optionItem">08:30</li>
+                                    <li class="optionItem">09:00</li>
+                                    <li class="optionItem">09:30</li>
+                                    <li class="optionItem">10:00</li>
+                                    <li class="optionItem">10:30</li>
+                                    <li class="optionItem">11:00</li>
+                                    <li class="optionItem">11:30</li>
+                                    <li class="optionItem">12:00</li>
+                                    <li class="optionItem">12:30</li>
+                                    <li class="optionItem">13:00</li>
+                                    <li class="optionItem">13:30</li>
+                                    <li class="optionItem">14:00</li>
+                                    <li class="optionItem">14:30</li>
+                                    <li class="optionItem">15:00</li>
+                                    <li class="optionItem">15:30</li>
+                                    <li class="optionItem">16:00</li>
+                                    <li class="optionItem">16:30</li>
+                                    <li class="optionItem">17:00</li>
+                                    <li class="optionItem">17:30</li>
+                                    <li class="optionItem">18:00</li>
+                                    <li class="optionItem">18:30</li>
+                                    <li class="optionItem">19:00</li>
+                                    <li class="optionItem">19:30</li>
+                                    <li class="optionItem">20:00</li>
+                                    <li class="optionItem">20:30</li>
+                                    <li class="optionItem">21:00</li>
+                                    <li class="optionItem">21:30</li>
+                                    <li class="optionItem">22:00</li>
+                                    <li class="optionItem">22:30</li>
+                                    <li class="optionItem">23:00</li>
+                                    <li class="optionItem">23:30</li>
+                                    <li class="optionItem">00:00</li>
+                                    <li class="optionItem">00:30</li>
+                                </ul>
+                            </div>
+                            <p>-</p>
+                            <div class="selectBox">
+                                <button class="label">17:00</button>
+                                <ul class="optionList">
+                                    <li class="optionItem">01:00</li>
+                                    <li class="optionItem">01:30</li>
+                                    <li class="optionItem">02:00</li>
+                                    <li class="optionItem">02:30</li>
+                                    <li class="optionItem">03:00</li>
+                                    <li class="optionItem">03:30</li>
+                                    <li class="optionItem">04:00</li>
+                                    <li class="optionItem">04:30</li>
+                                    <li class="optionItem">05:00</li>
+                                    <li class="optionItem">05:30</li>
+                                    <li class="optionItem">06:00</li>
+                                    <li class="optionItem">06:30</li>
+                                    <li class="optionItem">07:00</li>
+                                    <li class="optionItem">07:30</li>
+                                    <li class="optionItem">08:00</li>
+                                    <li class="optionItem">08:30</li>
+                                    <li class="optionItem">09:00</li>
+                                    <li class="optionItem">09:30</li>
+                                    <li class="optionItem">10:00</li>
+                                    <li class="optionItem">10:30</li>
+                                    <li class="optionItem">11:00</li>
+                                    <li class="optionItem">11:30</li>
+                                    <li class="optionItem">12:00</li>
+                                    <li class="optionItem">12:30</li>
+                                    <li class="optionItem">13:00</li>
+                                    <li class="optionItem">13:30</li>
+                                    <li class="optionItem">14:00</li>
+                                    <li class="optionItem">14:30</li>
+                                    <li class="optionItem">15:00</li>
+                                    <li class="optionItem">15:30</li>
+                                    <li class="optionItem">16:00</li>
+                                    <li class="optionItem">16:30</li>
+                                    <li class="optionItem">17:00</li>
+                                    <li class="optionItem">17:30</li>
+                                    <li class="optionItem">18:00</li>
+                                    <li class="optionItem">18:30</li>
+                                    <li class="optionItem">19:00</li>
+                                    <li class="optionItem">19:30</li>
+                                    <li class="optionItem">20:00</li>
+                                    <li class="optionItem">20:30</li>
+                                    <li class="optionItem">21:00</li>
+                                    <li class="optionItem">21:30</li>
+                                    <li class="optionItem">22:00</li>
+                                    <li class="optionItem">22:30</li>
+                                    <li class="optionItem">23:00</li>
+                                    <li class="optionItem">23:30</li>
+                                    <li class="optionItem">00:00</li>
+                                    <li class="optionItem">00:30</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="text"><input type="text" value="이동" readonly></li>
+                        <li class="detail"><input type="text" value="" readonly></li>
+                    </ul>
+                    <ul class="btnWrap">
+                        <li><a href="#"><i class="fa-solid fa-plus"></i></a></li>
+                        <li><a href="#" ><i class="fa-solid fa-minus"></i></a></li>
+                        <li class="save"><a href="#" ><i class="fa-solid fa-check"></i></a></li>
+                        <li class="reWrite"><a href="#"><i class="fa-solid fa-pen"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="tableList">
+                    <ul class="tableText">
+                        <li class="time">
+                            <div class="selectBox">
+                                <button class="label">17:00</button>
+                                <ul class="optionList">
+                                    <li class="optionItem">01:00</li>
+                                    <li class="optionItem">01:30</li>
+                                    <li class="optionItem">02:00</li>
+                                    <li class="optionItem">02:30</li>
+                                    <li class="optionItem">03:00</li>
+                                    <li class="optionItem">03:30</li>
+                                    <li class="optionItem">04:00</li>
+                                    <li class="optionItem">04:30</li>
+                                    <li class="optionItem">05:00</li>
+                                    <li class="optionItem">05:30</li>
+                                    <li class="optionItem">06:00</li>
+                                    <li class="optionItem">06:30</li>
+                                    <li class="optionItem">07:00</li>
+                                    <li class="optionItem">07:30</li>
+                                    <li class="optionItem">08:00</li>
+                                    <li class="optionItem">08:30</li>
+                                    <li class="optionItem">09:00</li>
+                                    <li class="optionItem">09:30</li>
+                                    <li class="optionItem">10:00</li>
+                                    <li class="optionItem">10:30</li>
+                                    <li class="optionItem">11:00</li>
+                                    <li class="optionItem">11:30</li>
+                                    <li class="optionItem">12:00</li>
+                                    <li class="optionItem">12:30</li>
+                                    <li class="optionItem">13:00</li>
+                                    <li class="optionItem">13:30</li>
+                                    <li class="optionItem">14:00</li>
+                                    <li class="optionItem">14:30</li>
+                                    <li class="optionItem">15:00</li>
+                                    <li class="optionItem">15:30</li>
+                                    <li class="optionItem">16:00</li>
+                                    <li class="optionItem">16:30</li>
+                                    <li class="optionItem">17:00</li>
+                                    <li class="optionItem">17:30</li>
+                                    <li class="optionItem">18:00</li>
+                                    <li class="optionItem">18:30</li>
+                                    <li class="optionItem">19:00</li>
+                                    <li class="optionItem">19:30</li>
+                                    <li class="optionItem">20:00</li>
+                                    <li class="optionItem">20:30</li>
+                                    <li class="optionItem">21:00</li>
+                                    <li class="optionItem">21:30</li>
+                                    <li class="optionItem">22:00</li>
+                                    <li class="optionItem">22:30</li>
+                                    <li class="optionItem">23:00</li>
+                                    <li class="optionItem">23:30</li>
+                                    <li class="optionItem">00:00</li>
+                                    <li class="optionItem">00:30</li>
+                                </ul>
+                            </div>
+                            <p>-</p>
+                            <div class="selectBox">
+                                <button class="label">17:00</button>
+                                <ul class="optionList">
+                                    <li class="optionItem">01:00</li>
+                                    <li class="optionItem">01:30</li>
+                                    <li class="optionItem">02:00</li>
+                                    <li class="optionItem">02:30</li>
+                                    <li class="optionItem">03:00</li>
+                                    <li class="optionItem">03:30</li>
+                                    <li class="optionItem">04:00</li>
+                                    <li class="optionItem">04:30</li>
+                                    <li class="optionItem">05:00</li>
+                                    <li class="optionItem">05:30</li>
+                                    <li class="optionItem">06:00</li>
+                                    <li class="optionItem">06:30</li>
+                                    <li class="optionItem">07:00</li>
+                                    <li class="optionItem">07:30</li>
+                                    <li class="optionItem">08:00</li>
+                                    <li class="optionItem">08:30</li>
+                                    <li class="optionItem">09:00</li>
+                                    <li class="optionItem">09:30</li>
+                                    <li class="optionItem">10:00</li>
+                                    <li class="optionItem">10:30</li>
+                                    <li class="optionItem">11:00</li>
+                                    <li class="optionItem">11:30</li>
+                                    <li class="optionItem">12:00</li>
+                                    <li class="optionItem">12:30</li>
+                                    <li class="optionItem">13:00</li>
+                                    <li class="optionItem">13:30</li>
+                                    <li class="optionItem">14:00</li>
+                                    <li class="optionItem">14:30</li>
+                                    <li class="optionItem">15:00</li>
+                                    <li class="optionItem">15:30</li>
+                                    <li class="optionItem">16:00</li>
+                                    <li class="optionItem">16:30</li>
+                                    <li class="optionItem">17:00</li>
+                                    <li class="optionItem">17:30</li>
+                                    <li class="optionItem">18:00</li>
+                                    <li class="optionItem">18:30</li>
+                                    <li class="optionItem">19:00</li>
+                                    <li class="optionItem">19:30</li>
+                                    <li class="optionItem">20:00</li>
+                                    <li class="optionItem">20:30</li>
+                                    <li class="optionItem">21:00</li>
+                                    <li class="optionItem">21:30</li>
+                                    <li class="optionItem">22:00</li>
+                                    <li class="optionItem">22:30</li>
+                                    <li class="optionItem">23:00</li>
+                                    <li class="optionItem">23:30</li>
+                                    <li class="optionItem">00:00</li>
+                                    <li class="optionItem">00:30</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="text"><input type="text" value="학교 도착" readonly></li>
+                        <li class="detail"><input type="text" value="" readonly></li>
+                    </ul>
+                    <ul class="btnWrap">
+                        <li><a href="#"><i class="fa-solid fa-plus"></i></a></li>
+                        <li><a href="#" ><i class="fa-solid fa-minus"></i></a></li>
+                        <li class="save"><a href="#" ><i class="fa-solid fa-check"></i></a></li>
+                        <li class="reWrite"><a href="#"><i class="fa-solid fa-pen"></i></a></li>
+                    </ul>
+                </div>
+
+
+            </div>
+
+
+
+            <div class="page-btn">
+                <a href="/diy2" class="comm-btn green-btn">저장하기</a>
+            </div>
+
+
+        </div>
+
+
+    </div>
+    <script>
+    </script>
+
+</div>
+</html>

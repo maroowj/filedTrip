@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/renew/sub_layout_user}"
+      xmlns:th="http://www.thymeleaf.org">
+
+<style layout:fragment="css">
+    input::-webkit-inner-spin-button { appearance: none; -moz-appearance: none; -webkit-appearance: none; }
+</style>
+
+<!-- index_layout_user.html 에 정의한 main page 부분 -->
+<div layout:fragment="content">
+
+    <div class="subCont inquiryUpdate-wrap">
+        <div class="auto mt120 mb120">
+            <div class="titleWrap">
+                <p class="title">항공권 문의</p>
+                <p class="text">문의사항을 남겨주시면 친절하게 답변해드리겠습니다.</p>
+            </div>
+
+            <div class="tableWrap">
+                <table class="page-table2 input-table">
+                    <colgroup>
+                        <col style="width: 20%">
+                        <col style="width: 80%">
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th>출발날짜</th>
+                        <td>
+                            2022-10-07 10:00
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>도착날짜</th>
+                        <td>
+                            2022-10-09 17:00
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>구간1</th>
+                        <td>
+                            구간1
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>구간2</th>
+                        <td>
+                            구간2
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>항공사</th>
+                        <td>
+                            전체
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>요청인원</th>
+                        <td>
+                            10명
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="answerWrap">
+                <p>
+                    안녕하세요. 스쿨트립입니다.<br>
+                    문의하신 내용의 답변입니다.문의하신 내용의 답변입니다.문의하신 내용의 답변입니다.문의하신 내용의 답변입니다.<br>
+                    문의하신 내용의 답변입니다.문의하신 내용의 답변입니다.문의하신 내용의 답변입니다.<br>
+                    감사합니다.
+                </p>
+            </div>
+
+
+            <div class="page-btn">
+                <a href="/mypage/air/update" class="comm-btn green-btn mr10">수정하기</a>
+                <a href="/mypage" class="comm-btn white-btn">목록</a>
+            </div>
+        </div>
+
+    </div>
+    <!--script START-->
+    <script>
+    </script>
+    <!--script END-->
+</div>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/renew/sub_layout_user}"
+      xmlns:th="http://www.thymeleaf.org">
+
+<style layout:fragment="css">
+    input::-webkit-inner-spin-button { appearance: none; -moz-appearance: none; -webkit-appearance: none; }
+</style>
+
+<!-- index_layout_user.html 에 정의한 main page 부분 -->
+<div layout:fragment="content">
+    <div class="subCont diyWrap  diyWrap3 diy-detailWrap">
+        <div class="auto pt120 pb120">
+            <div class="titleWrap">
+                <p class="title">체험장 상세정보</p>
+                <p class="text">DIY 여행코스 직접 만들기</p>
+            </div>
+
+
+            <ul class="stepList">
+                <li class="prev-act2" onclick="location.href='/mypage/diy'">체험 일정표 제작</li>
+                <li class="prev-act1" onclick="location.href='/mypage/diy2'">예상 견적서</li>
+                <li class="actived" onclick="location.href='/mypage/diy3'">등록완료</li>
+            </ul>
+
+
+            <div class="diy3-cont">
+                <span class="icon"><i class="fa-solid fa-check"></i></span>
+                <p class="title">체험장 수정이 완료되었습니다.</p>
+                <p class="text">
+                    작성하신 내용은 '인쇄하기'버튼을 통해 인쇄하실 수 있습니다. (PC 화면에서만 가능합니다.)<br>
+                    작성한 내용을 수정 또는 확인하시려면 <a href="./mypage.html" class="green">마이페이지</a>로 이동해주세요.
+                </p>
+            </div>
+
+
+            <div class="page-btn">
+                <a href="/" class="comm-btn white-btn ">메인으로</a>
+                <a href="#" class="comm-btn green-btn ml10 print-btn">인쇄하기</a>
+            </div>
+
+        </div>
+
+    </div>
+    <!--script START-->
+    <script>
+    </script>
+    <!--script END-->
+
+</div>
+   
+
+
+
+</html>

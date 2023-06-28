@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/renew/sub_layout_user}"
+      xmlns:th="http://www.thymeleaf.org">
+
+<style layout:fragment="css">
+    input::-webkit-inner-spin-button { appearance: none; -moz-appearance: none; -webkit-appearance: none; }
+</style>
+
+<!-- index_layout_user.html 에 정의한 main page 부분 -->
+<div layout:fragment="content">
+    <div class="subCont inquiryUpdate-wrap inquiry2-wrap">
+        <div class="auto mt120 mb120">
+            <div class="titleWrap">
+                <p class="title">차량 문의</p>
+                <p class="text">문의사항을 남겨주시면 친절하게 답변해드리겠습니다.</p>
+            </div>
+
+            <ul class="tabWrap">
+                <li><a href="#tab1" class="actived">왕복</a></li>
+                <li><a href="#tab2">편도</a></li>
+            </ul>
+
+            <div class="tabCont actived" id="tab1">
+                <div class="tableWrap">
+                    <table class="page-table2 input-table">
+                        <colgroup>
+                            <col style="width: 20%">
+                            <col style="width: 80%">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>
+                                <div class="titWrap">
+                                    <p class="tit">경로</p>
+                                    <a href="#" class="addBtn"><span></span><p>경유지 추가</p></a>
+                                </div>
+                            </th>
+                            <td>
+                                <div class="placeWrap">
+                                    <input type="text" placeholder="출발은 어디서 하나요?">
+                                    <textarea placeholder="모든 경유지를 구체적으로 적어주세요."></textarea>
+                                    <input type="text" placeholder="목적지는 어디신가요?">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>출발날짜</th>
+                            <td>
+                                <div class="flexWrap dateWrap">
+                                    <div class="datepickerWrap mr10">
+                                        <input type="text" id="datepicker1"  placeholder="yyyy-mm-dd">
+                                    </div>
+                                    <div class="selectBox time">
+                                        <button class="label">09:00</button>
+                                        <ul class="optionList">
+                                            <li class="optionItem">01:00</li>
+                                            <li class="optionItem">01:30</li>
+                                            <li class="optionItem">02:00</li>
+                                            <li class="optionItem">02:30</li>
+                                            <li class="optionItem">03:00</li>
+                                            <li class="optionItem">03:30</li>
+                                            <li class="optionItem">04:00</li>
+                                            <li class="optionItem">04:30</li>
+                                            <li class="optionItem">05:00</li>
+                                            <li class="optionItem">05:30</li>
+                                            <li class="optionItem">06:00</li>
+                                            <li class="optionItem">06:30</li>
+                                            <li class="optionItem">07:00</li>
+                                            <li class="optionItem">07:30</li>
+                                            <li class="optionItem">08:00</li>
+                                            <li class="optionItem">08:30</li>
+                                            <li class="optionItem">09:00</li>
+                                            <li class="optionItem">09:30</li>
+                                            <li class="optionItem">10:00</li>
+                                            <li class="optionItem">10:30</li>
+                                            <li class="optionItem">11:00</li>
+                                            <li class="optionItem">11:30</li>
+                                            <li class="optionItem">12:00</li>
+                                            <li class="optionItem">12:30</li>
+                                            <li class="optionItem">13:00</li>
+                                            <li class="optionItem">13:30</li>
+                                            <li class="optionItem">14:00</li>
+                                            <li class="optionItem">14:30</li>
+                                            <li class="optionItem">15:00</li>
+                                            <li class="optionItem">15:30</li>
+                                            <li class="optionItem">16:00</li>
+                                            <li class="optionItem">16:30</li>
+                                            <li class="optionItem">17:00</li>
+                                            <li class="optionItem">17:30</li>
+                                            <li class="optionItem">18:00</li>
+                                            <li class="optionItem">18:30</li>
+                                            <li class="optionItem">19:00</li>
+                                            <li class="optionItem">19:30</li>
+                                            <li class="optionItem">20:00</li>
+                                            <li class="optionItem">20:30</li>
+                                            <li class="optionItem">21:00</li>
+                                            <li class="optionItem">21:30</li>
+                                            <li class="optionItem">22:00</li>
+                                            <li class="optionItem">22:30</li>
+                                            <li class="optionItem">23:00</li>
+                                            <li class="optionItem">23:30</li>
+                                            <li class="optionItem">00:00</li>
+                                            <li class="optionItem">00:30</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>도착날짜</th>
+                            <td>
+                                <div class="flexWrap dateWrap">
+                                    <div class="datepickerWrap mr10">
+                                        <input type="text" id="datepicker2"  placeholder="yyyy-mm-dd">
+                                    </div>
+                                    <div class="selectBox time">
+                                        <button class="label">09:00</button>
+                                        <ul class="optionList">
+                                            <li class="optionItem">01:00</li>
+                                            <li class="optionItem">01:30</li>
+                                            <li class="optionItem">02:00</li>
+                                            <li class="optionItem">02:30</li>
+                                            <li class="optionItem">03:00</li>
+                                            <li class="optionItem">03:30</li>
+                                            <li class="optionItem">04:00</li>
+                                            <li class="optionItem">04:30</li>
+                                            <li class="optionItem">05:00</li>
+                                            <li class="optionItem">05:30</li>
+                                            <li class="optionItem">06:00</li>
+                                            <li class="optionItem">06:30</li>
+                                            <li class="optionItem">07:00</li>
+                                            <li class="optionItem">07:30</li>
+                                            <li class="optionItem">08:00</li>
+                                            <li class="optionItem">08:30</li>
+                                            <li class="optionItem">09:00</li>
+                                            <li class="optionItem">09:30</li>
+                                            <li class="optionItem">10:00</li>
+                                            <li class="optionItem">10:30</li>
+                                            <li class="optionItem">11:00</li>
+                                            <li class="optionItem">11:30</li>
+                                            <li class="optionItem">12:00</li>
+                                            <li class="optionItem">12:30</li>
+                                            <li class="optionItem">13:00</li>
+                                            <li class="optionItem">13:30</li>
+                                            <li class="optionItem">14:00</li>
+                                            <li class="optionItem">14:30</li>
+                                            <li class="optionItem">15:00</li>
+                                            <li class="optionItem">15:30</li>
+                                            <li class="optionItem">16:00</li>
+                                            <li class="optionItem">16:30</li>
+                                            <li class="optionItem">17:00</li>
+                                            <li class="optionItem">17:30</li>
+                                            <li class="optionItem">18:00</li>
+                                            <li class="optionItem">18:30</li>
+                                            <li class="optionItem">19:00</li>
+                                            <li class="optionItem">19:30</li>
+                                            <li class="optionItem">20:00</li>
+                                            <li class="optionItem">20:30</li>
+                                            <li class="optionItem">21:00</li>
+                                            <li class="optionItem">21:30</li>
+                                            <li class="optionItem">22:00</li>
+                                            <li class="optionItem">22:30</li>
+                                            <li class="optionItem">23:00</li>
+                                            <li class="optionItem">23:30</li>
+                                            <li class="optionItem">00:00</li>
+                                            <li class="optionItem">00:30</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>기사님 동행여부</th>
+                            <td>
+                                <div class="flexWrap-start labelWrap">
+                                    <label for="car1-1" class="driver1">
+                                        <input type="radio" name="car1" id="car1-1" checked> 출발, 귀환만 동행
+                                    </label>
+                                    <label for="car1-2" class="driver2">
+                                        <input type="radio" name="car1" id="car1-2"> 전체일정 동행
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="carText2">
+                            <th>전체 일정 작성</th>
+                            <td><textarea placeholder="정확한 전체일정을 구체적으로 적어주세요."></textarea></td>
+                        </tr>
+                        <tr>
+                            <th>인원</th>
+                            <td>
+                                <div class="inputBox">
+                                    <input type="number" value="0">
+                                    <span>명</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>이용목적</th>
+                            <td><input type="text" placeholder="어떤 목적으로 버스를 구하세요?"></td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+                <p class="subTitle">선택 입력사항</p>
+
+                <div class="tableWrap mt00">
+                    <table class="page-table2 input-table">
+                        <colgroup>
+                            <col style="width: 20%">
+                            <col style="width: 80%">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>카드결제 및 영수증</th>
+                            <td>
+                                <div class="flexWrap-start labelWrap">
+                                    <label for="car2-1">
+                                        <input type="checkbox"  name="car2" id="car2-1"> 세금계산서 및 현금영수증 발행
+                                    </label>
+                                    <label for="car2-2">
+                                        <input type="checkbox"  name="car2" id="car2-2"> 카드결제
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>선호하는 버스<br><span class="green sTxt">(여러개 선택 가능)</span></th>
+                            <td>
+                                <div class="flexWrap-start labelWrap">
+                                    <label for="car3-1" class="noneCheck">
+                                        <input type="checkbox"  name="car3" id="car3-1" checked> 상관없음
+                                    </label>
+                                    <label for="car3-2" class="check">
+                                        <input type="checkbox"  name="car3" id="car3-2"> 미니버스(최대25인승)
+                                    </label>
+                                    <label for="car3-3" class="check">
+                                        <input type="checkbox"  name="car3" id="car3-3"> 대형버스(최대45인승)
+                                    </label>
+                                    <label for="car3-4" class="check">
+                                        <input type="checkbox"  name="car3" id="car3-4"> 대형우등(28인승)
+                                    </label>
+                                    <label for="car3-5" class="check">
+                                        <input type="checkbox"  name="car3" id="car3-5"> 밴(최대14인승)
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>추가 메세지</th>
+                            <td>
+                                <textarea placeholder="추가 요청사항을 적어주세요."></textarea>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <div class="tabCont" id="tab2">
+                <div class="tableWrap">
+                    <table class="page-table2 input-table">
+                        <colgroup>
+                            <col style="width: 20%">
+                            <col style="width: 80%">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>
+                                <div class="titWrap">
+                                    <p class="tit">경로</p>
+                                    <a href="#" class="addBtn"><span></span><p>경유지 추가</p></a>
+                                </div>
+                            </th>
+                            <td>
+                                <div class="placeWrap">
+                                    <input type="text" placeholder="출발은 어디서 하나요?">
+                                    <textarea placeholder="모든 경유지를 구체적으로 적어주세요."></textarea>
+                                    <input type="text" placeholder="목적지는 어디신가요?">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>출발날짜</th>
+                            <td>
+                                <div class="flexWrap dateWrap">
+                                    <div class="datepickerWrap mr10">
+                                        <input type="text" id="datepicker1"  placeholder="yyyy-mm-dd">
+                                    </div>
+                                    <div class="selectBox time">
+                                        <button class="label">09:00</button>
+                                        <ul class="optionList">
+                                            <li class="optionItem">01:00</li>
+                                            <li class="optionItem">01:30</li>
+                                            <li class="optionItem">02:00</li>
+                                            <li class="optionItem">02:30</li>
+                                            <li class="optionItem">03:00</li>
+                                            <li class="optionItem">03:30</li>
+                                            <li class="optionItem">04:00</li>
+                                            <li class="optionItem">04:30</li>
+                                            <li class="optionItem">05:00</li>
+                                            <li class="optionItem">05:30</li>
+                                            <li class="optionItem">06:00</li>
+                                            <li class="optionItem">06:30</li>
+                                            <li class="optionItem">07:00</li>
+                                            <li class="optionItem">07:30</li>
+                                            <li class="optionItem">08:00</li>
+                                            <li class="optionItem">08:30</li>
+                                            <li class="optionItem">09:00</li>
+                                            <li class="optionItem">09:30</li>
+                                            <li class="optionItem">10:00</li>
+                                            <li class="optionItem">10:30</li>
+                                            <li class="optionItem">11:00</li>
+                                            <li class="optionItem">11:30</li>
+                                            <li class="optionItem">12:00</li>
+                                            <li class="optionItem">12:30</li>
+                                            <li class="optionItem">13:00</li>
+                                            <li class="optionItem">13:30</li>
+                                            <li class="optionItem">14:00</li>
+                                            <li class="optionItem">14:30</li>
+                                            <li class="optionItem">15:00</li>
+                                            <li class="optionItem">15:30</li>
+                                            <li class="optionItem">16:00</li>
+                                            <li class="optionItem">16:30</li>
+                                            <li class="optionItem">17:00</li>
+                                            <li class="optionItem">17:30</li>
+                                            <li class="optionItem">18:00</li>
+                                            <li class="optionItem">18:30</li>
+                                            <li class="optionItem">19:00</li>
+                                            <li class="optionItem">19:30</li>
+                                            <li class="optionItem">20:00</li>
+                                            <li class="optionItem">20:30</li>
+                                            <li class="optionItem">21:00</li>
+                                            <li class="optionItem">21:30</li>
+                                            <li class="optionItem">22:00</li>
+                                            <li class="optionItem">22:30</li>
+                                            <li class="optionItem">23:00</li>
+                                            <li class="optionItem">23:30</li>
+                                            <li class="optionItem">00:00</li>
+                                            <li class="optionItem">00:30</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>도착날짜</th>
+                            <td>
+                                <div class="flexWrap dateWrap">
+                                    <div class="datepickerWrap mr10">
+                                        <input type="text" id="datepicker2"  placeholder="yyyy-mm-dd">
+                                    </div>
+                                    <div class="selectBox time">
+                                        <button class="label">09:00</button>
+                                        <ul class="optionList">
+                                            <li class="optionItem">01:00</li>
+                                            <li class="optionItem">01:30</li>
+                                            <li class="optionItem">02:00</li>
+                                            <li class="optionItem">02:30</li>
+                                            <li class="optionItem">03:00</li>
+                                            <li class="optionItem">03:30</li>
+                                            <li class="optionItem">04:00</li>
+                                            <li class="optionItem">04:30</li>
+                                            <li class="optionItem">05:00</li>
+                                            <li class="optionItem">05:30</li>
+                                            <li class="optionItem">06:00</li>
+                                            <li class="optionItem">06:30</li>
+                                            <li class="optionItem">07:00</li>
+                                            <li class="optionItem">07:30</li>
+                                            <li class="optionItem">08:00</li>
+                                            <li class="optionItem">08:30</li>
+                                            <li class="optionItem">09:00</li>
+                                            <li class="optionItem">09:30</li>
+                                            <li class="optionItem">10:00</li>
+                                            <li class="optionItem">10:30</li>
+                                            <li class="optionItem">11:00</li>
+                                            <li class="optionItem">11:30</li>
+                                            <li class="optionItem">12:00</li>
+                                            <li class="optionItem">12:30</li>
+                                            <li class="optionItem">13:00</li>
+                                            <li class="optionItem">13:30</li>
+                                            <li class="optionItem">14:00</li>
+                                            <li class="optionItem">14:30</li>
+                                            <li class="optionItem">15:00</li>
+                                            <li class="optionItem">15:30</li>
+                                            <li class="optionItem">16:00</li>
+                                            <li class="optionItem">16:30</li>
+                                            <li class="optionItem">17:00</li>
+                                            <li class="optionItem">17:30</li>
+                                            <li class="optionItem">18:00</li>
+                                            <li class="optionItem">18:30</li>
+                                            <li class="optionItem">19:00</li>
+                                            <li class="optionItem">19:30</li>
+                                            <li class="optionItem">20:00</li>
+                                            <li class="optionItem">20:30</li>
+                                            <li class="optionItem">21:00</li>
+                                            <li class="optionItem">21:30</li>
+                                            <li class="optionItem">22:00</li>
+                                            <li class="optionItem">22:30</li>
+                                            <li class="optionItem">23:00</li>
+                                            <li class="optionItem">23:30</li>
+                                            <li class="optionItem">00:00</li>
+                                            <li class="optionItem">00:30</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th>인원</th>
+                            <td>
+                                <div class="inputBox">
+                                    <input type="number" value="0">
+                                    <span>명</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>이용목적</th>
+                            <td><input type="text" placeholder="어떤 목적으로 버스를 구하세요?"></td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+                <p class="subTitle">선택 입력사항</p>
+
+                <div class="tableWrap mt00">
+                    <table class="page-table2 input-table">
+                        <colgroup>
+                            <col style="width: 20%">
+                            <col style="width: 80%">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>카드결제 및 영수증</th>
+                            <td>
+                                <div class="flexWrap-start labelWrap">
+                                    <label for="car4-1">
+                                        <input type="checkbox"  name="car4" id="car4-1"> 세금계산서 및 현금영수증 발행
+                                    </label>
+                                    <label for="car4-2">
+                                        <input type="checkbox"  name="car2" id="car4-2"> 카드결제
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>선호하는 버스<br><span class="green sTxt">(여러개 선택 가능)</span></th>
+                            <td>
+                                <div class="flexWrap-start labelWrap">
+                                    <label for="car5-1" class="noneCheck">
+                                        <input type="checkbox"  name="car5" id="car5-1" checked> 상관없음
+                                    </label>
+                                    <label for="car5-2" class="check">
+                                        <input type="checkbox"  name="car5" id="car5-2"> 미니버스(최대25인승)
+                                    </label>
+                                    <label for="car5-3" class="check">
+                                        <input type="checkbox"  name="car5" id="car5-3"> 대형버스(최대45인승)
+                                    </label>
+                                    <label for="car5-4" class="check">
+                                        <input type="checkbox"  name="car5" id="car5-4"> 대형우등(28인승)
+                                    </label>
+                                    <label for="car5-5" class="check">
+                                        <input type="checkbox"  name="car5" id="car5-5"> 밴(최대14인승)
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>추가 메세지</th>
+                            <td>
+                                <textarea placeholder="추가 요청사항을 적어주세요."></textarea>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="page-btn">
+                <a href="./inquiry2_detail.html" class="comm-btn green-btn mr10">저장하기</a>
+                <a href="/mypage" class="comm-btn white-btn">목록</a>
+            </div>
+        </div>
+    </div>
+    <!--script START-->
+    <script>
+    </script>
+    <!--script END-->
+</div>
+</html>

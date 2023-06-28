@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/renew/sub_layout_user}"
+      xmlns:th="http://www.thymeleaf.org">
+
+<style layout:fragment="css">
+    input::-webkit-inner-spin-button { appearance: none; -moz-appearance: none; -webkit-appearance: none; }
+</style>
+
+<!-- index_layout_user.html 에 정의한 main page 부분 -->
+<div layout:fragment="content">
+    <div class="subCont diyWrap ">
+        <div class="auto pt120 pb120">
+            <div class="titleWrap">
+                <p class="title">체험장 등록</p>
+                <p class="text">DIY 여행코스 직접 만들기</p>
+            </div>
+
+            <div class="selWrap">
+                <div class="searchBox">
+                    <input type="text" placeholder="이름으로 검색해보세요.">
+                    <span class="icon"></span>
+                </div>
+                <div class="diySel">
+                    <div class="selectWrap">
+                        <div class="selectBox">
+                            <button class="label">카테고리</button>
+                            <ul class="optionList">
+                                <li class="optionItem">수학여행</li>
+                                <li class="optionItem">박물관투어</li>
+                                <li class="optionItem">환경투어</li>
+                                <li class="optionItem">역사투어</li>
+                                <li class="optionItem">체험학습</li>
+                            </ul>
+                        </div>
+                        <div class="selectBox">
+                            <button class="label">시·도</button>
+                            <ul class="optionList">
+                                <li class="optionItem">인천</li>
+                                <li class="optionItem">서울</li>
+                                <li class="optionItem">경기권</li>
+                                <li class="optionItem">경상권</li>
+                                <li class="optionItem">전라권</li>
+                                <li class="optionItem">강원권</li>
+                                <li class="optionItem">충청권</li>
+                                <li class="optionItem">제주도</li>
+                            </ul>
+                        </div>
+                        <div class="selectBox">
+                            <button class="label">군·구</button>
+                            <ul class="optionList">
+                                <li class="optionItem">강화군</li>
+                                <li class="optionItem">중구</li>
+                                <li class="optionItem">연수구</li>
+                                <li class="optionItem">미추홀구</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="#" class="comm-btn search-btn date-btn">검색</a>
+                </div>
+            </div>
+
+            <ul class="stepList">
+                <li class="prev-act1">체험 일정표 제작</li>
+                <li class="actived">예상 견적서</li>
+                <li>등록완료</li>
+            </ul>
+
+            <div class="numberSel-wrap">
+                <ul class="selectWrap">
+                    <li class="count">
+                        <p class="title">인원</p>
+                        <p class="text">인원을 입력해주세요.</p>
+                        <p class="conutText">
+                            <span>교사 10</span>
+                            <span>학생 100</span>
+                        </p>
+
+                        <ul class="numList">
+                            <li>
+                                <p class="tit">교사</p>
+                                <div class="countWrap">
+                                    <button type="button" class="minus">감소</button>
+                                    <input type="text" class="inp" value="0" />
+                                    <button type="button" class="plus">증가</button>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="tit">학생</p>
+                                <div class="countWrap">
+                                    <button type="button" class="minus">감소</button>
+                                    <input type="text" class="inp" value="0" />
+                                    <button type="button" class="plus">증가</button>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p class="title">숙박비</p>
+                        <p class="text">방 갯수를 입력해주세요.</p>
+                        <p class="conutText">
+                            <span>방 갯수 20</span>
+                        </p>
+                        <ul class="numList">
+                            <li>
+                                <p class="tit">방 갯수</p>
+                                <div class="countWrap">
+                                    <button type="button" class="minus">감소</button>
+                                    <input type="text" class="inp" value="0" />
+                                    <button type="button" class="plus">증가</button>
+                                </div>
+                            </li>
+                            <li class="notice">
+                                <p class="txt">숙박비용의 단가는 아래의 표에서 작성해주세요.</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p class="title">차량</p>
+                        <p class="text">차량 갯수를 입력해주세요.</p>
+                        <p class="conutText">
+                            <span>45인승 10</span>
+                            <span>25인승 0</span>
+                        </p>
+                        <ul class="numList">
+                            <li>
+                                <p class="tit">45인승</p>
+                                <div class="countWrap">
+                                    <button type="button" class="minus">감소</button>
+                                    <input type="text" class="inp" value="0" />
+                                    <button type="button" class="plus">증가</button>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="tit">25인승</p>
+                                <div class="countWrap">
+                                    <button type="button" class="minus">감소</button>
+                                    <input type="text" class="inp" value="0" />
+                                    <button type="button" class="plus">증가</button>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <a href="#" class="comm-btn green-btn countSave-btn">저장</a>
+            </div>
+
+
+            <div class="diy2-tableWrap pc-diy2-tableWrap">
+                <table class="page-table1">
+                    <colgroup>
+                        <col style="width:*">
+                        <col style="width:*">
+                        <col style="width:*">
+                        <col style="width:*">
+                        <col style="width:*">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>항목</th>
+                        <th>구분</th>
+                        <th>수량</th>
+                        <th>단가</th>
+                        <th>금액</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>차량</td>
+                        <td>45인승</td>
+                        <td>10</td>
+                        <td>440,000원</td>
+                        <td>4,400,000원</td>
+                    </tr>
+                    <tr>
+                        <td>숙박비</td>
+                        <td></td>
+                        <td>20</td>
+                        <td class="hasInp">
+                            <div class="inputBox">
+                                <input type="number" value="50000">
+                                <span>원</span>
+                            </div>
+                        </td>
+                        <td>1,000,000원</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">여행자보험</td>
+                        <td>학생</td>
+                        <td>100</td>
+                        <td>1,000원</td>
+                        <td>100,000원</td>
+                    </tr>
+                    <tr>
+                        <td>교사</td>
+                        <td>10</td>
+                        <td>1,500원</td>
+                        <td>15,000원</td>
+                    </tr>
+                    <tr>
+                        <td class="total" colspan="4">합계</td>
+                        <td class="total-price">5,515,000원</td>
+                    </tr>
+                    </tbody>
+
+                </table>
+            </div>
+
+
+            <div class="m-diy2-tableWrap">
+
+                <div class="diy2List">
+                    <p class="title"><span>차량</span><span>45인승</span></p>
+                    <div class="textWrap">
+                        <p class="tit">수량</p>
+                        <p class="txt">10</p>
+                    </div>
+                    <div class="textWrap">
+                        <p class="tit">단가</p>
+                        <p class="txt">440,000원</p>
+                    </div>
+                    <div class="textWrap priceWrap">
+                        <p class="tit">금액</p>
+                        <p class="txt">4,400,000원</p>
+                    </div>
+                </div>
+
+                <div class="diy2List">
+                    <p class="title"><span>숙박비</span><span></span></p>
+                    <div class="textWrap">
+                        <p class="tit">수량</p>
+                        <p class="txt">20</p>
+                    </div>
+                    <div class="textWrap">
+                        <p class="tit">단가</p>
+                        <div class="inputWrap">
+                            <input type="number" value="0">
+                            <span>원</span>
+                        </div>
+                    </div>
+                    <div class="textWrap priceWrap">
+                        <p class="tit">금액</p>
+                        <p class="txt">1,000,000원</p>
+                    </div>
+                </div>
+
+                <div class="diy2List">
+                    <p class="title"><span>여행자보험</span><span>학생</span></p>
+                    <div class="textWrap">
+                        <p class="tit">수량</p>
+                        <p class="txt">100</p>
+                    </div>
+                    <div class="textWrap">
+                        <p class="tit">단가</p>
+                        <p class="txt">1,000원</p>
+                    </div>
+                    <div class="textWrap priceWrap">
+                        <p class="tit">금액</p>
+                        <p class="txt">100,000원</p>
+                    </div>
+                </div>
+
+                <div class="diy2List">
+                    <p class="title"><span>여행자보험</span><span>교사</span></p>
+                    <div class="textWrap">
+                        <p class="tit">수량</p>
+                        <p class="txt">10</p>
+                    </div>
+                    <div class="textWrap">
+                        <p class="tit">단가</p>
+                        <p class="txt">1,500원</p>
+                    </div>
+                    <div class="textWrap priceWrap">
+                        <p class="tit">금액</p>
+                        <p class="txt">15,000원</p>
+                    </div>
+                </div>
+                <div class="totalWrap">
+                    <p class="tit">합계</p>
+                    <p class="txt">5,515,000원</p>
+                </div>
+
+            </div>
+
+
+
+
+            <div class="page-btn">
+                <a href="/diy3" class="comm-btn green-btn ">저장하기</a>
+            </div>
+
+
+        </div>
+    </div>
+    <script></script>
+</div>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<th:block th:fragment="topMenuFragment">
+    <header class="headerWrap">
+        <div class="headerInner">
+            <h1 class="logoWrap"><a href="/" class="logo"><img src="/renew/images/logo.png" alt="스쿨트립"></a></h1>
+
+            <div class="menuWrap">
+                <ul class="menu">
+                    <li><a href="/diy">체험장 등록</a></li>
+                    <li><a href="/trip">견적요청</a></li>
+                    <li><a href="/air">항공권</a></li>
+                    <li><a href="/vehicle">차량문의</a></li>
+                    <li><a href="/insurance">여행자보험</a></li>
+                </ul>
+                <a href="/login" id="login-btn" class="comm-btn login-btn">로그인</a>
+                <a id="mypage-btn" class="mypage-btn cupoint"><img class="profileImage" alt="프로필이미지"></a>
+                <ul id="p-ul" class="mypageMenu-box">
+                    <li><a href="/mypage">마이페이지</a></li>
+                    <li class="logout-li"><a href="/user/logout">로그아웃</a></li>
+                </ul>
+                <a href="#" class="menuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="m-menuWrap">
+        <div class="menuWrap-inner">
+            <div class="titleWrap">
+                <div class="profWrap">
+                    <a href="/mypage" class="profImg"><img class="profileImage" alt="프로필이미지"></a>
+                    <ul id="m-ul" class="infoWrap">
+                        <li class="logout-li"><a href="/user/logout">로그아웃</a></li>
+                        <li><a href="/mypage">마이페이지</a></li>
+                    </ul>
+                </div>
+
+                <a href="#" class="close-btn"><i class="fa-solid fa-xmark"></i></a>
+            </div>
+            <ul class="menuList">
+                <li><a href="/diy">체험장 등록</a></li>
+                <li><a href="/trip">견적요청</a></li>
+                <li><a href="air">항공권</a></li>
+                <li><a href="/vehicle">차량문의</a></li>
+                <li><a href="/insurance">여행자보험</a></li>
+            </ul>
+        </div>
+
+        <div class="menuBg"></div>
+    </div>
+
+
+    <!--   날짜 수정 모달-->
+    <div class="modal date-updateModal">
+        <div class="modal-inner">
+            <div class="modal-title">
+                <p class="title">날짜 선택</p>
+                <a href="#" class="close-btn"><i class="fa-solid fa-xmark close"></i></a>
+            </div>
+            <div class="modal-text">
+                <ul class="dateWrap">
+                    <li>
+                        <div class="datepickerWrap">
+                            <input type="text" id="datepicker1">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="datepickerWrap">
+                            <input type="text" id="datepicker2">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="modal-btn">
+                <a href="#" class="comm-btn white-btn close-btn mr10">닫기</a>
+                <a href="#" class="comm-btn green-btn close-btn">저장</a>
+            </div>
+        </div>
+        <div class="modal-bg"></div>
+    </div>
+
+    <!-- script START -->
+    <script>
+        let chkLogin = false;
+        loginChk();
+        function loginChk() {
+            $.ajax({
+                type:"get",
+                url:"/api/common/login",
+                async:false,
+                success:function(data) {
+
+                    if(!data.login) {
+                        chkLogin=false;
+                        $("#login-btn").removeClass("d-none");
+                        $(".logout-li").addClass("d-none");
+                        $(".profileImage").attr("src", "/renew/images/none_userIme.jpg");
+                        if (matchMedia("screen and (max-width: 768px)").matches) {
+                            $("#mypage-btn").addClass("d-none");
+                        }else {
+                            $("#mypage-btn").removeClass("d-none");
+                        }
+                    }else {
+                        chkLogin=true;
+                        $("#login-btn").addClass("d-none");
+                        $(".logout-li").removeClass("d-none");
+                        if(data.profilePicture!=null && data.profilePicture!="") {
+                            $(".profileImage").attr("src", data.profilePicture);
+                        }else {
+                            $(".profileImage").attr("src", "/renew/images/none_userIme.jpg");
+                        }
+
+                        if (matchMedia("screen and (max-width: 768px)").matches) {
+                            $("#mypage-btn").addClass("d-none");
+                        }else {
+                            $("#mypage-btn").removeClass("d-none");
+                        }
+                    }
+                },
+                error: function (request, status, error) {
+                    console.log(request.status + ' ' + error.statusText + ' ' + request.responseText);
+                }
+            });
+        }
+
+        $(window).resize(function(){
+            if (matchMedia("screen and (max-width: 768px)").matches) {
+                $("#mypage-btn").addClass("d-none");
+            }else {
+                $("#mypage-btn").removeClass("d-none");
+            }
+        });
+    </script>
+
+    <!-- script END -->
+
+</th:block>
+
+</html>
