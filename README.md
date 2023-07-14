@@ -46,4 +46,5 @@
 ![admin_course_details](https://github.com/maroowj/filedTrip/assets/77284101/4aabfc2f-2144-4af9-8daa-aff248e53fff)
 
 * 💡부가기능
+  * ckEditor를 이용한 코스 상세 정보 저장
   * MySql5.7 이상 버전으로 JSON COLUMN 사용하여 데이터 저장
